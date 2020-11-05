@@ -6,7 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WebAutomation_Team2" />
+        <module name="StateFarm" />
+        <module name="Walmart" />
+        <module name="T-Mobile" />
+        <module name="CNN" />
+        <module name="BankOfAmerica" />
+        <module name="Generic" />
+        <module name="Expedia" />
+        <module name="Marriot" />
+        <module name="BCBS" />
       </profile>
     </annotationProcessing>
   </component>
