@@ -7,7 +7,6 @@
 *.Secret Properties
 # Log file
 *.log
-
 # BlueJ files
 *.ctxt
 
