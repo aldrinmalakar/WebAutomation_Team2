@@ -1,4 +1,4 @@
-package home;
+package walmartHome;
 
 import common.WebAPI;
 

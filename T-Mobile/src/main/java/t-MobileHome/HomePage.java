@@ -1,4 +1,4 @@
-package home;
+package bankOfAmericaHome;
 
 import common.WebAPI;
 
