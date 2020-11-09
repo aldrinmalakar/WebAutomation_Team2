@@ -13,9 +13,9 @@ public class GiftFinderPage extends WebAPI {
 
     @FindBy (how = How.CSS, using = burgerMenu)
     public WebElement burger;
-    @FindBy (how = How.CSS, using = giftFinderInDep)
+    @FindBy (how = How.XPATH, using = giftFinderInDep)
     public WebElement giftFinderButton;
-    @FindBy (how = How.CSS, using = textCheckGiftPage)
+    @FindBy (how = How.XPATH, using = textCheckGiftPage)
     public WebElement getTextGiftPage;
 
     @FindBy (how = How.CSS, using = giftForWho)
@@ -45,7 +45,16 @@ public class GiftFinderPage extends WebAPI {
     }
     public void validateGiftFinderPage(){
         String expected = textForGiftPage;
-        String actual = getTextGiftPage.getText();
+        int attempts = 0;
+        String actual = "";
+        while(attempts < 2) {
+            try {
+                 actual = getTextGiftPage.getText();//stale element handling
+                break;
+            } catch(Exception e) {
+            }
+            attempts++;
+        }
         Assert.assertEquals(actual, expected, "Failed: Did not navigate to gift finder page");
     }
 

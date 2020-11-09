@@ -7,7 +7,7 @@ public class GiftFinderElements {
     public static final String giftFinderInDep ="//div[contains(text(),'Gift Finder')]";//xpath
     public static final String textCheckGiftPage = "//div[contains(text(),'Find the perfect')]";//xpath
     //expected text
-    public static final String textForGiftPage = "Find the perfect";
+    public static final String textForGiftPage = "Find the perfect gifts for";
 
     //select for her/baby/price25 locators
     public static final String giftForWho ="//body/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/select[1]";//xpath

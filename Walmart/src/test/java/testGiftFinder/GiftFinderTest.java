@@ -16,7 +16,8 @@ public class GiftFinderTest extends WebAPI {
     }
 
     @Test
-    public void testGiftPageNavigation(){
+    public void testGiftPageNavigation() throws InterruptedException {
+        Thread.sleep(30000);
         GiftFinderPage.navigateToGiftFinder();
         GiftFinderPage.validateGiftFinderPage();
     }
