@@ -4,7 +4,7 @@ public class GiftFinderElements {
 
     //navigate to page locators
     public static final String burgerMenu ="#header-Header-sparkButton";//css
-    public static final String giftFinderInDep ="//div[contains(text(),'Gift Finder')]";//xpath
+    public static final String giftFinderInDep ="//a[@title='Gift Finder']";//xpath
     public static final String textCheckGiftPage = "//div[contains(text(),'Find the perfect')]";//xpath
     //expected text
     public static final String textForGiftPage = "Find the perfect gifts for";
@@ -15,15 +15,21 @@ public class GiftFinderElements {
     public static final String selectAgeGroup ="//select[@aria-label='What is their age group?']";//xpath
     public static final String selectBaby = "option[value='Baby']";//css
     public static final String selectPriceRange ="select[aria-label='What is your price range?']";//css
-    public final static String priceLessThan25 ="option[value='0 - $25']"; //css
+    public static final String priceLessThan25 ="option[value='0 - $25']"; //css
 
     //select birthday for occasion
-    public final static String occasionDropArrow = "div[class='FacetBanner-titleWrapper']";//css
-    public final static String selectBirthdayOption = "option[value='Birthday']";//xpath
-    public final static String birthdayImage = "div[aria-label='Birthday-img']";
+    public static final String occasionDropArrow = "div[class='FacetBanner-titleWrapper']";//css
+    public static final String selectBirthdayOption = "option[value='Birthday']";//xpath
+    public static final String birthdayImage = "//img[@alt='Birthday-img']";
 
 
-    public final static String showAllRadioButton = "label[aria-label='Shipping & Pickup: Show all'] input[type='radio']";//css
-    //public final static String
+    public static final String showAllRadioButton = "label[aria-label='Shipping & Pickup: Show all'] input[type='radio']";//css
 
+    public static final String copyRightDisplay ="span[data-tl-id='footer-GlobalFooterCopyright-text']";//css
+
+    public static final String topArrowButton = "elc-icon elc-icon-up-arrow elc-icon-16";//class
+    public static final String giftFinderAtTop = "//h1";// tagname
+//    public static final String searchBoxDropDown = "search-category-bg"; //id
+//    public final static String jewelryCell ="//span[contains(text(),'Jewelry')]"; //xpath
+//    public static final String typeAheadJewelery = "typeahead-row-rings-Jewelry";//id
 }

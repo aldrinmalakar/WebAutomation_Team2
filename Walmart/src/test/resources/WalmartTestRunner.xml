@@ -20,7 +20,10 @@
         <classes>
             <class name="testGiftFinder.GiftFinderTest">
                 <methods>
-<!--                    <exclude name="testNaviagationPage"></exclude>-->
+                    <exclude name="showAllRadioTest"></exclude>
+                    <exclude name="scrollDownTest"></exclude>
+                    <include name="testBirthdayOccasion"></include>
+                    <exclude name="navigatetestGiftPageNavigation"></exclude>
                 </methods>
             </class>
         </classes>

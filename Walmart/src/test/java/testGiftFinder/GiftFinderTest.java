@@ -15,20 +15,32 @@ public class GiftFinderTest extends WebAPI {
     @BeforeMethod
     public void getInit(){
         GiftFinderPage= PageFactory.initElements(driver, GiftFinderPage.class);
+
     }
 
     @Test
     public void testGiftPageNavigation() throws InterruptedException {
         //Thread.sleep(10000);
-        GiftFinderPage.navigateToGiftFinder();
         GiftFinderPage.validateGiftFinderPage();
     }
 
     @Test
     public void testBirthdayOccasion() throws InterruptedException {
-        Thread.sleep(50000);
+        GiftFinderPage.navigateToGiftFinder();
         GiftFinderPage.selectOccasion();
         GiftFinderPage.validateSelectOccasion();
+    }
+
+    @Test
+    public void scrollDownTest() throws InterruptedException {
+        GiftFinderPage.scrollDown();
+        GiftFinderPage.validateScrollDown();
+    }
+
+    @Test
+    public void showAllRadioTest(){
+        GiftFinderPage.showAllRadioSelect();
+        GiftFinderPage.validateShowAllSelect();
     }
 
 }

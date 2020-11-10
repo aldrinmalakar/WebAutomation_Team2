@@ -37,11 +37,22 @@ public class GiftFinderPage extends WebAPI {
     public WebElement dropArrowOccasion;
     @FindBy (how = How.CSS, using = selectBirthdayOption)
     public WebElement selectBirthday;
-    @FindBy (how = How.CSS, using = birthdayImage)
+    @FindBy (how = How.XPATH, using = birthdayImage)
     public WebElement birthdayBanner;
 
+    @FindBy (how = How.CSS, using = copyRightDisplay)
+    public WebElement copyRightText;
 
-    public void navigateToGiftFinder(){
+    @FindBy (how = How.CSS, using = showAllRadioButton)
+    public WebElement showAllRadio;
+
+    @FindBy (how = How.CLASS_NAME, using = topArrowButton)
+    public WebElement backToTopArrow;
+    @FindBy (how = How.TAG_NAME, using = giftFinderAtTop)
+    public WebElement giftFinderAtTopCorner;
+
+
+    public void navigateToGiftFinder() throws InterruptedException {
         burger.click();
         giftFinderButton.click();
     }
@@ -60,7 +71,7 @@ public class GiftFinderPage extends WebAPI {
         Assert.assertEquals(actual, expected, "Failed: Did not navigate to gift finder page");
     }
 
-    public void selectOccasion(){
+    public void selectOccasion() throws InterruptedException {
         navigateToGiftFinder();
         int attempts = 0;
         while(attempts < 2) {
@@ -72,13 +83,41 @@ public class GiftFinderPage extends WebAPI {
             attempts++;
         }
         selectBirthday.click();
+        birthdayBanner.isDisplayed();
     }
     public void validateSelectOccasion(){
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Boolean imageLoaded =
-                (Boolean) ((JavascriptExecutor)driver).executeScript(
+          (Boolean) ((JavascriptExecutor)driver).executeScript(
                         "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",birthdayBanner);
-        Assert.assertTrue(imageLoaded,"Failed: Birthday banner did not load");
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertTrue(!imageLoaded,"Failed: Birthday banner did not load");
 
     }
+
+    public void scrollDown() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", copyRightText);
+    }
+    public void validateScrollDown(){
+        boolean elemDisplayed = copyRightText.isDisplayed();
+        Assert.assertTrue(elemDisplayed,"Failed: Element not displayed");
+    }
+
+
+    public void showAllRadioSelect(){
+        showAllRadio.click();
+    }
+    public void validateShowAllSelect(){
+        boolean selected = showAllRadio.isSelected();
+        Assert.assertTrue(selected,"Failed :Radio button not selected");
+    }
+
+    public void selectBackToTop() throws InterruptedException {
+        navigateToGiftFinder();
+        backToTopArrow.click();
+        boolean topOfPageDisplay = giftFinderAtTopCorner.isDisplayed();
+        Assert.assertTrue(topOfPageDisplay);
+    }
 }
+
+
