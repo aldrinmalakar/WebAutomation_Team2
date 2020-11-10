@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 import static giftFinder.GiftFinderElements.*;
 
 public class GiftFinderPage extends WebAPI {
@@ -60,10 +62,19 @@ public class GiftFinderPage extends WebAPI {
 
     public void selectOccasion(){
         navigateToGiftFinder();
-        dropArrowOccasion.click();
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                dropArrowOccasion.click();//stale element handling
+                break;
+            } catch(Exception e) {
+            }
+            attempts++;
+        }
         selectBirthday.click();
     }
     public void validateSelectOccasion(){
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Boolean imageLoaded =
                 (Boolean) ((JavascriptExecutor)driver).executeScript(
                         "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",birthdayBanner);

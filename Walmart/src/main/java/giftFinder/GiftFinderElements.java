@@ -19,11 +19,11 @@ public class GiftFinderElements {
 
     //select birthday for occasion
     public final static String occasionDropArrow = "div[class='FacetBanner-titleWrapper']";//css
-    public final static String selectBirthdayOption = "//option[normalize-space()='Anytime']";//xpath
+    public final static String selectBirthdayOption = "option[value='Birthday']";//xpath
     public final static String birthdayImage = "div[aria-label='Birthday-img']";
 
 
-//    public final static String
-//    public final static String
+    public final static String showAllRadioButton = "label[aria-label='Shipping & Pickup: Show all'] input[type='radio']";//css
+    //public final static String
 
 }

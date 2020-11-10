@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import walmartHome.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 public class GiftFinderTest extends WebAPI {
     GiftFinderPage GiftFinderPage;
 
@@ -17,9 +19,16 @@ public class GiftFinderTest extends WebAPI {
 
     @Test
     public void testGiftPageNavigation() throws InterruptedException {
-        Thread.sleep(30000);
+        //Thread.sleep(10000);
         GiftFinderPage.navigateToGiftFinder();
         GiftFinderPage.validateGiftFinderPage();
+    }
+
+    @Test
+    public void testBirthdayOccasion() throws InterruptedException {
+        Thread.sleep(50000);
+        GiftFinderPage.selectOccasion();
+        GiftFinderPage.validateSelectOccasion();
     }
 
 }
