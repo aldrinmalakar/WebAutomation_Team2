@@ -19,7 +19,7 @@
         <module>Marriot</module>
         <module>Expedia</module>
     </modules>
-    A
+
 
     <properties>
         <maven.compiler.source>1.11</maven.compiler.source>
