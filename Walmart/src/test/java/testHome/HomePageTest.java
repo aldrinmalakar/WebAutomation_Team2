@@ -16,7 +16,7 @@ public class HomePageTest extends WebAPI {
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void CheckSearchBar() throws InterruptedException {
         homePage.CheckSearchBar();
 
@@ -102,22 +102,22 @@ public class HomePageTest extends WebAPI {
         homePage.AddtoCartProdct();
     }
 
-    @Test( enabled = false)
+    @Test( enabled =true)
     public void AddtoCartProdct2(){
         homePage.AddtoCartProdct2();
     }
 
 
     @Test( enabled = false)
-    public void assertEqual(){
-        homePage.assertEqual("clickButton","haircare");
+    public void validedShampoo() throws InterruptedException {
+        homePage.validedShampoo() ;
     }
 
 
 
     @Test( enabled = false)
-    public void assertEqual2(){
-        homePage.assertEqual("clickButton","sampoo");
+    public void validedHairCare() throws InterruptedException {
+        homePage.validedHairCare();
     }
 
 

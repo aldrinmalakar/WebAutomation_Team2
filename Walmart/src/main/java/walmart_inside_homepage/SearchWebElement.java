@@ -14,6 +14,7 @@ public class SearchWebElement extends WebAPI{
     @FindBy( how = How.CSS,using =clickSearchButton)public WebElement  WalmartclickSearchButton;
     @FindBy( how = How.CSS,using =validedWebElement)public WebElement  WalmartvalidedWebElement;
     @FindBy( how = How.CSS,using =clickCart)public WebElement  WalmartclickCart;
+ @FindBy( how = How.XPATH,using =validedShoes)public WebElement  WalmartvalidedShoes;
 
 public void walmartSearchproduct1(){
     WalmartSearchBox.sendKeys("shoes");
@@ -22,7 +23,7 @@ public void walmartSearchproduct1(){
 public void WalmartValidedSearchProduct1() {
 
     String expectedResult = "Shoes";
-    String actualResult =  WalmartvalidedWebElement.getText();
+    String actualResult =  WalmartvalidedShoes.getText();
     Assert.assertEquals(actualResult,expectedResult,"DoesNot match Test fail");
 }
 

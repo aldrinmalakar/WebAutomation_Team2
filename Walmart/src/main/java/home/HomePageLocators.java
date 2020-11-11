@@ -27,8 +27,8 @@ public static final String clickSignin="//*[@id=\"vh-account-menu-root\"]/div[2]
   public static final String clickproduct="//*[@id='searchProductResult']/ul/li[1]/div/div[2]/div[5]/div/a";
  public static final String  clickqty="//*[@id='add-on-atc-container']/div[1]/section/div[1]/div[2]/select";
   public static final String ClickAddToCart="//*[@id='add-on-atc-container']/div[1]/section/div[1]/div[3]/button/span/span";
-//  public static final String
-//  public static final String
+  public static final String validedhaircare=" //*[@id='Departments']/div/div/div/ul/li[1]/a";
+ public static final String validedShampoo="//*[@id='Departments']/div/div/div[1]/ul/li/a";
 //  public static final String
 
 }

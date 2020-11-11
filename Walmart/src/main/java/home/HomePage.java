@@ -39,6 +39,8 @@ public class HomePage extends WebAPI {
     @FindBy(how=How.XPATH,using =clickproduct)public WebElement Walmartclickproduct;
  @FindBy(how=How.XPATH,using =clickqty)public WebElement Walmartclickclickqty;
  @FindBy(how=How.XPATH,using =ClickAddToCart)public WebElement WalmartclicClickAddToCart;
+ @FindBy(how=How.XPATH,using =validedhaircare)public WebElement Walmartvalidedhaircare;
+@FindBy(how=How.XPATH,using =validedShampoo)public WebElement WalmartvalidedShampoo;
 
 
     public void CheckSearchBar() throws InterruptedException {
@@ -169,16 +171,21 @@ public void AddtoCartProdct(){
         Walmartclickclickqty.click();
         WalmartclicClickAddToCart.click();
     }
-    public void assertEqual (String loc, String expValue){
-        String act = ClickSearchButton.getText();
-        // act is coming from Domain -- the one developer build and release
-        String exp =" haircare";
+    public void validedShampoo() throws InterruptedException {
+
+        SearchBox.sendKeys("Shampoo");
+        Thread.sleep(5000);
+        ClickSearchButton.click();
+        String act =WalmartvalidedShampoo.getText();
+        String exp ="Shampoo";
         Assert.assertEquals(act, exp," failed");
     }
-    public void assertEqual2 (String loc, String expValue){
-        String act = ClickSearchButton.getText();
-        // act is coming from Domain -- the one developer build and release
-        String exp =" sampoo";
+    public void validedHairCare() throws InterruptedException {
+        SearchBox.sendKeys("haircare");
+        Thread.sleep(5000);
+        ClickSearchButton.click();
+        String act =  Walmartvalidedhaircare.getText();
+        String exp ="Hair Care";
         Assert.assertEquals(act, exp," failed");
     }
 
