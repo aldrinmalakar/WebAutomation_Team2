@@ -33,12 +33,12 @@
                     <exclude name="navigateToLocalStoreTest"></exclude>
                     <exclude name="makeThisMyStoreTest"></exclude>
                     <exclude name="findAnotherStoreTest"></exclude>
-<!--                    <exclude name="getDirectionTest"></exclude>-->
+                    <exclude name="getDirectionTest"></exclude>
                     <exclude name="callTheStoreTest"></exclude>
-                    <exclude name="headerLocationMapTest"></exclude>
                     <exclude name="openHoursTest"></exclude>
                     <exclude name="featureCoronaTest"></exclude>
-                    <exclude name="pharmacyDropDownTest"></exclude>
+                    <exclude name="featureCoronaPageTest"></exclude>
+<!--                    <exclude name="pharmacyDropDownTest"></exclude>-->
                     <exclude name="searchStoreTest"></exclude>
 
                     <exclude name=""></exclude>

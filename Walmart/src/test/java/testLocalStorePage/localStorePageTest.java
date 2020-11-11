@@ -12,9 +12,8 @@ public class localStorePageTest extends WebAPI {
     LocalStorePage localStorePage;
 
     @BeforeMethod
-    public void getInit() {
+    public void getInit() throws InterruptedException {
         localStorePage = PageFactory.initElements(driver, LocalStorePage.class);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         localStorePage.navigateToLocalStorePage();
     }
 
@@ -47,35 +46,42 @@ public class localStorePageTest extends WebAPI {
     @Test
     public void callTheStoreTest() {
         localStorePage.callTheStore();
-        localStorePage.validateCallTheStore();
+        //localStorePage.validateCallTheStore();
 
     }
+
     @Test
-    public void headerLocationMapTest(){
-        localStorePage.headerLocationMap();
-        localStorePage.validateHeaderLocationMap();
-    }
-    @Test
-    public void openHoursTest(){
-        localStorePage.openHours();
+    public void openHoursTest() {
         localStorePage.validateOpenHours();
     }
+
     @Test
-    public void featureCoronaTest(){
+    public void featureCoronaTest() {
         localStorePage.featureCorona();
         localStorePage.validateFeatureCorona();
 
     }
+
     @Test
-    public void pharmacyDropDownTest(){
+    public void featureCoronaPageTest() {
+        localStorePage.featureCorona();
+        localStorePage.bannerNext();
+        localStorePage.validateBannerText();
+
+    }
+
+    @Test
+    public void pharmacyDropDownTest() {
         localStorePage.pharmacyDropDown();
         localStorePage.validatePharmacyDropDown();
     }
 
     @Test
-    public void searchStoreTest(){
+    public void searchStoreTest() {
         localStorePage.searchStore();
         localStorePage.validateSearchStore();
 
     }
+
+
 }
