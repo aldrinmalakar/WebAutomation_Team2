@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 36.593 s <<< FAILURE! - in TestSuite
+testGiftFinder.GiftFinderTest.testBirthdayOccasion  Time elapsed: 25.554 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#header-Header-sparkButton"}
+  (Session info: chrome=86.0.4240.193)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Shailas-MBP.lan1', ip: '2604:2000:1200:ac1:0:0:0:fb2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.193, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/5j/jwmzy5wj0q9...}, goog:chromeOptions: {debuggerAddress: localhost:51645}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 687f3ffec5c17dc4e7d2c0e3b939a8d1
+*** Element info: {Using=css selector, value=#header-Header-sparkButton}
+	at testGiftFinder.GiftFinderTest.testBirthdayOccasion(GiftFinderTest.java:30)
+

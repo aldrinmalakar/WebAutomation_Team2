@@ -12,16 +12,10 @@ import java.util.concurrent.TimeUnit;
 public class GiftFinderTest extends WebAPI {
     GiftFinderPage GiftFinderPage;
 
+
     @BeforeMethod
-    public void getInit(){
-        GiftFinderPage= PageFactory.initElements(driver, GiftFinderPage.class);
-
-    }
-
-    @Test
-    public void testGiftPageNavigation() throws InterruptedException {
-        //Thread.sleep(10000);
-        GiftFinderPage.validateGiftFinderPage();
+    public void getInit() {
+        GiftFinderPage = PageFactory.initElements(driver, GiftFinderPage.class);
     }
 
     @Test
@@ -32,13 +26,13 @@ public class GiftFinderTest extends WebAPI {
     }
 
     @Test
-    public void scrollDownTest() throws InterruptedException {
+    public void scrollDownTest() {
         GiftFinderPage.scrollDown();
         GiftFinderPage.validateScrollDown();
     }
 
     @Test
-    public void showAllRadioTest(){
+    public void showAllRadioTest() {
         GiftFinderPage.showAllRadioSelect();
         GiftFinderPage.validateShowAllSelect();
     }
