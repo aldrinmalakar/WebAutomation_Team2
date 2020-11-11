@@ -203,6 +203,7 @@ public class WebAPI {
         driver.quit();
     }
 
+// Helper Method
 
     // Our code should be dynamic and reusable
 

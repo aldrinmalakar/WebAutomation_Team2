@@ -9,17 +9,18 @@ import org.testng.Assert;
 import static localStore.localStorePageElements.*;
 
 public class LocalStorePage extends WebAPI {
-    @FindBy(how = How.CSS, using = makeThisYourStore)
+    @FindBy(how = How.XPATH, using = makeThisYourStore)
     public WebElement localStore;
     @FindBy(how = How.XPATH, using = findAnotherStore)
     public WebElement findStore;
+    @FindBy(how = How.CSS, using = getFindAnotherStore)
+    public WebElement getAnotherStore;
     @FindBy(how = How.CLASS_NAME, using = getMakeThisYourStore)
     public WebElement assertGetMakeThisYourStore;
 
     public void navigateToLocalStorePage() {
         driver.get(localStoreURL);
     }
-
     public void validateNavigateToLocalStorePage() {
         String expected = currentLocalStoreURL;
         int attempts = 0;
@@ -36,11 +37,57 @@ public class LocalStorePage extends WebAPI {
     }
 
     public void makeThisYourStore(){
+        navigateToLocalStorePage();
     localStore.click();
 
     }
     public void validateMakeThisYourStore(){
-        assertGetMakeThisYourStore.getText();
+        String expected = " #2010";
+        String actual = assertGetMakeThisYourStore.getText();
+        Assert.assertEquals(actual,expected,"Test Failed: Page did not switch to local Store.");
 
     }
+
+    public void findAnotherStore(){
+        findStore.click();
+    }
+    public void validateFindAnotherStore(){
+        String expected = "Nearby Stores";
+        String actual = getAnotherStore.getText();
+        Assert.assertEquals(actual,expected,"Test Failed: Could not find nearby stores.");
+
+    }
+
+    public void getDirection(){
+
+    }
+    public void validateGetDirection(){
+
+    }
+
+    public void callTheStore(){}
+    public void validateCallTheStore(){}
+
+    public void headerLocationMap(){}
+    public void validateHeaderLocationMap(){}
+
+    public void openHours(){}
+    public void validateOpenHours(){}
+
+    public void featureCorona() {
+    }
+    public void validateFeatureCorona() {
+    }
+
+    public void pharmacyDropDown() {
+    }
+    public void validatePharmacyDropDown() {
+    }
+
+    public void searchStore() {
+    }
+    public void validateSearchStore() {
+    }
+
+
 }

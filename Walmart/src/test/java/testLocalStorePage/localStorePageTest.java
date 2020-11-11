@@ -15,18 +15,67 @@ public class localStorePageTest extends WebAPI {
     public void getInit() {
         localStorePage = PageFactory.initElements(driver, LocalStorePage.class);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        localStorePage.navigateToLocalStorePage();
     }
 
-    @Test (enabled = false)
-    public void navigateToLocalStorePage() {
-        localStorePage.navigateToLocalStorePage();
+    @Test
+    public void navigateToLocalStoreTest() {
+
         localStorePage.validateNavigateToLocalStorePage();
     }
 
     @Test
-    public void makeThisMyStorePage(){
+    public void makeThisMyStoreTest() {
+
         localStorePage.makeThisYourStore();
         localStorePage.validateMakeThisYourStore();
+
+    }
+
+    @Test
+    public void findAnotherStoreTest() {
+        localStorePage.findAnotherStore();
+        localStorePage.validateFindAnotherStore();
+    }
+
+    @Test
+    public void getDirectionTest() {
+        localStorePage.getDirection();
+        localStorePage.validateGetDirection();
+    }
+
+    @Test
+    public void callTheStoreTest() {
+        localStorePage.callTheStore();
+        localStorePage.validateCallTheStore();
+
+    }
+    @Test
+    public void headerLocationMapTest(){
+        localStorePage.headerLocationMap();
+        localStorePage.validateHeaderLocationMap();
+    }
+    @Test
+    public void openHoursTest(){
+        localStorePage.openHours();
+        localStorePage.validateOpenHours();
+    }
+    @Test
+    public void featureCoronaTest(){
+        localStorePage.featureCorona();
+        localStorePage.validateFeatureCorona();
+
+    }
+    @Test
+    public void pharmacyDropDownTest(){
+        localStorePage.pharmacyDropDown();
+        localStorePage.validatePharmacyDropDown();
+    }
+
+    @Test
+    public void searchStoreTest(){
+        localStorePage.searchStore();
+        localStorePage.validateSearchStore();
 
     }
 }
