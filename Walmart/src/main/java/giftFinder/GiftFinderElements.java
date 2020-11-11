@@ -34,6 +34,19 @@ public class GiftFinderElements {
 
     public static final String brandBoxScroll = "div[aria-labelledby='Brand']"; //css
     public static final String theMandalorian = "label[for='The-Mandalorian-499-brand'] span[class='option-label']"; //css
+    public static final String personalizedTab = "div[role='main'] button:nth-child(15)"; //css
+
+    public static final String expandGiftingTab ="//span[contains(text(),'Gifting')]"; //xpath
+    public static final String giftEligibleElement = "label[for='Gift-eligible-0-Gifting'] span[class='option-label']"; //css
+
+    public static final String resetButton = "button[class='reset-facet']";//css
+
+    public static final String pageNavigator = "//button[@class='paginator-btn paginator-btn-next']"; //xpath
+    public static final String secondPage = "a[aria-label='Page 2 of 3 selected']"; //css
+
+    public static final String logo ="z_a"; //class
+
+    public static final String HourWareHouse = "//input[@id='24-hour-warehouse-1-retailer']"; //xpath
 
 
 //    public static final String searchBoxDropDown = "search-category-bg"; //id

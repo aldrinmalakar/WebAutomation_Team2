@@ -63,6 +63,27 @@ public class GiftFinderPage extends WebAPI {
     @FindBy (how = How.CSS, using = theMandalorian)
     public WebElement mandalorianBrand;
 
+    @FindBy (how = How.CSS, using = personalizedTab)
+    public WebElement personalize;
+
+    @FindBy (how = How.CSS, using = expandGiftingTab)
+    public WebElement expandGifting;
+    @FindBy (how = How.CSS, using = giftEligibleElement)
+    public WebElement giftEligible;
+
+    @FindBy (how = How.CSS, using = resetButton)
+    public WebElement resetPersonalized;
+
+    @FindBy (how = How.XPATH, using = pageNavigator)
+    public WebElement pageNavigatorArrow;
+
+    @FindBy (how = How.XPATH, using = secondPage)
+    public WebElement page2Of3;
+
+    @FindBy (how = How.XPATH, using = logo)
+    public WebElement walmartLogo;
+
+
     public void navigateToGiftFinder(){
         burger.click();
         giftFinderButton.click();
@@ -148,6 +169,97 @@ public class GiftFinderPage extends WebAPI {
         Assert.assertTrue(mandalorianDisplayed, "Failed: Did not scroll down to The Mandalorian");
     }
 
+    public void personalizeTabClick(){
+        personalize.click();
+    }
+    public void validatePersonalizeSelected(){
+        boolean personalizedSelected =personalize.isSelected();
+        Assert.assertTrue(personalizedSelected, "Failed:personalized not selected");
+    }
+
+    public void expandGiftingOption(){
+        expandGifting.click();
+    }
+    public void giftEligibleDisplay(){
+        boolean eligibleDisplayed = giftEligible.isDisplayed();
+        Assert.assertTrue(eligibleDisplayed, "Failed");
+    }
+
+    public void filterReset(){
+        personalizeTabClick();
+        resetPersonalized.click();
+    }
+    public void validateFilterReset(){
+        boolean reset = resetPersonalized.isDisplayed();
+        Assert.assertTrue(!reset,"Failed");
+    }
+
+    public void navigateToSecondPage(){
+        pageNavigatorArrow.click();
+    }
+    public void validateSecondPage(){
+        boolean page2Selected = page2Of3.isSelected();
+        Assert.assertTrue(page2Selected, "Failed");
+    }
+
+    public void logoNavigatesToHome(){
+        walmartLogo.click();
+    }
+    public void validateLogoNavigation(){
+        driver.getTitle();
+        String actual = "Walmart.com | Save Money. Live Better.";
+        String expected = "Walmart.com | Save Money. Live Better.";
+        Assert.assertEquals(expected,actual, "Failed");
+    }
+
+    public void hourWareHouseSelect(){
+
+    }
+    public void validateHourWareHouse(){
+
+    }
+
+    public void aSecretAdmirer(){
+
+    }
+    public void validateASecretAdmirer(){
+
+    }
+
+    public void barbie (){
+
+    }
+    public void validateBarbie(){
+
+    }
+
+    public void roku(){
+
+    }
+    public void validateRoku(){
+
+    }
+
+    public void champion(){
+
+    }
+    public void validateChampion(){
+
+    }
+
+    public void samsung(){
+
+    }
+    public void validateSamsung(){
+
+    }
+
+    public void apple(){
+
+    }
+    public void validateApple(){
+
+    }
 
 
 }
