@@ -14,6 +14,8 @@ public class localStorePageElements {
     public static final String findAnotherStore = "//button[normalize-space()='Find another store']";
     public static final String getFindAnotherStore = "p[class='results-list-header']";
     public static final String findDirection = "//div[@class='directions-and-phone-parts-cell-right']//span[contains(text(),'Get directions')]";
+    public static final String homeAddress = "store-address-line-1";
+    public static final String getDirectionSearchBox = "h2[class='section-subheader-header GLOBAL__gm2-subtitle-alt-1']";
     public static final String callTheStore = "//div[@class='directions-and-phone-parts-cell-right']//div[@id='store-phone']";
 
 }

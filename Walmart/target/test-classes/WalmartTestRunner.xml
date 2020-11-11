@@ -33,7 +33,7 @@
                     <exclude name="navigateToLocalStoreTest"></exclude>
                     <exclude name="makeThisMyStoreTest"></exclude>
                     <exclude name="findAnotherStoreTest"></exclude>
-                    <exclude name="getDirectionTest"></exclude>
+<!--                    <exclude name="getDirectionTest"></exclude>-->
                     <exclude name="callTheStoreTest"></exclude>
                     <exclude name="headerLocationMapTest"></exclude>
                     <exclude name="openHoursTest"></exclude>
