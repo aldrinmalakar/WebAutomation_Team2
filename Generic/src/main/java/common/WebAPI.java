@@ -83,12 +83,16 @@ public class WebAPI {
         driver.quit();
     }
 
+
+
+
+
     @AfterSuite
     public void generateReport() {
         extent.close();
     }
 
-    private Date getTime(long millis) {
+    public Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
