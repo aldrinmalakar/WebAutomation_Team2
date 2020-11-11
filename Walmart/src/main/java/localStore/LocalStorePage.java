@@ -8,9 +8,13 @@ import org.testng.Assert;
 
 import static localStore.localStorePageElements.*;
 
-public class localStorePage extends WebAPI {
+public class LocalStorePage extends WebAPI {
     @FindBy(how = How.CSS, using = makeThisYourStore)
     public WebElement localStore;
+    @FindBy(how = How.XPATH, using = findAnotherStore)
+    public WebElement findStore;
+    @FindBy(how = How.CLASS_NAME, using = getMakeThisYourStore)
+    public WebElement assertGetMakeThisYourStore;
 
     public void navigateToLocalStorePage() {
         driver.get(localStoreURL);
@@ -29,5 +33,14 @@ public class localStorePage extends WebAPI {
             attempts++;
         }
         Assert.assertEquals(actual,expected,"Failed: Did not navigate to the correct page.");
+    }
+
+    public void makeThisYourStore(){
+    localStore.click();
+
+    }
+    public void validateMakeThisYourStore(){
+        assertGetMakeThisYourStore.getText();
+
     }
 }

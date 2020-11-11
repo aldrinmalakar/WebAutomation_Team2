@@ -16,7 +16,7 @@
     <parameter name="browserVersion" value="###"/>
     <parameter name="url" value="###########"/>
 
-    <test name="###########">
+    <test name="Walmart">
 <!--        <parameter name="browserName" value="chrome"/>-->
 <!--        <parameter name="browserVersion" value="86"/>-->
 
@@ -28,7 +28,8 @@
 <!--                    <include name="testSearchBoxCheck2"></include>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testHome."></class>
+           <class name="testLocalStorePage.localStorePageTest"/>
+
 
         </classes>
     </test>
