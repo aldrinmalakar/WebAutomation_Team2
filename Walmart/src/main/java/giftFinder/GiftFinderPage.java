@@ -10,6 +10,7 @@ import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
 
 import static giftFinder.GiftFinderElements.*;
+import static org.openqa.selenium.Keys.ARROW_DOWN;
 
 public class GiftFinderPage extends WebAPI {
 
@@ -46,13 +47,23 @@ public class GiftFinderPage extends WebAPI {
     @FindBy (how = How.CSS, using = showAllRadioButton)
     public WebElement showAllRadio;
 
-    @FindBy (how = How.CLASS_NAME, using = topArrowButton)
+    @FindBy (how = How.CSS, using = topArrowButton)
     public WebElement backToTopArrow;
-    @FindBy (how = How.TAG_NAME, using = giftFinderAtTop)
+    @FindBy (how = How.XPATH, using = giftFinderAtTop)
     public WebElement giftFinderAtTopCorner;
 
+    @FindBy (how = How.CSS, using = feedBackButton)
+    public WebElement feedBack;
+    @FindBy (how = How.CSS, using = stars)
+    public WebElement fiveStars;
 
-    public void navigateToGiftFinder() throws InterruptedException {
+    @FindBy (how = How.CSS, using = brandBoxScroll)
+    public WebElement scrollInBrand;
+
+    @FindBy (how = How.CSS, using = theMandalorian)
+    public WebElement mandalorianBrand;
+
+    public void navigateToGiftFinder(){
         burger.click();
         giftFinderButton.click();
     }
@@ -72,7 +83,6 @@ public class GiftFinderPage extends WebAPI {
     }
 
     public void selectOccasion() throws InterruptedException {
-        navigateToGiftFinder();
         int attempts = 0;
         while(attempts < 2) {
             try {
@@ -103,7 +113,6 @@ public class GiftFinderPage extends WebAPI {
         Assert.assertTrue(elemDisplayed,"Failed: Element not displayed");
     }
 
-
     public void showAllRadioSelect(){
         showAllRadio.click();
     }
@@ -112,12 +121,35 @@ public class GiftFinderPage extends WebAPI {
         Assert.assertTrue(selected,"Failed :Radio button not selected");
     }
 
-    public void selectBackToTop() throws InterruptedException {
-        navigateToGiftFinder();
+    public void selectBackToTop() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
         backToTopArrow.click();
+    }
+    public void validateBackToTopButton(){
         boolean topOfPageDisplay = giftFinderAtTopCorner.isDisplayed();
         Assert.assertTrue(topOfPageDisplay);
     }
+
+    public void giveFeedBackStars(){
+        feedBack.click();
+        fiveStars.click();
+    }
+    public void validateFiveStars(){
+        boolean fiveStarsFeedBack= fiveStars.isSelected();
+        Assert.assertTrue(fiveStarsFeedBack, "Failed: 5 stars not selected");
+    }
+
+    public void scrollInsideBrand(){
+        scrollInBrand.sendKeys(ARROW_DOWN);
+    }
+    public void validateBrandScrollDown(){
+        boolean mandalorianDisplayed = mandalorianBrand.isDisplayed();
+        Assert.assertTrue(mandalorianDisplayed, "Failed: Did not scroll down to The Mandalorian");
+    }
+
+
+
 }
 
 

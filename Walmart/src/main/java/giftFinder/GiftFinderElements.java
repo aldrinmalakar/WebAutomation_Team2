@@ -27,8 +27,15 @@ public class GiftFinderElements {
 
     public static final String copyRightDisplay ="span[data-tl-id='footer-GlobalFooterCopyright-text']";//css
 
-    public static final String topArrowButton = "elc-icon elc-icon-up-arrow elc-icon-16";//class
-    public static final String giftFinderAtTop = "//h1";// tagname
+    public static final String topArrowButton = "span[class='top']";//css
+    public static final String giftFinderAtTop = "//h1[contains(text(),'Gift Finder')]";//xpath
+    public static final String feedBackButton ="#hf-feedback-tab-text"; //css
+    public static final String stars = "button[value='5']"; //css
+
+    public static final String brandBoxScroll = "div[aria-labelledby='Brand']"; //css
+    public static final String theMandalorian = "label[for='The-Mandalorian-499-brand'] span[class='option-label']"; //css
+
+
 //    public static final String searchBoxDropDown = "search-category-bg"; //id
 //    public final static String jewelryCell ="//span[contains(text(),'Jewelry')]"; //xpath
 //    public static final String typeAheadJewelery = "typeahead-row-rings-Jewelry";//id

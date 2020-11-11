@@ -10,31 +10,44 @@ import walmartHome.HomePage;
 import java.util.concurrent.TimeUnit;
 
 public class GiftFinderTest extends WebAPI {
-    GiftFinderPage GiftFinderPage;
+    GiftFinderPage giftFinderPage;
 
 
     @BeforeMethod
     public void getInit() {
-        GiftFinderPage = PageFactory.initElements(driver, GiftFinderPage.class);
+        giftFinderPage = PageFactory.initElements(driver, GiftFinderPage.class);
+        giftFinderPage.navigateToGiftFinder();
     }
 
+    @Test
+    public void giftFinderNavigation(){
+        giftFinderPage.validateGiftFinderPage();
+    }
     @Test
     public void testBirthdayOccasion() throws InterruptedException {
-        GiftFinderPage.navigateToGiftFinder();
-        GiftFinderPage.selectOccasion();
-        GiftFinderPage.validateSelectOccasion();
+        giftFinderPage.selectOccasion();
+        giftFinderPage.validateSelectOccasion();
     }
-
     @Test
     public void scrollDownTest() {
-        GiftFinderPage.scrollDown();
-        GiftFinderPage.validateScrollDown();
+        giftFinderPage.scrollDown();
+        giftFinderPage.validateScrollDown();
     }
-
     @Test
     public void showAllRadioTest() {
-        GiftFinderPage.showAllRadioSelect();
-        GiftFinderPage.validateShowAllSelect();
+        giftFinderPage.showAllRadioSelect();
+        giftFinderPage.validateShowAllSelect();
     }
+    @Test
+    public void backToTopButton() {
+        giftFinderPage.selectBackToTop();
+        giftFinderPage.validateBackToTopButton();
+    }
+    @Test
+    public void feedBackActions(){
+        giftFinderPage.giveFeedBackStars();
+        giftFinderPage.validateFiveStars();
+    }
+
 
 }
