@@ -30,34 +30,36 @@
             <!--            </class>-->
             <class name="testLocalStorePage.localStorePageTest">
                 <methods>
-                    <exclude name="navigateToLocalStoreTest"></exclude>
-                    <exclude name="makeThisMyStoreTest"></exclude>
-                    <exclude name="findAnotherStoreTest"></exclude>
-                    <exclude name="getDirectionTest"></exclude>
-                    <exclude name="callTheStoreTest"></exclude>
-                    <exclude name="openHoursTest"></exclude>
-                    <exclude name="featureCoronaTest"></exclude>
-                    <exclude name="featureCoronaPageTest"></exclude>
-<!--                    <exclude name="pharmacyDropDownTest"></exclude>-->
-                    <exclude name="searchStoreTest"></exclude>
+                    <exclude name="navigateToLocalStoreTest"/>
+                    <exclude name="makeThisMyStoreTest"/>
+                    <exclude name="findAnotherStoreTest"/>
+                    <exclude name="getDirectionTest"/>
+                    <exclude name="callTheStoreTest"/>
+                    <exclude name="openHoursTest"/>
+                    <exclude name="featureCoronaTest"/>
+                    <exclude name="featureCoronaPageTest"/>
+                    <exclude name="pharmacyDropDownTest"/>
+                    <exclude name="searchStoreTest"/>
+                    <exclude name="weeklyAdsCheckTest"/>
+                    <exclude name="digitalMuseumCheckTest"/>
 
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
+                    <exclude name="newsAndEventsTest"/>
+                    <exclude name="footerWeeklyAdsCheckTest"/>
+                    <exclude name="emailSignupTest"/>
+<!--                    <exclude name="footerDigitalMuseumCheckTest"/>-->
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
 
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-                    <exclude name=""></exclude>
-
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
+                    <exclude name=""/>
 
                 </methods>
             </class>

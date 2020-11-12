@@ -25,6 +25,29 @@ public class localStorePageElements {
     public static final String pharmacyDropDown ="//div[@itemtype='http://schema.org/Pharmacy']//button[@type='button']";
     public static final String pharmacyChekText = "Refill a prescription";
     public static final String REFILL_A_PRESCRIPTION = "//span[normalize-space()='Refill a prescription']";
+    public static final String publicSearch = "global-search-input";
+    public static final String searchKey = "All in one desktop";
+    public static final String searchStart = "//*[@id='global-search-submit']/span";
+    public static final String searchExpected = "All-In-One Desktops";
+    public static final String searchActual = "//*[@id='Departments'] //a[contains(text(),'All-In-One Desktops')]";
+
+    public static final String newsEventsLink = "//*[@id='content'] //a[.='News & Events']";
+    public static final String facebookTextExpected = "//*[@id='seo_h1_tag']/span";
+    public static final String facebookTextActual = "//*[@id='u_0_0']/span[1]/a/span";
+
+    public static final String footerWeeklyAd = "//a[@class='i_a hf-footer-link i_c'][normalize-space()='Weekly Ad']";
+    public static final String expectedAdLinkText = "Weekly Ad";
+    public static final String actualAdLinkText = "breadcrumb-tab";
+
+    public static final String emailSignupBoxID = "hf-email-input";
+    public static final String emailSignupText = "testEmail1@walmart.com";
+    public static final String SIGN_UP = "//span[normalize-space()='Sign up']";
+    public static final String signUpActualEmail= "//*[@id='hf-email-modal-email-id']";
+
+    public static final String digitalMuseumLinkText = "Digital Museum";
+    public static final String museumTagName = "h2";
+    public static final String expectedMuseumHeader = "Take a journey through Walmart's heritage";
+
 
 
 

@@ -83,5 +83,32 @@ public class localStorePageTest extends WebAPI {
 
     }
 
+    @Test
+    public void newsAndEventsTest() {
+        localStorePage.newsEvents();
+        localStorePage.validateNewsEvents();
+    }
+
+    @Test
+    public void footerWeeklyAdsCheckTest() {
+        localStorePage.weeklyAdsCheck();
+        localStorePage.validateWeeklyAdsCheck();
+
+    }
+
+    @Test
+    public void emailSignupTest() {
+        localStorePage.signUpMethod();
+        localStorePage.validateSignupMethod();
+
+    }
+
+
+    @Test
+    public void footerDigitalMuseumCheckTest() {
+        localStorePage.digitalMuseumCheck();
+        localStorePage.validateDigitalMuseumCheck();
+    }
+
 
 }
