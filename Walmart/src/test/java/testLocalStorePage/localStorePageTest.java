@@ -6,8 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class localStorePageTest extends WebAPI {
     LocalStorePage localStorePage;
 
@@ -110,5 +108,69 @@ public class localStorePageTest extends WebAPI {
         localStorePage.validateDigitalMuseumCheck();
     }
 
+    @Test
+    public void clickAppStoreTest() {
+        localStorePage.clickAppStore();
+        localStorePage.validateAppStoreRedirection();
+    }
 
+    @Test
+    public void clickPlayStoreTest() {
+        localStorePage.clickPlayStore();
+        localStorePage.validatePlayStoreRedirection();
+    }
+
+    @Test
+    public void learnAboutWalmartPlusTest() {
+        localStorePage.clickWalmartPlus();
+        localStorePage.validateWalmartPlus();
+    }
+
+    @Test
+    public void wPlusPageTest() {
+        localStorePage.clickWalmartPlus();
+        localStorePage.searchAvailability("49120");
+    }
+
+    @Test
+    public void productRecallTest() {
+        localStorePage.navigateToProductRecall();
+        localStorePage.validateProdRecall("https://corporate.walmart.com/recalls");
+    }
+
+    @Test
+    public void accountSignInTest() {
+        localStorePage.clickAccount();
+        localStorePage.validateClickAccount("Looking for your Walmart.com order?");
+    }
+
+    @Test
+    public void trackOrderTest() {
+        localStorePage.clickTrackOrder();
+        localStorePage.validateTrackOrder("https://www.walmart.com/account/trackorder","Track your order");
+    }
+
+    @Test
+    public void feedbackReviewTest() {
+        localStorePage.feedbackMethod();
+    }
+
+    @Test
+    public void submitComplaintTest() {
+        localStorePage.clickTellUs();
+        localStorePage.validateComplaintSubmission("Your feedback helps us make Walmart shopping better for millions of customers.");
+    }
+
+    @Test
+    public void assertCopyRightTextTest() {
+        localStorePage.getCopyRightText("© 2020 Walmart. All Rights Reserved.");
+            }
+
+    @Test
+    public void careersPageTest() {
+        localStorePage.navigateToCareers();
+        localStorePage.assertCareerSearch("Member Frontline Cashier");
+
+
+    }
 }
