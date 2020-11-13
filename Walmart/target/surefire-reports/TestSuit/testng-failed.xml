@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuit]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="OS" value="windows"/>
+  <parameter name="os_version" value="10"/>
+  <parameter name="browserVersion" value="86"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="cloudEnvName" value="browserStack"/>
+  <parameter name="url" value="https://www.walmart.com/"/>
+  <test thread-count="5" name="Walmart(failed)" verbose="0">
+    <classes>
+      <class name="testLocalStorePage.localStorePageTest">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="clickAppStoreTest"/>
+          <include name="setUp"/>
+          <include name="pharmacyDropDownTest"/>
+          <include name="openHoursTest"/>
+          <include name="startExtent"/>
+          <include name="getInit"/>
+          <include name="cleanUp"/>
+          <include name="feedbackReviewTest"/>
+          <include name="careersPageTest"/>
+          <include name="extentSetup"/>
+          <include name="emailSignupTest"/>
+          <include name="callTheStoreTest"/>
+          <include name="trackOrderTest"/>
+          <include name="generateReport"/>
+          <include name="clickPlayStoreTest"/>
+        </methods>
+      </class> <!-- testLocalStorePage.localStorePageTest -->
+    </classes>
+  </test> <!-- Walmart(failed) -->
+</suite> <!-- Failed suite [TestSuit] -->

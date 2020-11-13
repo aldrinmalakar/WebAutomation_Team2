@@ -1,0 +1,93 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 25, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 704.425 s <<< FAILURE! - in TestSuite
+testLocalStorePage.localStorePageTest.callTheStoreTest  Time elapsed: 0.504 s  <<< FAILURE!
+org.openqa.selenium.NoAlertPresentException: 
+no such alert
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62439}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ed43c8df4dcbb6d2d1a37efaf308904a
+	at testLocalStorePage.localStorePageTest.callTheStoreTest(localStorePageTest.java:46)
+
+testLocalStorePage.localStorePageTest.careersPageTest  Time elapsed: 10.899 s  <<< FAILURE!
+java.lang.AssertionError: Test Failed. expected [Member Frontline Cashier] but found [Cashier & Front End Services]
+	at testLocalStorePage.localStorePageTest.careersPageTest(localStorePageTest.java:172)
+
+testLocalStorePage.localStorePageTest.clickAppStoreTest  Time elapsed: 19.16 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62628}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee7a357d478194e84f6fb7225766810f
+	at testLocalStorePage.localStorePageTest.clickAppStoreTest(localStorePageTest.java:113)
+
+testLocalStorePage.localStorePageTest.clickPlayStoreTest  Time elapsed: 20.252 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62725}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6e6261dcc2e4b7d71a5fdb2255dee1c2
+	at testLocalStorePage.localStorePageTest.clickPlayStoreTest(localStorePageTest.java:119)
+
+testLocalStorePage.localStorePageTest.emailSignupTest  Time elapsed: 1.016 s  <<< FAILURE!
+java.lang.AssertionError: Test Failed: Email does not match as provided. expected [testEmail1@walmart.com] but found []
+	at testLocalStorePage.localStorePageTest.emailSignupTest(localStorePageTest.java:100)
+
+testLocalStorePage.localStorePageTest.feedbackReviewTest  Time elapsed: 20.129 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"hf-feedback-bubble-fixed-link"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee840228e320ca5433b78f21d4647dc9
+*** Element info: {Using=css selector, value=hf-feedback-bubble-fixed-link}
+	at testLocalStorePage.localStorePageTest.feedbackReviewTest(localStorePageTest.java:155)
+
+testLocalStorePage.localStorePageTest.openHoursTest  Time elapsed: 20.156 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"div[aria-label='Open until 10 pm'] span[class='open service-expander-friendly-hours']"}
+  (Session info: chrome=86.0.4240.198)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63894}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6aee5dcf8f3d7b1268d92ef092e3b0f5
+*** Element info: {Using=css selector, value=div[aria-label='Open until 10 pm'] span[class='open service-expander-friendly-hours']}
+	at testLocalStorePage.localStorePageTest.openHoursTest(localStorePageTest.java:53)
+
+testLocalStorePage.localStorePageTest.pharmacyDropDownTest  Time elapsed: 1.608 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="button icon-button expander-toggle font-semibold button--link" data-automation-id="button" data-tl-id="expander-button" aria-expanded="false" type="button">...</button> is not clickable at point (947, 906). Other element would receive the click: <span class="closed service-expander-friendly-hours">...</span>
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63974}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 955f44769a801be237c5facfca62b0ea
+	at testLocalStorePage.localStorePageTest.pharmacyDropDownTest(localStorePageTest.java:73)
+
+testLocalStorePage.localStorePageTest.trackOrderTest  Time elapsed: 23.186 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=86.0.4240.198)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-TSTLMB5', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\aldri\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64310}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 133b263127438d70c68439bf4837d062
+	at testLocalStorePage.localStorePageTest.trackOrderTest(localStorePageTest.java:149)
+
