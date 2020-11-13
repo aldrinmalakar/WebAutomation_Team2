@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static home.HomePageLocators.checkAccount;
+
 
 public class HomePageTest extends WebAPI {
     HomePage homePage;
@@ -102,7 +102,7 @@ public class HomePageTest extends WebAPI {
         homePage.AddtoCartProdct();
     }
 
-    @Test( enabled =true)
+    @Test( enabled =false)
     public void AddtoCartProdct2(){
         homePage.AddtoCartProdct2();
     }
