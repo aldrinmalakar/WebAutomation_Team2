@@ -97,11 +97,6 @@ public class GiftFinderTest extends WebAPI {
     }
 
     @Test
-    public void secretAdmirerTest() {
-
-    }
-
-    @Test
     public void barbieTest() {
 
     }
@@ -120,4 +115,18 @@ public class GiftFinderTest extends WebAPI {
     public void appleTest() {
 
     }
+
+    @Test
+    public void findABrandByTyping(){
+
+    }
+
+    @Test
+    public void typeOfGiftList(){
+        giftFinderPage.validateListText();
+    }
+
+
+
+
 }

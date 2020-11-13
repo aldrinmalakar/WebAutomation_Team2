@@ -46,7 +46,16 @@ public class GiftFinderElements {
 
     public static final String logo ="z_a"; //class
 
-    public static final String HourWareHouse = "//input[@id='24-hour-warehouse-1-retailer']"; //xpath
+    public static final String rokuCheckBox= "##Roku-9-brand"; //css
+    public static final String championCheckBox= "#Champion-27-brand"; //css
+    public static final String samsungCheckBox= "##Samsung-0-brand"; //css
+    public static final String appleCheckBox= "#Apple-0-brand"; //css
+    public static final String barbieCheckBox= "#Barbie-0-brand"; //css
+
+
+
+    public static final String hourWareHouse = "//input[@id='24-hour-warehouse-1-retailer']"; //xpath
+    public static final String typeOfGiftTabs ="//button[@aria-label='Reset selected interests']";//xpath
 
 
 //    public static final String searchBoxDropDown = "search-category-bg"; //id
