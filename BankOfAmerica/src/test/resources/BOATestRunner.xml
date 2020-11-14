@@ -28,7 +28,9 @@
 <!--&lt;!&ndash;                    <include name="testSearchBoxCheck2"></include>&ndash;&gt;-->
 <!--&lt;!&ndash;                </methods>&ndash;&gt;-->
 <!--&lt;!&ndash;            </class>&ndash;&gt;-->
-<!--&lt;!&ndash;            <class name="testHome.HomePageTest"></class>&ndash;&gt;-->
+
+<!--            <class name="testHome.HomePageTest"></class>-->
+
 
 <!--        </classes>-->
 <!--    </test>-->

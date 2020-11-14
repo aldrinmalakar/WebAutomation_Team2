@@ -149,9 +149,14 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>
-                        <!--                        <suiteXmlFile></suiteXmlFile>-->
-                        <!-- <suiteXmlFile></suiteXmlFile>-->
+                        <suiteXmlFile>target/test-classes/WalmartTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>T-MobileTestRunner</suiteXmlFile>
+                        <suiteXmlFile>StateFarmTestRunner</suiteXmlFile>
+                        <suiteXmlFile>MarriotTestRunner</suiteXmlFile>
+                        <suiteXmlFile>ExpediaTestRunner</suiteXmlFile>
+                        <suiteXmlFile>CNNTestRunner</suiteXmlFile>
+                        <suiteXmlFile>BCBDTestRunner</suiteXmlFile>
+                        <suiteXmlFile>BOATestRunner</suiteXmlFile>
                     </suiteXmlFiles>
 
 
