@@ -128,7 +128,7 @@ public class WebAPI {
     @Parameters({"useCloudEnv", "cloudEnvName", "OS", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("chrome") String browserName,
-                      @Optional("86") String browserVersion, @Optional("https://www.walmart.com/taxexempt/") String url) throws IOException {
+                      @Optional("86") String browserVersion, @Optional("https://www.cnn.com/more") String url) throws IOException {
         // Platform: Local Machine/ cloud machine
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserStack")) {
