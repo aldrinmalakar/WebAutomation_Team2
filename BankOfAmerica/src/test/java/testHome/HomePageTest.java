@@ -200,42 +200,6 @@ public class HomePageTest extends WebAPI {
 
     }
 
-//
-//    @Test( enabled = false)
-//    public String getCurrentUrl(){
-//
-//        String url= driver.getCurrentUrl();
-//        return url;
-//    }
-//    @Test( enabled = false)
-//    public void  afterclear(){
-//        homePage.typeByXpath1("SearchBarElement","giftBox ");
-//    }
-//
-//    @Test( enabled = false)
-//    public void AddtoCartProdct(){
-//        homePage.AddtoCartProdct();
-//    }
-//
-//    @Test( enabled =true)
-//    public void AddtoCartProdct2(){
-//        homePage.AddtoCartProdct2();
-//    }
-//
-//
-//    @Test( enabled = false)
-//    public void validedShampoo() throws InterruptedException {
-//        homePage.validedShampoo() ;
-//    }
-//
-//
-//
-//    @Test( enabled = false)
-//    public void validedHairCare() throws InterruptedException {
-//        homePage.validedHairCare();
-//    }
-//
-//
 
 
 }
