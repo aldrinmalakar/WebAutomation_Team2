@@ -160,5 +160,10 @@ public class GiftFinderTest extends WebAPI {
         giftFinderPage.seeMoreGiftValidation();
     }
 
+    @Test
+    public void testest(){
+
+    }
+
 
 }
