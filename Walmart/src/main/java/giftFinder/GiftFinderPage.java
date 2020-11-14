@@ -2,7 +2,6 @@ package giftFinder;
 
 import com.google.common.collect.ImmutableList;
 import common.WebAPI;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -94,20 +93,26 @@ public class GiftFinderPage extends WebAPI {
     @FindBy(how = How.XPATH, using = hourWareHouse)
     public WebElement hourWareHouseSelect;
 
-    @FindBy(how = How.XPATH, using = barbieCheckBox)
+    @FindBy(how = How.CSS, using = barbieCheckBox)
     public WebElement barbieCheck;
 
-    @FindBy(how = How.XPATH, using = rokuCheckBox)
+    @FindBy(how = How.CSS, using = rokuCheckBox)
     public WebElement rokuCheck;
 
-    @FindBy(how = How.XPATH, using = championCheckBox)
-    public List<WebElement> championCheck;
+    @FindBy(how = How.CSS, using = championCheckBox)
+    public WebElement championCheck;
 
-    @FindBy(how = How.XPATH, using = samsungCheckBox)
+    @FindBy(how = How.CSS, using = samsungCheckBox)
     public WebElement samsungCheck;
 
-    @FindBy(how = How.XPATH, using = appleCheckBox)
+    @FindBy(how = How.CSS, using = appleCheckBox)
     public WebElement appleCheck;
+
+    @FindBy(how = How.CSS, using = seeMoreGiftIdeas)
+    public WebElement seeMoreGiftFinderIdeas;
+
+    @FindBy(how = How.XPATH, using = moreTextExpanded)
+    public WebElement moreTextShows;
 
 
     public void navigateToGiftFinder() {
@@ -128,6 +133,33 @@ public class GiftFinderPage extends WebAPI {
             attempts++;
         }
         Assert.assertEquals(actual, expected, "Failed: Did not navigate to gift finder page");
+    }
+
+    public void selectForHer(){
+        forWho.click();
+        forHer.click();
+    }
+
+    public void forHerSelectValidation(){
+        boolean selectedForHer = forHer.isDisplayed();
+        Assert.assertTrue(selectedForHer, "Failed: For her is no selected and displayed");
+    }
+
+    public void selectAgeBaby(){
+        ageGroupBox.click();
+        forBaby.click();
+    }
+    public void babySelected(){
+        boolean isBabySelected = forBaby.isEnabled();
+    }
+
+    public void priceRangeSelect(){
+        priceRangeBox.click();
+        lessThan25.click();
+    }
+
+    public void priceRangeIs25(){
+        boolean lessThan25Selected = lessThan25.isDisplayed();
     }
 
     public void selectOccasion() throws InterruptedException {
@@ -279,29 +311,30 @@ public class GiftFinderPage extends WebAPI {
     }
 
     public void champion() {
-
+        championCheck.click();
     }
 
     public void validateChampion() {
-
+        boolean championSelected = championCheck.isSelected();
+        Assert.assertTrue(championSelected, "Failed: Champion not selected");
     }
 
     public void samsung() {
-
+        samsungCheck.click();
     }
 
     public void validateSamsung() {
-        boolean barbieSelected = barbieCheck.isSelected();
-        Assert.assertTrue(barbieSelected, "Failed: barbie not selected");
+        boolean samsungSelected = samsungCheck.isSelected();
+        Assert.assertTrue(samsungSelected, "Failed: Samsung not selected");
     }
 
     public void apple() {
-
+        appleCheck.click();
     }
 
     public void validateApple() {
-        boolean barbieSelected = barbieCheck.isSelected();
-        Assert.assertTrue(barbieSelected, "Failed: barbie not selected");
+        boolean appleSelected = appleCheck.isSelected();
+        Assert.assertTrue(appleSelected, "Failed: Apple not selected");
     }
 
 
@@ -311,6 +344,15 @@ public class GiftFinderPage extends WebAPI {
 
     public void typeOfGiftTextList() {
 
+    }
+
+    public void seeMoreGiftTextExpand() {
+        seeMoreGiftFinderIdeas.click();
+    }
+
+    public void seeMoreGiftValidation() {
+        boolean moreTextDisplayed = moreTextShows.isDisplayed();
+        Assert.assertTrue(moreTextDisplayed, "Failed: More text does not display");
     }
 
     public void validateListText() {

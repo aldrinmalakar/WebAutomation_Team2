@@ -52,6 +52,10 @@ public class GiftFinderElements {
     public static final String appleCheckBox= "#Apple-0-brand"; //css
     public static final String barbieCheckBox= "#Barbie-0-brand"; //css
 
+    public static final String seeMoreGiftIdeas= "button[aria-label='See More'] span[class='button-wrapper']"; //css
+    public static final String moreTextExpanded = "//p[contains(text(),\"Whether you're avoiding the holiday rush by buying\")]";// xpath
+
+
 
 
     public static final String hourWareHouse = "//input[@id='24-hour-warehouse-1-retailer']"; //xpath

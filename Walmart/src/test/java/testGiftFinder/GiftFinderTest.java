@@ -19,114 +19,146 @@ public class GiftFinderTest extends WebAPI {
         giftFinderPage.navigateToGiftFinder();
     }
 
-    @Test
+    @Test//1
     public void giftFinderNavigation() {
         giftFinderPage.validateGiftFinderPage();
     }
 
-    @Test
+    @Test//2
+    public void selectForHerTest(){
+        giftFinderPage.selectForHer();
+        giftFinderPage.forHerSelectValidation();
+    }
+
+    @Test//3
+    public void forBabyTest(){
+        giftFinderPage.selectAgeBaby();
+        giftFinderPage.babySelected();
+    }
+
+    @Test//4
+    public void priceRangeTest(){
+        giftFinderPage.priceRangeSelect();
+        giftFinderPage.priceRangeIs25();
+    }
+
+    @Test//5
     public void testBirthdayOccasion() throws InterruptedException {
         giftFinderPage.selectOccasion();
         giftFinderPage.validateSelectOccasion();
     }
 
-    @Test
+    @Test//6
     public void scrollDownTest() {
         giftFinderPage.scrollDown();
         giftFinderPage.validateScrollDown();
     }
 
-    @Test
+    @Test//7
     public void showAllRadioTest() {
         giftFinderPage.showAllRadioSelect();
         giftFinderPage.validateShowAllSelect();
     }
 
-    @Test
+    @Test//8
     public void backToTopButton() {
         giftFinderPage.selectBackToTop();
         giftFinderPage.validateBackToTopButton();
     }
 
-    @Test
+    @Test//9
     public void feedBackActions() {
         giftFinderPage.giveFeedBackStars();
         giftFinderPage.validateFiveStars();
     }
 
-    @Test
+    @Test//10
     public void scrollBrandOption() {
         giftFinderPage.scrollInsideBrand();
         giftFinderPage.validateBrandScrollDown();
     }
 
-    @Test
+    @Test//11
     public void personalizedTabTest() {
         giftFinderPage.personalizeTabClick();
         giftFinderPage.validatePersonalizeSelected();
     }
 
-    @Test
+    @Test//12
     public void expandGiftTest() {
         giftFinderPage.expandGiftingOption();
         giftFinderPage.giftEligibleDisplay();
     }
 
-    @Test
+    @Test//13
     public void filterResetTest() {
         giftFinderPage.filterReset();
         giftFinderPage.validateFilterReset();
     }
 
-    @Test
+    @Test//14
     public void navigate2ndPage() {
         giftFinderPage.navigateToSecondPage();
         giftFinderPage.validateSecondPage();
     }
 
-    @Test
+    @Test//15
     public void logoToHomePageTest() {
         giftFinderPage.logoNavigatesToHome();
         giftFinderPage.validateLogoNavigation();
     }
 
-    @Test
+    @Test//16
     public void wareHouseTest() {
         giftFinderPage.hourWareHouseSelect();
         giftFinderPage.validateHourWareHouse();
     }
 
-    @Test
+    @Test//17
     public void barbieTest() {
-
+        giftFinderPage.barbie();
+        giftFinderPage.validateBarbie();
     }
 
-    @Test
+    @Test//18
     public void rokuTest() {
-
+        giftFinderPage.roku();
+        giftFinderPage.validateRoku();
     }
 
-    @Test
+    @Test//19
     public void samsungTest() {
-
+        giftFinderPage.samsung();
+        giftFinderPage.validateSamsung();
     }
 
-    @Test
+    @Test//20
+    public void championTest() {
+        giftFinderPage.champion();
+        giftFinderPage.validateChampion();
+    }
+
+    @Test//21
     public void appleTest() {
+        giftFinderPage.apple();
+        giftFinderPage.validateApple();
+    }
+
+    @Test//22
+    public void findABrandByTyping() {
 
     }
 
-    @Test
-    public void findABrandByTyping(){
-
-    }
-
-    @Test
-    public void typeOfGiftList(){
+    @Test//23
+    public void typeOfGiftList() {
         giftFinderPage.validateListText();
     }
 
-
+    @Test//24
+    public void seeMoreGiftIdeasText(){
+        giftFinderPage.seeMoreGiftTextExpand();
+        giftFinderPage.seeMoreGiftValidation();
+    }
 
 
 }
