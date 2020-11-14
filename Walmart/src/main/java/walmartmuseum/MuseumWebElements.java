@@ -5,7 +5,8 @@ public class MuseumWebElements {
     // Navigate to Museum
     public static final String navigateToMuseum = "Digital Museum";
     // Validate Navigate to Museum
-    public static final String shoppingPage = "//div[1]/div[1]/nav[1]/ul[1]/li[5]/a[1]";
+    public static final String shoppingPage = "//div[1]/nav[1]/ul[1]/li[5]/a[1]";//body/segmentation-timeout[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[5]/a[1]
+    public static final String Logo = "//img[@id='logo']";
     //click on shop
 //    public static final String validationOfShoppingPage = "//*[@id='post-1769850']/div/h1/span";
 //    //click on shop menu
@@ -19,8 +20,8 @@ public class MuseumWebElements {
 //    //click on sticker decal item
 //
     public static final String smileyProduct = "//h2[contains(text(),'Sticker Decal – Smiley')]";
-    public static final String smileyImage = "uD83D\\uDD0D";
-    public static final String clickONSmileyImage = "//body/div[4]/div[2]/div[2]/div[1]/button[1]";
+    public static final String smileyImage = ".images > a.woocommerce-product-gallery__trigger:nth-child(1)";
+    public static final String closeONSmileyImage = "//body/div[4]/div[2]/div[2]/div[1]/button[1]";
     public static final String SmileyAddToCart = "//button[contains(text(),'Add to cart')]";
     public static final String checkCart = "wpmenucartli";
 
@@ -37,13 +38,14 @@ public class MuseumWebElements {
     public static final String closeMaskImage = "//body/div[4]/div[2]/div[2]/div[1]/button[1]";
 
     //validate secure mask
-    public static final String actualForSecureMask = "//div[contains(text(),'840196902661_quarter')]";
+    public static final String actualForSecureMask = "//h1[contains(text(),'Secure-fit Reusable Face Mask Plaid Pattern')]";
 
     //validateVerifyMasksInCart
     public static final String verifyMasksInCart = "//button[contains(text(),'Add to cart')]";
-    public static final String clickOnCart = "wpmenucartli";
+    public static final String clickOnViewCart = "//a[contains(text(),'View cart')]";
 
-    public static final String removeItem ="//body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/strong[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]";
+    public static final String removeFirstItem ="//body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/strong[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]";
+    public static final String removeSecondItem ="//body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/strong[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]";
     public static final String validateRemoveItems ="//strong[contains(text(),'Your cart is currently empty.')]";
 //    //select schedule with ….empty date
 //    public static final String

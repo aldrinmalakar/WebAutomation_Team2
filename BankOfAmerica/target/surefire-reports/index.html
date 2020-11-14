@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-TestSuit" class="navigator-link">
+              <span class="suite-name border-failed">TestSuit</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-TestSuit" class="navigator-link ">
+                    <span>C:\Users\alaed\IdeaProjects\WebAutomation_Team2\BankOfAmerica\target\test-classes\BOATestRunner.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-TestSuit" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-TestSuit" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-TestSuit" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-TestSuit" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-TestSuit" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-TestSuit" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuit" class="hide-methods failed suite-TestSuit"> (hide)</a> <!-- hide-methods failed suite-TestSuit -->
+                      <a href="#" panel-name="suite-TestSuit" class="show-methods failed suite-TestSuit"> (show)</a> <!-- show-methods failed suite-TestSuit -->
+                    </span>
+                    <div class="method-list-content failed suite-TestSuit">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="openFilterFunctions">openFilterFunctions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuit -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-TestSuit" class="hide-methods passed suite-TestSuit"> (hide)</a> <!-- hide-methods passed suite-TestSuit -->
+                      <a href="#" panel-name="suite-TestSuit" class="show-methods passed suite-TestSuit"> (show)</a> <!-- show-methods passed suite-TestSuit -->
+                    </span>
+                    <div class="method-list-content passed suite-TestSuit">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="BOAHomePage">BOAHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="LocationByFilters">LocationByFilters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="LocationPage">LocationPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="SearchBox">SearchBox</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="checkNearMeButtonMap">checkNearMeButtonMap</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="closeFilterFunctions">closeFilterFunctions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="findLocationByState">findLocationByState</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuit" title="com.BOAtest.BOATest" class="method navigator-link" hash-for-method="validateTheLocationInMap">validateTheLocationInMap</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-TestSuit -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-TestSuit" class="panel TestSuit">
+          <div class="suite-TestSuit-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.BOAtest.BOATest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openFilterFunctions">
+                  </a> <!-- openFilterFunctions -->
+                  <span class="method-name">openFilterFunctions</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;footer_bofa_locations&quot; href=&quot;https://locators.bankofamerica.com/&quot;&gt;...&lt;/a&gt; is not clickable at point (374, 915). Other element would receive the click: &lt;a id=&quot;AMT2HXAC&quot; href=&quot;https://about.bankofamerica.com/promo/assistance/latest-updates-from-bank-of-america-coronavirus/?cm_sp=EBZ-BAC-Announcement-_-BACAnnouncement-_-AMT2HXAC01_Engagement_Banner_CV_Payments_ShowToAll_EB_cvStimulusHlCta&quot; class=&quot;engagement-banner-link&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=86.0.4240.198)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-8DAJPHUM&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 30154016920eb9e5236ca302b5acdc5b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at bankofamerica.BOAHmePage.openFilterFunctions(BOAHmePage.java:74)
+	at com.BOAtest.BOATest.openFilterFunctions(BOATest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuit-class-failed -->
+          <div class="suite-TestSuit-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.BOAtest.BOATest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BOAHomePage">
+                  </a> <!-- BOAHomePage -->
+                  <span class="method-name">BOAHomePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LocationByFilters">
+                  </a> <!-- LocationByFilters -->
+                  <span class="method-name">LocationByFilters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LocationPage">
+                  </a> <!-- LocationPage -->
+                  <span class="method-name">LocationPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SearchBox">
+                  </a> <!-- SearchBox -->
+                  <span class="method-name">SearchBox</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkNearMeButtonMap">
+                  </a> <!-- checkNearMeButtonMap -->
+                  <span class="method-name">checkNearMeButtonMap</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="closeFilterFunctions">
+                  </a> <!-- closeFilterFunctions -->
+                  <span class="method-name">closeFilterFunctions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findLocationByState">
+                  </a> <!-- findLocationByState -->
+                  <span class="method-name">findLocationByState</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateTheLocationInMap">
+                  </a> <!-- validateTheLocationInMap -->
+                  <span class="method-name">validateTheLocationInMap</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuit-class-passed -->
+        </div> <!-- panel TestSuit -->
+        <div panel-name="test-xml-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\alaed\IdeaProjects\WebAutomation_Team2\BankOfAmerica\target\test-classes\BOATestRunner.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;TestSuit&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;os_version&quot; value=&quot;10&quot;/&gt;
+  &lt;parameter name=&quot;browserVersion&quot; value=&quot;86&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;cloudEnvName&quot; value=&quot;browserStack&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://www.bankofamerica.com&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Bank Of America Location Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.BOAtest.BOATest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Bank Of America Location Test --&gt;
+&lt;/suite&gt; &lt;!-- TestSuit --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for TestSuit</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Bank Of America Location Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for TestSuit</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for TestSuit</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_TestSuit');
+function tableData_TestSuit() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(9);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'LocationPage')
+data.setCell(0, 2, 'com.BOAtest.BOATest')
+data.setCell(0, 3, 8359);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'closeFilterFunctions')
+data.setCell(1, 2, 'com.BOAtest.BOATest')
+data.setCell(1, 3, 4589);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'findLocationByState')
+data.setCell(2, 2, 'com.BOAtest.BOATest')
+data.setCell(2, 3, 3533);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'SearchBox')
+data.setCell(3, 2, 'com.BOAtest.BOATest')
+data.setCell(3, 3, 3386);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateTheLocationInMap')
+data.setCell(4, 2, 'com.BOAtest.BOATest')
+data.setCell(4, 3, 3321);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'LocationByFilters')
+data.setCell(5, 2, 'com.BOAtest.BOATest')
+data.setCell(5, 3, 2482);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkNearMeButtonMap')
+data.setCell(6, 2, 'com.BOAtest.BOATest')
+data.setCell(6, 3, 1867);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'openFilterFunctions')
+data.setCell(7, 2, 'com.BOAtest.BOATest')
+data.setCell(7, 3, 1076);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'BOAHomePage')
+data.setCell(8, 2, 'com.BOAtest.BOATest')
+data.setCell(8, 3, 13);
+window.suiteTableData['TestSuit']= { tableData: data, tableDiv: 'times-div-TestSuit'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <div id="times-div-TestSuit">
+              </div> <!-- times-div-TestSuit -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for TestSuit</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-TestSuit" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.BOAtest.BOATest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">extentSetup(org.testng.TestRunner@593a6726)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">163 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.BOAHomePage())</span>
+                <span class="method-start">7228 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">7232 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">BOAHomePage</span>
+                <span class="method-start">7252 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=BOAHomePage status=SUCCESS method=BOATest.BOAHomePage()[pri:0, instance:com.BOAtest...)</span>
+                <span class="method-start">7267 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">8126 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.LocationByFilters() throws java.lang.InterruptedException)</span>
+                <span class="method-start">14576 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">14577 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LocationByFilters</span>
+                <span class="method-start">14578 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=LocationByFilters status=SUCCESS method=BOATest.LocationByFilters()[pri:0, instance...)</span>
+                <span class="method-start">17061 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">18198 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.LocationPage())</span>
+                <span class="method-start">24760 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">24760 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LocationPage</span>
+                <span class="method-start">24761 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=LocationPage status=SUCCESS method=BOATest.LocationPage()[pri:0, instance:com.BOAte...)</span>
+                <span class="method-start">33120 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">33775 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.SearchBox() throws java.lang.InterruptedException)</span>
+                <span class="method-start">40469 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">40470 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SearchBox</span>
+                <span class="method-start">40471 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=SearchBox status=SUCCESS method=BOATest.SearchBox()[pri:0, instance:com.BOAtest.BOA...)</span>
+                <span class="method-start">43857 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">44538 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.checkNearMeButtonMap() throws java.lang.InterruptedException)</span>
+                <span class="method-start">51138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">51139 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkNearMeButtonMap</span>
+                <span class="method-start">51140 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=checkNearMeButtonMap status=SUCCESS method=BOATest.checkNearMeButtonMap()[pri:0, in...)</span>
+                <span class="method-start">53007 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">53629 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.closeFilterFunctions() throws java.lang.InterruptedException)</span>
+                <span class="method-start">60031 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">60031 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">closeFilterFunctions</span>
+                <span class="method-start">60032 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=closeFilterFunctions status=SUCCESS method=BOATest.closeFilterFunctions()[pri:0, in...)</span>
+                <span class="method-start">64621 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">65299 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.findLocationByState() throws java.lang.InterruptedException)</span>
+                <span class="method-start">71828 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">71829 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">findLocationByState</span>
+                <span class="method-start">71831 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=findLocationByState status=SUCCESS method=BOATest.findLocationByState()[pri:0, inst...)</span>
+                <span class="method-start">75364 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">76874 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.openFilterFunctions() throws java.lang.InterruptedException)</span>
+                <span class="method-start">83776 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">83776 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">openFilterFunctions</span>
+                <span class="method-start">83777 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=openFilterFunctions status=FAILURE method=BOATest.openFilterFunctions()[pri:0, inst...)</span>
+                <span class="method-start">84858 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(false, browserStack, windows, 10, chrome, 86, https://www.bankofamerica.com)</span>
+                <span class="method-start">85922 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">startExtent(public void com.BOAtest.BOATest.validateTheLocationInMap() throws java.lang.InterruptedException)</span>
+                <span class="method-start">96329 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">96329 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateTheLocationInMap</span>
+                <span class="method-start">96330 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=validateTheLocationInMap status=SUCCESS method=BOATest.validateTheLocationInMap()[p...)</span>
+                <span class="method-start">99651 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">generateReport</span>
+                <span class="method-start">100313 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

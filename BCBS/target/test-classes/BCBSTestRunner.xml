@@ -21,7 +21,7 @@
 <!--        <parameter name="browserVersion" value="86"/>-->
 
         <classes>
-<!--            <class name="testHome.HomePageTest">-->
+<!--            <class name="HomePageTest">-->
 <!--                <methods>-->
 <!--                    <exclude name="testSearchBoxCheck"></exclude>-->
 <!--                    <exclude name="testSearchBoxCheck1"></exclude>-->
@@ -44,7 +44,7 @@
 <!--            &lt;!&ndash;                    <include name="testSearchBoxCheck2"></include>&ndash;&gt;-->
 <!--            &lt;!&ndash;                </methods>&ndash;&gt;-->
 <!--            &lt;!&ndash;            </class>&ndash;&gt;-->
-<!--            <class name="testHome.HomePageTest"></class>-->
+<!--            <class name="HomePageTest"></class>-->
 
 <!--        </classes>-->
 

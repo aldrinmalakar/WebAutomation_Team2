@@ -26,7 +26,22 @@
         <maven.compiler.target>1.11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <repositories>
 
+<!--        <repository>-->
+<!--            <id>mulesoft-releases</id>-->
+<!--            <name>MuleSoft Repository</name>-->
+<!--            <url>http://repository.mulesoft.org/releases/</url>-->
+<!--            <layout>default</layout>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>mulesoft-snapshots</id>-->
+<!--            <name>MuleSoft Snapshot Repository</name>-->
+<!--            <url>http://repository.mulesoft.org/snapshots/</url>-->
+<!--            <layout>default</layout>-->
+<!--        </repository>-->
+
+    </repositories>
     <dependencyManagement>
         <!-- Browser WebDriver Manager-->
         <dependencies>
@@ -147,9 +162,9 @@
                     </systemPropertyVariables>
                     <!-- Test Fail will be Ignored -->
                     <testFailureIgnore>true</testFailureIgnore>
-                    <!--Test Runner Files-->
+<!--                    Test Runner Files-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/BOATestRunner.xml</suiteXmlFile>
                         <!--                        <suiteXmlFile></suiteXmlFile>-->
                         <!-- <suiteXmlFile></suiteXmlFile>-->
                     </suiteXmlFiles>

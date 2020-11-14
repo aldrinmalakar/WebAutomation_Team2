@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LearnWebAutomationFramework_WeekdaysEvening_Selenium_NY_Summer2020(failed)">
+    <classes>
+      <class name="walmarttesting.MuseumTest">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="setUp"/>
+          <include name="startExtent"/>
+          <include name="generateReport"/>
+          <include name="cleanUp"/>
+          <include name="getInit"/>
+          <include name="generatereport"/>
+          <include name="testSearchBox1"/>
+          <include name="extentSetup"/>
+        </methods>
+      </class> <!-- testhome.HomePageTest -->
+    </classes>
+  </test> <!-- LearnWebAutomationFramework_WeekdaysEvening_Selenium_NY_Summer2020(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

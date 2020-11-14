@@ -7,7 +7,7 @@ import walmartmuseum.MuseumBase;
 
 
 public class MuseumTest extends WebAPI {
-   static MuseumBase museumBase;
+    static MuseumBase museumBase;
 
 
     @BeforeMethod
@@ -15,55 +15,66 @@ public class MuseumTest extends WebAPI {
         museumBase = PageFactory.initElements(driver, MuseumBase.class);
     }
 
-    @Test(enabled = true)
+    @Test(priority = 1)
     public void NavigateToMuseum() throws InterruptedException {
         museumBase.museumNavigation();
+        Thread.sleep(10000);
         museumBase.validateMuseumNavigation();
 
     }
 
-    @Test(enabled = true)
+    @Test(priority = 2)
     public void navigateToShoppingPage() throws InterruptedException {
-        museumBase.museumNavigation();
         museumBase.museumShopping();
         museumBase.validateMuseumShopping();
     }
 
-    @Test(enabled = true)
+    @Test(priority = 3)
     public void NavigateToDeskSupplies() throws InterruptedException {
-        museumBase.museumShopping();
+
         museumBase.desksSupplies();
+        Thread.sleep(10000);
         museumBase.validateDesksSupplies();
     }
 
-    @Test(enabled = false,priority = 4,dependsOnMethods = "NavigateToMuseum")
+    @Test(priority = 4)
     public void verifySmileProduct() throws InterruptedException {
+
         museumBase.smileProduct();
+        Thread.sleep(10000);
         museumBase.validateSmileProduct();
     }
 
-    @Test(enabled = false,priority = 5,dependsOnMethods = "NavigateToMuseum")
+    @Test(priority = 5)
     public void MasksFromAccessory() throws InterruptedException {
+
         museumBase.selectMasksFromAccessory();
+        Thread.sleep(10000);
         museumBase.ValidateSelectMasksFromAccessory();
     }
 
-    @Test(enabled = false,priority = 6,dependsOnMethods = "NavigateToMuseum")
+    @Test(priority = 6)
     public void selectSecureFitMask() throws InterruptedException {
+
         museumBase.selectSecurefitMasks();
+        Thread.sleep(10000);
         museumBase.validateSelectSecurefitMasks();
     }
 
-    @Test(enabled = false,priority = 7,dependsOnMethods = "NavigateToMuseum")
+    //
+    @Test(priority = 7)
     public void VerifyMasksInCart() throws InterruptedException {
+
         museumBase.verifyMasksInCart();
+        Thread.sleep(10000);
         museumBase.validateVerifyMasksInCart();
     }
 
-    @Test(enabled = false,priority = 8,dependsOnMethods = "NavigateToMuseum")
+    @Test(priority = 8)
     public void removeItemsFromCart() throws InterruptedException {
-        museumBase.removeItems();
-        museumBase.validateRemoveItems();
 
+        museumBase.removeItems();
+        Thread.sleep(10000);
+        museumBase.validateRemoveItems();
     }
 }
