@@ -1,9 +1,0 @@
-reporting\ExtentManager.class
-utilities\WriteExcelFile.class
-reporting\ExtentTestManager.class
-utilities\DataReader$1.class
-reporting\ApplicationLog.class
-utilities\ReadExcel.class
-reporting\TestLogger.class
-common\WebAPI.class
-utilities\DataReader.class
