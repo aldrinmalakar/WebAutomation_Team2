@@ -6,19 +6,65 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
+import static backOfAmericaAutoLoan.autoLoanPageElements.*;
+
 public class autoLoanPageTest extends WebAPI {
     AutoLoanPage autoLoanPage;
 
     @BeforeMethod
-    public void getInit(){
-        autoLoanPage = PageFactory.initElements(driver,AutoLoanPage.class);
-        autoLoanPage.navigateToTestPage("https://www.bankofamerica.com/auto-loans/");
+    public void getInit() {
+        autoLoanPage = PageFactory.initElements(driver, AutoLoanPage.class);
+        autoLoanPage.navigateToTestPage(testHomeURL);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        autoLoanPage.selectStateAlert();
     }
 
     @Test
-    public void selectStateTest() {
-        autoLoanPage.selectStateAlert();
+    public void navigateToHomePage() {
+        autoLoanPage.assetHomePage(testHomeURL);
+    }
 
+    @Test
+    public void searchBoxMobileBankingTest() {
+        autoLoanPage.searchMobileBanking();
+        autoLoanPage.assertMobileBankSearch(headerMobileBankingSearch);
+    }
 
+    @Test
+    public void searchBoxScheduleAppointmentTest() {
+        autoLoanPage.searchScheduleAppoint();
+        autoLoanPage.assertScdlAppt(expectedScheduleAppt);
+    }
+
+    @Test
+    public void scheduleAppointmentTest() {
+        autoLoanPage.scheduleAppointment();
+        autoLoanPage.assertAppointmentTabOpened(expectedHeaderScdlAppt);
+    }
+
+    @Test
+    public void menuDropDownTest() {
+        autoLoanPage.openingMenu();
+        autoLoanPage.assertOpeningMenu(expectedDDMenuText);
+    }
+
+    @Test
+    public void contactUsDropDownMenuTest() {
+        autoLoanPage.navigateContactUs();
+        autoLoanPage.assertNavigateContactUs(exptectedContactUs);
+    }
+
+    @Test
+    public void applyNowTest() {
+        autoLoanPage.applyNow();
+        autoLoanPage.assertApplyNow(expectedURLapplyNow, expectedApplyNowText);
+    }
+
+    @Test
+    public void shopForYourCarTest() {
+        autoLoanPage.shopForYourCar("49120");
+        autoLoanPage.AssertShopForYourCar(expectedCarBuyHeader);
     }
 }

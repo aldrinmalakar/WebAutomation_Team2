@@ -36,15 +36,15 @@
             <!--            <class name="testHome.HomePageTest"></class>-->
             <class name="testAutoLoan.autoLoanPageTest">
                 <methods>
-                    <!--                    <exclude name="selectStateTest"/>-->
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
+                    <exclude name="navigateToHomePage"/>
+                    <exclude name="searchBoxTest"/>
+                    <exclude name="searchBoxMobileBankingTest"/>
+                    <exclude name="searchBoxScheduleAppointmentTest"/>
+                    <exclude name="scheduleAppointmentTest"/>
+                    <exclude name="menuDropDownTest"/>
+                    <exclude name="contactUsDropDownMenuTest"/>
+                    <exclude name="applyNowTest"/>
+                    <exclude name="shopForYourCarTest"/>
                     <exclude name=""/>
 
                     <exclude name=""/>
