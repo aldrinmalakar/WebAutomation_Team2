@@ -15,17 +15,17 @@
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="86"/>
     <parameter name="url" value="https://www.walmart.com/"/>
+  
 
-    <test name="Walmart automation">
+  <test name="Walmart automation">
 <!--        <parameter name="browserName" value="chrome"/>-->
 <!--        <parameter name="browserVersion" value="86"/>-->
 
+    <test name="Walmart">
         <classes>
-            <class name="testHome.HomePageTest">
+           <class name="testHome.HomePageTest">
 
                 <methods>
-
-
                     <include name="testCreateAccount"></include>
 <!--                    <include name="testSearchXobConsoles"></include>-->
 <!--                    <include name="testPrintPhoto"></include>-->
@@ -39,8 +39,19 @@
                 </methods>
             </class>
 <!--            <class name="testHome.HomePageTest"></class>-->
-
+     
+           
+            <class name="testGiftFinder.GiftFinderTest">
+                <methods>
+                    <exclude name="showAllRadioTest"></exclude>
+                    <exclude name="scrollDownTest"></exclude>
+                    <exclude name="testBirthdayOccasion"></exclude>
+                    <exclude name="navigatetestGiftPageNavigation"></exclude>
+                    <include name="backToTopButton"></include>
+                </methods>
+            </class>
         </classes>
+      
     </test>
 
 <!--    <test name="#########">-->

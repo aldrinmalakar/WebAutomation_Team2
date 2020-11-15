@@ -4,7 +4,7 @@
 *.idea
 *.iml
 *.class
-
+*.secret.properties
 # Log file
 *.log
 
