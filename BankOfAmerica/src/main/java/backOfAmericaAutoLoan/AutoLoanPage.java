@@ -78,6 +78,12 @@ public class AutoLoanPage extends WebAPI {
     public WebElement getShopNowButton;
     @FindBy (how = How.CLASS_NAME, using = actualCarBuyHeader)
     public WebElement getActualCarBuyHeader;
+    @FindBy(how = How.XPATH,using = actualNewCarRate)
+    public WebElement newCarRate;
+    @FindBy(how = How.XPATH,using = actualUsedCarRate)
+    public WebElement usedCarRate;
+    @FindBy(how = How.XPATH,using = actualRefinancedCarRate)
+    public WebElement refinancedCarRate;
 
 
     public void navigateToTestPage(String URL) {
@@ -183,11 +189,17 @@ public class AutoLoanPage extends WebAPI {
     }
 
     public void assertNewCarRate(String expected) {
+        String actual = newCarRate.getText();
+        assertFailed(actual,expected);
     }
 
     public void assertUsedCarRate(String expected) {
+        String actual = usedCarRate.getText();
+        assertFailed(actual,expected);
     }
 
     public void assertRefinancedCarRate(String expected) {
+        String actual = refinancedCarRate.getText();
+        assertFailed(actual,expected);
     }
 }

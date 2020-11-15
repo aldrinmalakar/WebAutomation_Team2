@@ -50,8 +50,11 @@ public class autoLoanPageElements {
     public static final String actualCarBuyHeader = "h3[class='display-3 m-0 widget-heading']";
 
     public static final String expectedNewCarRate = "2.59";
+    public static final String actualNewCarRate = "//div[@class='inner-content']//span[@class='rate-txt'][.='2.59']";
     public static final String expectedUsedCarRate = "2.89";
+    public static final String actualUsedCarRate = "//div[@class='inner-content']//span[@class='rate-txt'][.='2.89']";
     public static final String expectedRefinancedCarRate = "3.49";
+    public static final String actualRefinancedCarRate = "//div[@class='inner-content']//span[@class='rate-txt'][.='3.49']";
 
 }
 
