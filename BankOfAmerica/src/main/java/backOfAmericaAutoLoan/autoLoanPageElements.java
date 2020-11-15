@@ -49,5 +49,9 @@ public class autoLoanPageElements {
     public static final String expectedCarBuyHeader = "Your car buying journey starts here ";
     public static final String actualCarBuyHeader = "h3[class='display-3 m-0 widget-heading']";
 
+    public static final String expectedNewCarRate = "2.59";
+    public static final String expectedUsedCarRate = "2.89";
+    public static final String expectedRefinancedCarRate = "3.49";
 
 }
+

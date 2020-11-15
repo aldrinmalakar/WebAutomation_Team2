@@ -67,4 +67,11 @@ public class autoLoanPageTest extends WebAPI {
         autoLoanPage.shopForYourCar("49120");
         autoLoanPage.AssertShopForYourCar(expectedCarBuyHeader);
     }
+
+    @Test
+    public void assertRatesTest() {
+        autoLoanPage.assertNewCarRate(expectedNewCarRate);
+        autoLoanPage.assertUsedCarRate(expectedUsedCarRate);
+        autoLoanPage.assertRefinancedCarRate(expectedRefinancedCarRate);
+    }
 }

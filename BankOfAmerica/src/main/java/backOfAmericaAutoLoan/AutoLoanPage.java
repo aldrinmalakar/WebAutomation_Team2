@@ -181,4 +181,13 @@ public class AutoLoanPage extends WebAPI {
         String actual = getActualCarBuyHeader.getText();
         assertFailed(actual,expected);
     }
+
+    public void assertNewCarRate(String expected) {
+    }
+
+    public void assertUsedCarRate(String expected) {
+    }
+
+    public void assertRefinancedCarRate(String expected) {
+    }
 }
