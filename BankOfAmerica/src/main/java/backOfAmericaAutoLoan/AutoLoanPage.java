@@ -3,13 +3,15 @@ package backOfAmericaAutoLoan;
 import common.WebAPI;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import javax.servlet.annotation.WebListener;
 
 import static backOfAmericaAutoLoan.autoLoanPageElements.*;
 
@@ -27,8 +29,9 @@ public class AutoLoanPage extends WebAPI {
             e.printStackTrace();
         }
     }
-    public void assertFailed(String actual, String expected){
-        Assert.assertEquals(actual, expected,"Test Failed");
+
+    public void assertFailed(String actual, String expected) {
+        Assert.assertEquals(actual, expected, "Test Failed");
     }
 
     //Selecting the state: DC
@@ -54,9 +57,9 @@ public class AutoLoanPage extends WebAPI {
     public WebElement actualMenuDDText;
     @FindBy(how = How.ID, using = headerContactUs)
     public WebElement clkContactUs;
-    @FindBy (how = How.ID, using = contactUsSearch)
+    @FindBy(how = How.ID, using = contactUsSearch)
     public WebElement selectContactUs;
-    @FindBy (how = How.ID, using = searchGoButton)
+    @FindBy(how = How.ID, using = searchGoButton)
     public WebElement clickSearchGo;
     @FindBy(how = How.XPATH, using = actualContactUs)
     public WebElement getContactUs;
@@ -68,27 +71,44 @@ public class AutoLoanPage extends WebAPI {
     public WebElement getNoCarInfo;
     @FindBy(how = How.ID, using = actualApplyNowText)
     public WebElement applyNowActual;
-    @FindBy (how = How.ID, using = carShopButton)
+    @FindBy(how = How.ID, using = carShopButton)
     public WebElement buttonCarShop;
-    @FindBy (how = How.ID, using = zipCodeBox)
+    @FindBy(how = How.ID, using = zipCodeBox)
     public WebElement boxZipCode;
-    @FindBy (how = How.ID, using = shopCarbutton)
+    @FindBy(how = How.ID, using = shopCarbutton)
     public WebElement buttonShopCar;
-    @FindBy (how = How.ID, using = shopNowButton)
+    @FindBy(how = How.ID, using = shopNowButton)
     public WebElement getShopNowButton;
-    @FindBy (how = How.CLASS_NAME, using = actualCarBuyHeader)
+    @FindBy(how = How.CLASS_NAME, using = actualCarBuyHeader)
     public WebElement getActualCarBuyHeader;
-    @FindBy(how = How.XPATH,using = actualNewCarRate)
+    @FindBy(how = How.XPATH, using = actualNewCarRate)
     public WebElement newCarRate;
-    @FindBy(how = How.XPATH,using = actualUsedCarRate)
+    @FindBy(how = How.XPATH, using = actualUsedCarRate)
     public WebElement usedCarRate;
-    @FindBy(how = How.XPATH,using = actualRefinancedCarRate)
+    @FindBy(how = How.XPATH, using = actualRefinancedCarRate)
     public WebElement refinancedCarRate;
-
+    @FindBy(how = How.ID, using = actualSelectYourState)
+    public WebElement stateElement;
+    @FindBy(how = How.ID, using = clickSignIn)
+    public WebElement signInElement;
+    @FindBy(how = How.ID, using = enterOnlineID)
+    public WebElement elementOnlineIDBox;
+    @FindBy(how = How.ID, using = enterPassword)
+    public WebElement elementPasswordBox;
+    @FindBy(how = How.ID, using = buttonSignIn)
+    public WebElement elementSignInButton;
+    @FindBy(how = How.CSS, using = transferMoney)
+    public WebElement elementTransferMoney;
+    @FindBy(how = How.ID, using = stickyGetAppButton) public WebElement elementGetApp;
+    @FindBy(how = How.ID, using = selectAppDevice) public WebElement elementAppDevice;
+    @FindBy(how = How.ID, using = stickyGoButton) public WebElement elementStickyGoButton;
+    @FindBy(how = How.ID, using = stickyPhoneInput) public WebElement elementStickyPhoneInput;
+    @FindBy(how = How.ID, using = stickySendToDevice) public WebElement elementStickySendToDevice;
 
     public void navigateToTestPage(String URL) {
         driver.get(URL);
     }
+
     //Has a Select Method
     public void selectStateAlert() {
         Select select = new Select(selectStateDD);
@@ -133,7 +153,7 @@ public class AutoLoanPage extends WebAPI {
     public void assertAppointmentTabOpened(String expected) {
 
         String actual = actualHeaderScheduleAppt.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
 
     }
 
@@ -143,7 +163,7 @@ public class AutoLoanPage extends WebAPI {
 
     public void assertOpeningMenu(String expected) {
         String actual = actualMenuDDText.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
     }
 
     public void navigateContactUs() {
@@ -156,7 +176,7 @@ public class AutoLoanPage extends WebAPI {
 
     public void assertNavigateContactUs(String expected) {
         String actual = getContactUs.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
     }
 
     public void applyNow() {
@@ -171,8 +191,8 @@ public class AutoLoanPage extends WebAPI {
     public void assertApplyNow(String expectedURL, String expectedText) {
         String actualURL = driver.getCurrentUrl();
         String actualText = applyNowActual.getText();
-        Assert.assertEquals(actualURL,expectedURL,"Test Failed");
-        Assert.assertEquals(actualText,expectedText,"Test Failed.");
+        Assert.assertEquals(actualURL, expectedURL, "Test Failed");
+        Assert.assertEquals(actualText, expectedText, "Test Failed.");
     }
 
     public void shopForYourCar(String zipCode) {
@@ -185,21 +205,87 @@ public class AutoLoanPage extends WebAPI {
 
     public void AssertShopForYourCar(String expected) {
         String actual = getActualCarBuyHeader.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
     }
 
     public void assertNewCarRate(String expected) {
         String actual = newCarRate.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
     }
 
     public void assertUsedCarRate(String expected) {
         String actual = usedCarRate.getText();
-        assertFailed(actual,expected);
+        assertFailed(actual, expected);
     }
 
     public void assertRefinancedCarRate(String expected) {
         String actual = refinancedCarRate.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void assertSelectYourPage(String expected) {
+        String actual = stateElement.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void gotoSignIn() {
+        signInElement.click();
+    }
+
+    public void assertGotoSignIn(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual, expected);
+    }
+
+    public void invalidSignInTest(String onlineID, String password) {
+        gotoSignIn();
+        elementOnlineIDBox.sendKeys(invalidOnlineID);
+        elementPasswordBox.sendKeys(invalidPassword, Keys.ENTER);
+        threadSleep(1000);
+        //elementSignInButton.click();
+
+    }
+
+    public void assertInvalidSignInTest() {
+        if (invalidOnlineID.isEmpty()) {
+            if (invalidPassword.isEmpty()) {
+
+            }
+        } else {
+            Assert.fail("Test Failed");
+        }
+
+    }
+
+    public void gotoTransfersMoneyPage() {
+        gotoSignIn();
+        elementTransferMoney.click();
+        threadSleep(2500);
+        switchTab();
+    }
+
+    public void assertGotoTransfersMoneyPage(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual, expected);
+    }
+
+    public void getAppSticky() {
+        gotoSignIn();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("javascript:window.scrollBy(750,750)");
+       threadSleep(500);
+       elementGetApp.click();
+       Select select = new Select(elementAppDevice);
+       select.selectByIndex(2);
+        elementStickyGoButton.click();
+        threadSleep(1500);
+        elementStickyPhoneInput.sendKeys(stickyPhoneNumber);
+        elementStickySendToDevice.click();
+        threadSleep(2500);
+    }
+    @FindBy(how = How.XPATH, using = actualStickyDestinationPhone ) public WebElement getMobileActual;
+    public void assertGetAppSticky(String expected) {
+        String actual = getMobileActual.getText();
         assertFailed(actual,expected);
     }
 }

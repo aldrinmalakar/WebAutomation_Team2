@@ -2,6 +2,7 @@ package testAutoLoan;
 
 import common.WebAPI;
 import backOfAmericaAutoLoan.AutoLoanPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -73,5 +74,40 @@ public class autoLoanPageTest extends WebAPI {
         autoLoanPage.assertNewCarRate(expectedNewCarRate);
         autoLoanPage.assertUsedCarRate(expectedUsedCarRate);
         autoLoanPage.assertRefinancedCarRate(expectedRefinancedCarRate);
+    }
+
+    @Test
+    public void assertSelectYourPageTest() {
+        autoLoanPage.assertSelectYourPage(expectedSelectYourState);
+    }
+
+    @Test
+    public void gotoSignInTest() {
+        autoLoanPage.gotoSignIn();
+        autoLoanPage.assertGotoSignIn(expectedURLSignIn);
+    }
+
+    @Test
+    public void invalidSignInTest() {
+        autoLoanPage.invalidSignInTest(invalidOnlineID,invalidPassword);
+        autoLoanPage.assertInvalidSignInTest();
+    }
+
+    @Test
+    public void gotoTransferMoneyPageTest() {
+        autoLoanPage.gotoTransfersMoneyPage();
+        autoLoanPage.assertGotoTransfersMoneyPage(expectedTransferMoneyURL);
+    }
+
+    @Test
+    public void getAppStickyTest() {
+        autoLoanPage.getAppSticky();
+        autoLoanPage.assertGetAppSticky(expectedDestinationPhone);
+    }
+
+    @Test
+    public void testName() {
+       String x = driver.findElement(By.xpath("//input[@id='currencyInputField']")).;
+        System.out.println(x);
     }
 }

@@ -1,4 +1,5 @@
 package backOfAmericaAutoLoan;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,9 +19,9 @@ public class autoLoanPageElements {
     public static final String searchAnswerMobileBanking = "h3[class='answer-heading'] span[class='query']";
 
     //Search for Schedule an appointment
-    public static final String clickScheduleAppt ="a[name='Search Module - Suggestion - schedule an appointment']";
+    public static final String clickScheduleAppt = "a[name='Search Module - Suggestion - schedule an appointment']";
     public static final String expectedScheduleAppt = "Schedule appointment";
-    public static final String scheduleApptButton ="Schedule_appointment";
+    public static final String scheduleApptButton = "Schedule_appointment";
     public static final String expectedHeaderScdlAppt = "Schedule An Appointment";
     public static final String actualHeaderScdlAppt = "skip-to-h1";
 
@@ -31,7 +32,7 @@ public class autoLoanPageElements {
     public static final String headerContactUs = "header-contact-us";
     public static final String contactUsSearch = "contactUsSelector";
     public static final String contactUsSearchText = "Auto loans";
-    public static final String searchGoButton ="selectGoButton";
+    public static final String searchGoButton = "selectGoButton";
     public static final String exptectedContactUs = "Auto loans";
     public static final String actualContactUs = "//option[@value='customer-service/contact-us/auto-loans']";
 
@@ -55,6 +56,32 @@ public class autoLoanPageElements {
     public static final String actualUsedCarRate = "//div[@class='inner-content']//span[@class='rate-txt'][.='2.89']";
     public static final String expectedRefinancedCarRate = "3.49";
     public static final String actualRefinancedCarRate = "//div[@class='inner-content']//span[@class='rate-txt'][.='3.49']";
+
+    public static final String expectedSelectYourState = "stateSelectModal";
+    public static final String actualSelectYourState = "stateSelectModal";
+
+    public static final String clickSignIn = "header-signin";
+    public static final String expectedURLSignIn = "https://www.bankofamerica.com/online-banking/sign-in/";
+
+    public static final String enterOnlineID = "oid";
+    public static final String enterPassword = "pass";
+    public static final String invalidOnlineID = "crazyCuckoo";
+    public static final String invalidPassword = "SorryNoLuckThisTime2020";
+    public static final String buttonSignIn = "secure-signin-submit";
+
+    public static final String transferMoney = "a[id='signInTransferMoney'] div[class='headline']";
+    public static final String expectedTransferMoneyURL = "https://secure.bankofamerica.com/login/sign-in/signOnV2Screen.go?reason=TransferFunds";
+
+    public static final String stickyGetAppButton = "getTheAppSticky";
+    public static final String selectAppDevice = "getAppDeviceSelect";
+    public static final String stickyGoButton = "appChoiceSubmit";
+    public static final String stickyPhoneInput = "phoneNumberFieldAndroid";
+    public static final String stickyPhoneNumber = "574-698-5598";
+    public static final String stickySendToDevice = "sendToDeviceBtnAndroid";
+    public static final String expectedDestinationPhone = stickyPhoneNumber;
+    public static final String actualStickyDestinationPhone = "//*[@id='sendToDeviceSuccess']/div[1]/p[2]/span";
+
+
 
 }
 

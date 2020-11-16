@@ -47,11 +47,11 @@
                     <exclude name="shopForYourCarTest"/>
                     <exclude name="assertRatesTest"/>
 
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
+                    <exclude name="assertSelectYourPageTest"/>
+                    <exclude name="gotoSignInTest"/>
+                    <exclude name="invalidSignInTest"/>
+                    <exclude name="gotoTransferMoneyPageTest"/>
+                    <exclude name="getAppStickyTest"/>
                     <exclude name=""/>
                     <exclude name=""/>
                     <exclude name=""/>
