@@ -105,9 +105,5 @@ public class autoLoanPageTest extends WebAPI {
         autoLoanPage.assertGetAppSticky(expectedDestinationPhone);
     }
 
-    @Test
-    public void testName() {
-       String x = driver.findElement(By.xpath("//input[@id='currencyInputField']")).;
-        System.out.println(x);
-    }
+
 }
