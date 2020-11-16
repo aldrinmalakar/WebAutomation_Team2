@@ -13,11 +13,5 @@
         <module name="Generic" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="BCBS" target="1.8" />
-      <module name="Expedia" target="1.8" />
-      <module name="Marriot" target="1.8" />
-      <module name="T-Mobile" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
