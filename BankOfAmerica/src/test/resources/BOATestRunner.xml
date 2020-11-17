@@ -52,18 +52,18 @@
                     <exclude name="invalidSignInTest"/>
                     <exclude name="gotoTransferMoneyPageTest"/>
                     <exclude name="getAppStickyTest"/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
+                    <exclude name="scrollDownApplyNowTest"/>
+                    <exclude name="scrollDownContactUsTest"/>
+                    <exclude name="findNearByDealersTest"/>
+                    <exclude name="refineDealerTest"/>
+                    <exclude name="accessibleVehicleLoanLinkTest"/>
 
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                    <exclude name=""/>
-                </methods>
+                    <exclude name="footerLinkCarBuyingTipsTest"/>
+                    <exclude name="footerLinkCheckApplicationStatusTest"/>
+                    <exclude name="checkStatusTest"/>
+                    <exclude name="footerYouTubeChannelTest"/>
+                    <exclude name="applyOnlineTest"/>
+                    </methods>
             </class>
 
         </classes>

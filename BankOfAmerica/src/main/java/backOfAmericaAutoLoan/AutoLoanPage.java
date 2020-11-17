@@ -13,10 +13,12 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+
 import static backOfAmericaAutoLoan.autoLoanPageElements.*;
 
 public class AutoLoanPage extends WebAPI {
     public void switchTab() {
+        threadSleep(2000);
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
@@ -99,11 +101,56 @@ public class AutoLoanPage extends WebAPI {
     public WebElement elementSignInButton;
     @FindBy(how = How.CSS, using = transferMoney)
     public WebElement elementTransferMoney;
-    @FindBy(how = How.ID, using = stickyGetAppButton) public WebElement elementGetApp;
-    @FindBy(how = How.ID, using = selectAppDevice) public WebElement elementAppDevice;
-    @FindBy(how = How.ID, using = stickyGoButton) public WebElement elementStickyGoButton;
-    @FindBy(how = How.ID, using = stickyPhoneInput) public WebElement elementStickyPhoneInput;
-    @FindBy(how = How.ID, using = stickySendToDevice) public WebElement elementStickySendToDevice;
+    @FindBy(how = How.ID, using = stickyGetAppButton)
+    public WebElement elementGetApp;
+    @FindBy(how = How.ID, using = selectAppDevice)
+    public WebElement elementAppDevice;
+    @FindBy(how = How.ID, using = stickyGoButton)
+    public WebElement elementStickyGoButton;
+    @FindBy(how = How.ID, using = stickyPhoneInput)
+    public WebElement elementStickyPhoneInput;
+    @FindBy(how = How.ID, using = stickySendToDevice)
+    public WebElement elementStickySendToDevice;
+    @FindBy(how = How.XPATH, using = actualStickyDestinationPhone)
+    public WebElement getMobileActual;
+    @FindBy(how = How.ID, using = scrollDownApply)
+    public WebElement getScrollApplyNow;
+    @FindBy(how = How.XPATH, using = actualLoanApplication)
+    public WebElement getActualLoanApplication;
+    @FindBy(how = How.XPATH, using = scrollDownContactUs)
+    public WebElement ContactUs;
+    @FindBy(how = How.XPATH, using = scrollDownScheduleAnAppt)
+    public WebElement scrollSchedule;
+    @FindBy(how = How.XPATH, using = zipcodeInput)
+    public WebElement getZipcodeInput;
+    @FindBy(how = How.ID, using = filterInput)
+    public WebElement getFilterInput;
+    @FindBy(how = How.ID, using = actualHeaderDealer)
+    public WebElement getActualHeaderDealer;
+    @FindBy(how = How.CSS, using = actualDealerHeader)
+    public WebElement getDealerHeader;
+    @FindBy(how = How.CSS, using = linkToAccessible)
+    public WebElement getLinkToAccessible;
+    @FindBy(how = How.CLASS_NAME, using = actualFooterText)
+    public WebElement getFooterText;
+    @FindBy(how = How.ID, using = carBuyingTips)
+    public WebElement getCarBuyingTips;
+    @FindBy(how = How.ID, using = checkStatus)
+    public WebElement getCheckStatus;
+    @FindBy(how = How.ID, using = checkStatusDOBEntry)
+    public WebElement getcheckStatusDOBEntry;
+    @FindBy(how = How.ID, using = checkStatusMothersMaidenName)
+    public WebElement getcheckStatusMothersMaidenName;
+    @FindBy(how = How.ID, using = checkSSNEntry)
+    public WebElement getcheckSSNEntry;
+    @FindBy(how = How.CSS, using = continueButtonStatus)
+    public WebElement getcontinueButtonStatus;
+    @FindBy(how = How.XPATH, using = actualCheckStatusText)
+    public WebElement getactualCheckStatusText;
+    @FindBy(how = How.ID, using = youtubeFollow)
+    public WebElement getYoutubefollow;
+    @FindBy(how = How.CSS, using = popupYoutubeFollow)
+    public WebElement getpopupYoutubeFollow;
 
     public void navigateToTestPage(String URL) {
         driver.get(URL);
@@ -273,19 +320,144 @@ public class AutoLoanPage extends WebAPI {
         gotoSignIn();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollBy(750,750)");
-       threadSleep(500);
-       elementGetApp.click();
-       Select select = new Select(elementAppDevice);
-       select.selectByIndex(2);
+        threadSleep(1500);
+        elementGetApp.click();
+        Select select = new Select(elementAppDevice);
+        select.selectByIndex(2);
         elementStickyGoButton.click();
         threadSleep(1500);
         elementStickyPhoneInput.sendKeys(stickyPhoneNumber);
         elementStickySendToDevice.click();
         threadSleep(2500);
     }
-    @FindBy(how = How.XPATH, using = actualStickyDestinationPhone ) public WebElement getMobileActual;
+
     public void assertGetAppSticky(String expected) {
         String actual = getMobileActual.getText();
+        assertFailed(actual, expected);
+    }
+
+
+    public void scrollDownApplyNow() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("javascript:window.scrollBy(950,750)");
+        threadSleep(1500);
+        getScrollApplyNow.click();
+        threadSleep(3000);
+    }
+
+    public void assertScrollDownApplyNow(String expected) {
+        String actual = getActualLoanApplication.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void scrollDownContactUs() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("javascript:window.scrollBy(950,750)");
+        threadSleep(1500);
+        ContactUs.click();
+        threadSleep(500);
+        scrollSchedule.click();
+        switchTab();
+    }
+
+
+    public void assertScrollDownContactUs(String expected) {
+        String actual = driver.getTitle();
+        assertFailed(actual, expected);
+    }
+
+
+    public void findNearByDealers(String zipcode) {
+        getZipcodeInput.sendKeys(zipcode, Keys.ENTER);
+        switchTab();
+    }
+
+    public void assertFindNearByDealers(String expected) {
+        String actual = getDealerHeader.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void refineDealer() {
+        findNearByDealers("49120");
+        getFilterInput.sendKeys(filterInputKeyword, Keys.ENTER);
+    }
+
+    public void assertRefineDealer(String expected) {
+        String actual = getActualHeaderDealer.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void accessibleVehicleLoanLink() {
+        getLinkToAccessible.click();
+    }
+
+    public void assertAccessibleVehicleLoanLink(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual, expected);
+    }
+
+    public void assertFooterText(String expected) {
+        String actual = getFooterText.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void footLinkCarBuyingTips() {
+        getCarBuyingTips.click();
+    }
+
+    public void assertFootLinkCarBuyingTips(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual, expected);
+    }
+
+    public void checkApplicationStatus() {
+        getCheckStatus.click();
+    }
+
+    public void assertCheckApplicationStatus(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual, expected);
+    }
+
+    public void checkStatusEntry() {
+        checkApplicationStatus();
+        threadSleep(2500);
+        getcheckStatusDOBEntry.sendKeys(dobEntry);
+        threadSleep(500);
+        getcheckStatusMothersMaidenName.sendKeys(maidenNameEntry);
+        threadSleep(500);
+        getcheckSSNEntry.sendKeys(ssnEntry);
+        threadSleep(500);
+        getcontinueButtonStatus.click();
+
+    }
+
+    public void assertCheckStatusEntry(String expected) {
+        String actual = getactualCheckStatusText.getText();
+        assertFailed(actual, expected);
+    }
+
+    public void footerYouTubeChannel() {
+        getYoutubefollow.click();
+        threadSleep(1000);
+        getpopupYoutubeFollow.click();
+        threadSleep(1500);
+        switchTab();
+    }
+
+    public void assertFooterYouTubeChannel(String expected) {
+        String actual = driver.getCurrentUrl();
         assertFailed(actual,expected);
     }
+    @FindBy(how = How.ID,using = applyOnlineHP) public WebElement getApplyOnlineHP;
+    public void applyOnline() {
+        getApplyOnlineHP.click();
+    }
+
+    public void assertApplyOnline(String expected) {
+        String actual = driver.getCurrentUrl();
+        assertFailed(actual,expected);
+    }
+
+
 }

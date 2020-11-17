@@ -89,7 +89,7 @@ public class autoLoanPageTest extends WebAPI {
 
     @Test
     public void invalidSignInTest() {
-        autoLoanPage.invalidSignInTest(invalidOnlineID,invalidPassword);
+        autoLoanPage.invalidSignInTest(invalidOnlineID, invalidPassword);
         autoLoanPage.assertInvalidSignInTest();
     }
 
@@ -105,5 +105,69 @@ public class autoLoanPageTest extends WebAPI {
         autoLoanPage.assertGetAppSticky(expectedDestinationPhone);
     }
 
+    @Test
+    public void scrollDownApplyNowTest() {
+        autoLoanPage.scrollDownApplyNow();
+        autoLoanPage.assertScrollDownApplyNow(expectedLoanApplication);
+    }
+
+    @Test
+    public void scrollDownContactUsTest() {
+        autoLoanPage.scrollDownContactUs();
+        autoLoanPage.assertScrollDownContactUs(expectedScrollScheduleTitle);
+    }
+
+    @Test
+    public void findNearByDealersTest() {
+        autoLoanPage.findNearByDealers("49120");
+        autoLoanPage.assertFindNearByDealers(expectedDealerHeader);
+    }
+
+    @Test
+    public void refineDealerTest() {
+        autoLoanPage.refineDealer();
+        autoLoanPage.assertRefineDealer(expectedHeader);
+    }
+
+    @Test
+    public void accessibleVehicleLoanLinkTest() {
+        autoLoanPage.accessibleVehicleLoanLink();
+        autoLoanPage.assertAccessibleVehicleLoanLink(expectedAccessibleLink);
+    }
+
+    @Test
+    public void assertFooterTextTest() {
+        autoLoanPage.assertFooterText(expectedFooterText);
+    }
+
+    @Test
+    public void footerLinkCarBuyingTipsTest() {
+        autoLoanPage.footLinkCarBuyingTips();
+        autoLoanPage.assertFootLinkCarBuyingTips(expectedCarBuyingURL);
+    }
+
+    @Test
+    public void footerLinkCheckApplicationStatusTest() {
+        autoLoanPage.checkApplicationStatus();
+        autoLoanPage.assertCheckApplicationStatus(expectedCheckStatus);
+    }
+
+    @Test
+    public void checkStatusTest() {
+        autoLoanPage.checkStatusEntry();
+        autoLoanPage.assertCheckStatusEntry(expectedCheckStatusText);
+    }
+
+    @Test
+    public void footerYouTubeChannelTest() {
+        autoLoanPage.footerYouTubeChannel();
+        autoLoanPage.assertFooterYouTubeChannel(expectedYTLink);
+    }
+
+    @Test
+    public void applyOnlineTest() {
+        autoLoanPage.applyOnline();
+        autoLoanPage.assertApplyOnline(getExpectedURLapplyNow);
+    }
 
 }
