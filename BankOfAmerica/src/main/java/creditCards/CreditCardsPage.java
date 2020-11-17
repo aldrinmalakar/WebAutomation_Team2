@@ -1,14 +1,20 @@
 package creditCards;
 
 import common.WebAPI;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import static creditCards.CreditCardsPageElements.*;
@@ -62,23 +68,41 @@ public class CreditCardsPage extends WebAPI {
     @FindBy(how = How.XPATH, using = checkNoAnnualText)
     public WebElement checkNoAnnualTextOnPage;
 
+    @FindBy(how = How.XPATH, using = glassSliderForPrice)
+    public WebElement glassSlider;
+
+    @FindBy(how = How.CSS, using = calculateRewardsInBlue)
+    public WebElement calculateRewards;
+
+    @FindBy(how = How.CSS, using = sliderNumberNineHundredAmount)
+    public WebElement sliderNumber;
+
+    @FindBy(how = How.CSS, using = footerElementDisplay)
+    public WebElement footerElement;
+
+    @FindBy(how = How.CSS, using = twitterFooterElement)
+    public WebElement twitterFooter;
+
+    @FindBy(how = How.XPATH, using = faceBookFooterElement)
+    public WebElement faceBookFooter;
+
+    @FindBy(how = How.CSS, using = connectToTwitterButton)
+    public WebElement connectToTwitter;
+
+    @FindBy(how = How.CSS, using = connectToFacebookButton)
+    public WebElement connectToFacebook;
+
+    @FindBy(how = How.CSS, using = airlinesFooterCard)
+    public WebElement airlinesFooter;
 
 
-
-//    @FindBy(how = How.CSS, using = thirdContainerCardPresent)
-//    public WebElement thirdContainerCard;
-
-    public void searchFilters(){
-        noAnnualFeeSelected();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        searchCardsAfterFilter.click();
+    public void calculateRewards() {
+        calculateRewards.click();
     }
-    public void noAnnualFeeOnPageFound(){
-        String actual= checkNoAnnualTextOnPage.getText();
-        String expected = noAnnualExpected;
-        Assert.assertEquals(actual,expected,"Failed: Text does not say no annual fee");
-    }
 
+    public void calculatePageOpens() {
+
+    }
 
 
     public void navigateToCreditCards() {
@@ -130,29 +154,168 @@ public class CreditCardsPage extends WebAPI {
         return element.getAttribute("class").contains(full);
     }
 
-    public void selectVisaRadioButton(){
+    public void selectVisaRadioButton() {
         viewAllCards.click();
         filterCards.click();
         Actions act = new Actions(driver);
         act.moveToElement(visaRadio).click().build().perform();
     }
-    public void visaRadioButtonSelected(){
+
+    public void visaRadioButtonSelected() {
         boolean visaIsSelected = visaRadio.isSelected();
-        Assert.assertTrue(visaIsSelected,"Failed: Visa radio button not selected");
+        Assert.assertTrue(visaIsSelected, "Failed: Visa radio button not selected");
     }
 
-    public void noAnnualFeeSelected(){
+    public void noAnnualFeeSelected() {
         viewAllCards.click();
         filterCards.click();
         noAnnualFee.click();
     }
-    public void noAnnualFeeValidation(){
-        boolean noAnnualSelected= noAnnualFee.isSelected();
-        Assert.assertTrue(noAnnualSelected,"Failed:No annual fee not selected");
+
+    public void noAnnualFeeValidation() {
+        boolean noAnnualSelected = noAnnualFee.isSelected();
+        Assert.assertTrue(noAnnualSelected, "Failed:No annual fee not selected");
+    }
+
+    public void searchFilters() {
+        noAnnualFeeSelected();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        searchCardsAfterFilter.click();
+    }
+
+    public void noAnnualFeeOnPageFound() {
+        String actual = checkNoAnnualTextOnPage.getText();
+        String expected = noAnnualExpected;
+        Assert.assertEquals(actual, expected, "Failed: Text does not say no annual fee");
+    }
+
+    public void checkGlassSlider() {
+        calculateRewards();
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", glassSlider);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Actions move = new Actions(driver);
+        move.dragAndDropBy(glassSlider, 100, 0).release().perform();
+    }
+
+    public void glassSliderNineHundred() {
+        String actual = sliderNumber.getText();
+        String expected = "$900";
+        Assert.assertEquals(actual, expected, "Failed: Number is not 900");
+    }
+
+    public void dragSliderToHighest() {
+        calculateRewards();
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", glassSlider);
+        Actions move = new Actions(driver);
+        move.dragAndDropBy(glassSlider, 530, 0).release().perform();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
+
+    public void glassSliderOnHighestAmount() {
+        String actual = sliderNumber.getText();
+        String expected = "$5,000";
+        Assert.assertEquals(actual, expected, "Failed: highest amount not $5,000");
+    }
+
+    public void scrollDownPage() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", footerElement);
+    }
+
+    public void scrollDownDisplaysFooter() {
+        boolean footerIsDisplayed = footerElement.isDisplayed();
+        Assert.assertTrue(footerIsDisplayed);
+    }
+
+    public void scrollDownToTwitter() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", twitterFooter);
+    }
+
+    public void scrollDownDisplaysTwitter() {
+        boolean footerIsDisplayed = twitterFooter.isDisplayed();
+        Assert.assertTrue(footerIsDisplayed);
+    }
+
+    public void scrollDownToFaceBook() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView();", faceBookFooter);
+    }
+
+    public void scrollDownDisplaysFaceBook() {
+        boolean footerIsDisplayed = faceBookFooter.isDisplayed();
+        Assert.assertTrue(footerIsDisplayed);
+    }
+
+    public void connectToTwitterPage() {
+        scrollDownToTwitter();
+        twitterFooter.click();
+    }
+
+    public void acceptTwitterPopup() {
+        boolean continueTwitterDisplayed = connectToTwitter.isDisplayed();
+        Assert.assertTrue(continueTwitterDisplayed);
+    }
+
+    public void navigateToTwitter() {
+        connectToTwitterPage();
+        connectToTwitter.click();
+    }
+
+    public void navigateToTwitterTitle() {
+        String actual = driver.getTitle();
+        String expected = twitterTitle;
+        Assert.assertEquals(actual, expected, "Failed:Title not for Twitter");
+    }
+
+    public void continueFacebookPopUp() {
+        scrollDownToFaceBook();
+        faceBookFooter.click();
+    }
+
+    public void acceptFacebookPopup() {
+        boolean continueFBDisplayed = connectToFacebook.isDisplayed();
+        Assert.assertTrue(continueFBDisplayed);
+    }
+
+    public void navigateToFacebook() {
+        continueFacebookPopUp();
+        connectToFacebook.click();
+        ArrayList<String> secondTab = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(secondTab.get(1));
+    }
+
+    public void navigateToFacebookTitle() {
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        String actual = driver.getTitle();
+        String expected = facebookTitle;
+        Assert.assertEquals(actual, expected, "Failed:Title not for Facebook");
+    }
+
+    public void airlinesInFooterClick() {
+        airlinesFooter.click();
+    }
+
+    public void airlinesFooterPageTitle() {
+        String actual = driver.getTitle();
+        String expected = airlinesPageTitle;
+        Assert.assertEquals(actual, expected, "Failed:Title does not match Airlines");
     }
 
 
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,45 +11,119 @@ public class CreditCardsPageTest extends WebAPI {
     CreditCardsPage creditCardsPage;
 
     @BeforeMethod
-    public void getInit(){
-        creditCardsPage = PageFactory.initElements(driver,CreditCardsPage.class);
+    public void getInit() {
+        creditCardsPage = PageFactory.initElements(driver, CreditCardsPage.class);
         creditCardsPage.navigateToCreditCards();
     }
 
-    @Test
-    public void creditCardNavigation(){
+    @Test//1
+    public void creditCardNavigation() {
         creditCardsPage.creditCardPageValidation();
     }
-    @Test
-    public void cardsToCompareIsActive(){
+
+    @Test//2
+    public void cardsToCompareIsActive() {
         creditCardsPage.compareCards();
-        creditCardsPage.elementHasClass(creditCardsPage.firstCardContainer,"active");
-        creditCardsPage.elementHasClass(creditCardsPage.secondCardContainer,"active");
+        creditCardsPage.elementHasClass(creditCardsPage.firstCardContainer, "active");
+        creditCardsPage.elementHasClass(creditCardsPage.secondCardContainer, "active");
     }
-    @Test
-    public void compareCardsPageTitle(){
+
+    @Test//3
+    public void compareCardsPageTitle() {
         creditCardsPage.clickOnCompare();
         creditCardsPage.comparePageValidation();
     }
-    @Test
-    public void thirdCardIsAddedToCompare(){
+
+    @Test//4
+    public void thirdCardIsAddedToCompare() {
         creditCardsPage.addOneMoreCard();
-        creditCardsPage.classIsNotEmpty(creditCardsPage.thirdContainerCard,"dyn-content");
+        creditCardsPage.classIsNotEmpty(creditCardsPage.thirdContainerCard, "dyn-content");
     }
-    @Test
-    public void noAnnualFeeTest(){
+
+    @Test//5
+    public void noAnnualFeeTest() {
         creditCardsPage.noAnnualFeeSelected();
         creditCardsPage.noAnnualFeeValidation();
     }
-    @Test
-    public void visaRadioButtonTest(){
+
+    @Test//6
+    public void visaRadioButtonTest() {
         creditCardsPage.selectVisaRadioButton();
         creditCardsPage.visaRadioButtonSelected();
     }
-    @Test
-    public void noAnnualFeeResultsT(){
+
+    @Test//7
+    public void noAnnualFeeResultsT() {
         creditCardsPage.searchFilters();
         creditCardsPage.noAnnualFeeOnPageFound();
     }
+
+    @Test//8
+    public void glassSliderClickable() {
+        creditCardsPage.calculateRewards();
+        creditCardsPage.checkGlassSlider();
+    }
+
+    @Test//9
+    public void glassSliderToNineHundred() {
+        creditCardsPage.checkGlassSlider();
+        creditCardsPage.glassSliderNineHundred();
+    }
+
+    @Test//10
+    public void dragSliderToFiveThousand() {
+        creditCardsPage.dragSliderToHighest();
+        creditCardsPage.glassSliderOnHighestAmount();
+    }
+
+    @Test//11
+    public void scrollToFooter() {
+        creditCardsPage.scrollDownPage();
+        creditCardsPage.scrollDownDisplaysFooter();
+    }
+
+    @Test//12
+    public void scrollDownToTwitter() {
+        creditCardsPage.scrollDownToTwitter();
+        creditCardsPage.scrollDownDisplaysTwitter();
+    }
+
+    @Test//13
+    public void scrollDownToFB() {
+        creditCardsPage.scrollDownToFaceBook();
+        creditCardsPage.scrollDownDisplaysFaceBook();
+    }
+
+    @Test//14
+    public void connectToTwitterOfBOA() {
+        creditCardsPage.connectToTwitterPage();
+        creditCardsPage.acceptTwitterPopup();
+    }
+
+    @Test//15
+    public void clickAndNavigateToTwitter() {
+        creditCardsPage.navigateToTwitter();
+        creditCardsPage.navigateToTwitterTitle();
+    }
+
+    @Test//16
+    public void continueToFBPopUp() {
+        creditCardsPage.continueFacebookPopUp();
+        creditCardsPage.acceptFacebookPopup();
+    }
+
+    @Test//17
+    public void navigateToFacebook() {
+        creditCardsPage.navigateToFacebook();
+        creditCardsPage.navigateToFacebookTitle();
+    }
+
+    @Test//18
+    public void airlinesPageTest() {
+        creditCardsPage.airlinesInFooterClick();
+        creditCardsPage.airlinesFooterPageTitle();
+    }
+
+    @Test
 
 }

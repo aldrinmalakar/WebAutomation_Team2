@@ -34,4 +34,23 @@ public class CreditCardsPageElements {
     public static final String checkNoAnnualText="div[class='row card-info compare visible'] div[class='small-12 medium-3 columns card-info-left']";
     public static final String noAnnualExpected="\n" + "      No annual fee";
 
+    public static final String calculateRewardsInBlue="a[id='learn-more-image-4047600~5B~en_US'] img[alt='Bank of America® Cash Rewards Credit Card']";
+    public static final String glassSliderForPrice="//div[@id='gas3PercentageSlider']//div[@class='noUi-handle']";
+    //public static final String glassSliderForPrice="//body/div[2]/div[1]/div[1]/section[3]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/a[1]/div[1]/div[1]/div[2]/div[1]";
+    public static final String sliderNumberNineHundredAmount="span[aria-label='gas3PercentageSlider value']";
+
+    public static final String footerElementDisplay="p[class='footer__copyright-text']";
+    public static final String twitterFooterElement="#social_follow_twitter_link > svg";
+    public static final String faceBookFooterElement="//*[name()='path' and contains(@d,'M24.6,18.3')]";
+
+    public static final String connectToTwitterButton="a[id='boaSocialModal_link_Continue'] span";
+    public static final String twitterTitle="Bank of America (@BankofAmerica) / Twitter";
+
+    public static final String connectToFacebookButton="a[id='boaSocialModal_link_Continue'] span";
+    public static final String facebookTitle="Bank of America - Home | Facebook";
+
+    public static final String airlinesFooterCard="#footer_cc_airline";
+    public static final String airlinesPageTitle="Airline Credit Cards: Rewards Cards That Earn Miles or Points";
+
+
 }
