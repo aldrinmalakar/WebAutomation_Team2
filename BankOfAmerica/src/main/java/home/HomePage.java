@@ -423,58 +423,6 @@ Thread.sleep(5000);
 }
 
 
-//
-//
-//    public void clearSearchElement(){
-//        SearchBox.sendKeys("haircare");
-//        SearchBox.sendKeys(Keys.RETURN);
-//        try{
-//            Thread.sleep(5000);
-//            SearchBox.clear();
-//
-//
-//        } catch (Exception e){
-//            System.out.println("Unable to clear Elemnet not found ");
-//        }
-//    }
-//
-//    public void typeByXpath1(String loc, String val){
-//        SearchBox.clear();
-//        SearchBox.sendKeys("giftBox");
-//    }
-//    public void AddtoCartProdct(){
-//        SearchBox.sendKeys("haircare ");
-//        ClickSearchButton.click();
-//        Walmartclickproduct.click();
-//
-//    }
-//    public void AddtoCartProdct2(){
-//        SearchBox.sendKeys("haircare ");
-//        ClickSearchButton.click();
-//        Walmartclickproduct.click();
-//        Walmartclickclickqty.click();
-//        WalmartclicClickAddToCart.click();
-//    }
-//    public void validedShampoo() throws InterruptedException {
-//
-//        SearchBox.sendKeys("Shampoo");
-//        Thread.sleep(5000);
-//        ClickSearchButton.click();
-//        String act =WalmartvalidedShampoo.getText();
-//        String exp ="Shampoo";
-//        Assert.assertEquals(act, exp," failed");
-//    }
-//    public void validedHairCare() throws InterruptedException {
-//        SearchBox.sendKeys("haircare");
-//        Thread.sleep(5000);
-//        ClickSearchButton.click();
-//        String act =  Walmartvalidedhaircare.getText();
-//        String exp ="Hair Care";
-//        Assert.assertEquals(act, exp," failed");
-
-
-
-
 
 
 

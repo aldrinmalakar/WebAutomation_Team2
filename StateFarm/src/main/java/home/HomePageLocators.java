@@ -1,4 +1,84 @@
 package home;
 
 public class HomePageLocators {
+
+    public static final String insurance = "//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[1]/div/button/span";
+    public static final String health = "//*[@id='oneX-3-insurance']";
+    public static final String zipcode = "//*[@id='callout-agent-zip-code-input_1']";
+  public static final String selectProduct= "//*[@id='popDropdown']";
+   public static final String selectLife = "popDropdown";
+
+  public static final String selectstate = "//*[@id='quote-main-state-select']";
+  public static final String clickslectedstate= "//*[@id='quote-main-state-select']";
+   public static final String ClickSignIn = "//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[8]/div/button/span";
+public static final String SendUserId = "//*[@id='oneX-username']";
+public static final String SendPassWord= "//*[@id='util-login-password']";
+public static final String clickrememberme= "//*[@id='oneX-submenu-login']/div/div/div[1]/form/div/div[2]/label";
+public static final String clickLigin= "//*[@id='oneX-submenu-login']/div/div/div[1]/form/div/button";
+public static final String clickTroubleloggin ="//*[@id='oneX-submenu-login']/div/div/div[1]/form/div/div[3]/a[1]";
+public static final String clickCreateYourAccount ="//*[@id='block-link2']";
+public static final String sendPhoneNumber ="//*[@id='forgotPhoneInput']";
+public static final String enterbirthDay ="//*[@id='forgotDobInput']";
+public static final String enterEmail ="//*[@id='forgotEmailInput']";
+public static final String clickText="//*[@id='emailOrTextOptionContainer']/fieldset/div/div[2]/label";
+public static final String submit="//*[@id='submitBtn']";
+public static final String claims="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[6]/div/button/span";
+public static final String fileClaims="//*[@id='oneX-submenu-claims']/div[3]/div[1]/a";
+public static final String fileClaimsLife="//*[@id='content']/section[2]/div/div/div[2]/div/div/div[2]/div[5]/div[1]/fieldset/div/div/label";
+    public static final  String FindAnAgent="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[7]/div/button/span";
+public static final  String FindAnAgentZipCode="//*[@id='oneX-findAnAgentZipCode']";
+public static final  String FindAnAgentZipCodeSearch="//*[@id='search']";
+public static final  String FindAnAgentclick="//*[@id='findAnAgentButton']";
+public static final  String FindAnAgentShowall="//a[contains(text(),'Show All')]";
+public static final  String PayaBill="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[5]/div";
+public static final  String PayaBillPhone="//*[@id='pay-a-bill-paymentSelect']";
+public static final  String PayaBillPhone2="//*[@id='pay-a-bill-phoneNo']";
+public static final  String DateOfBirth="//*[@id='pay-a-bill-DOB']";
+public static final  String PayNow="//*[@id='pay-a-bill-submitButton']";
+public static final  String searchButton="#oneX-header > nav > section.-oneX-header-nav-apps-container > div.-oneX-header-nav-container > div.-oneX-header-util-nav > ul > li:nth-child(2) > button > span";
+
+public static final  String searchButtonclick="//*[@id='oneX-submenu-search']/div/form/button";
+public static final  String searchButtonshowall="//*[@id='pagination-incrementer']/div/div/ul/li[4]/a";
+    public static final String trackaClaim="Track a claim";
+ public static final String trackaClaimcreateAnAccount="Create an account";
+ public static final String trackaClaimFirstNmae="#firstNameField";
+public static final String trackaClaimLasttNmae="//*[@id='lastNameField']";
+        public static final String trackaClaimForgotAnAccount="Forgot your UserId or Password?";
+        public static final String investment="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[3]/div/button/span";
+ public static final String investmentmutualFunds="oneX-1-investments";
+public static final String statcidropDown="0-17-3151554-2";
+public static final String staticDropDown="popDropdown";
+    public static final String staticDropDownZipCode="quote-main-zip-code-input";
+public static final String staticDropDown1="quote-main-state-select";
+public static final String PayInsuranceBill="Pay insurance bill";
+public static final String PayInsuranceBillPhoneNum="billingMode";
+public static final String PayInsuranceBillPhoneNum1="phoneNumber";
+    public static final String DateOfBirth1="dob";
+    public static final String clickContinue="continueButton";
+    public static final String Gopaperless="Go paperless";
+    public static final String Gopaperlesspnonenum="phoneMasked";
+    public static final String GopaperlessDateofbirth="dob";
+public static final String GopaperlessCancle="Cancel";
+public static final String headerClaims="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[6]/div";
+public static final String stateFfarmClaims="State Farm Claims";
+public static final String stateFfarmClaimsCarAccident="//*[@id='content']/section[3]/div/div/div[2]/div/div/div[2]/div[1]/div[1]/fieldset/div/div/label";
+public static final String learnMoreAboutDrive="Learn more about Drive Safe & Save";
+public static final String learnMoreAboutDriveGooglePlay="//*[@id='content']/section[4]/div/div/div[2]/div/div/div/div/div/div/div/a[1]/img";
+public static final String findAndagent="//*[@id='oneX-header']/nav/section[3]/div[1]/div[1]/ul/li[7]/div/button/span";
+public static final String findAndagentZipCode="oneX-findAnAgentZipCode";
+public static final String findAndagentZipCodeClick="findAnAgentButton";
+public static final String AdvanceSearchOption="search-options-toggle";
+public static final String  safeDrivingyong="See more about Steer Clear";
+public static final String  discount="//*[@id='content']/section[1]/div/div/div/nav/ol/li[3]/a/span[1]";
+public static final String State="0-17-3036875-8";
+public static final String clickGo="//*[@id='form-61115']/div/div/button";
+public static final String payInsuranceBill="//a[contains(text(),'Pay insurance bill')]";
+public static final String payInsuranceBillPhone="billingMode";
+public static final String payInsuranceBillPhone1="phoneNumber";
+public static final String dateOfBirth="dob";
+    public static final String insuranceCard="Get insurance ID card";
+ public static final String steerClear="See more about Steer Clear";
+ public static final String steerClearvalided="//body/div[@id='content']/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/h1[1]";
+public static final String autoDiscout="Save money with auto discounts";
+
 }
