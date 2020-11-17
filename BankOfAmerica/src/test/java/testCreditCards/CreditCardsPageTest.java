@@ -124,6 +124,6 @@ public class CreditCardsPageTest extends WebAPI {
         creditCardsPage.airlinesFooterPageTitle();
     }
 
-    @Test
+
 
 }
