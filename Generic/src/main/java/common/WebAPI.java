@@ -128,7 +128,7 @@ public class WebAPI {
     @Parameters({"useCloudEnv", "cloudEnvName", "OS", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("chrome") String browserName,
-                      @Optional("86") String browserVersion, @Optional("https://www.cnn.com/more") String url) throws IOException {
+                      @Optional("86") String browserVersion, @Optional("https://b2b.statefarm.com/b2b/index.html") String url) throws IOException {
         // Platform: Local Machine/ cloud machine
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserStack")) {
@@ -736,11 +736,33 @@ public class WebAPI {
 
 
 
+    public static void verifyLinkActive(String linkUrl) {
+        try {
+            URL url = new URL(linkUrl);
 
-    public String getCurrentUrl(){
-        String url=driver.getCurrentUrl();
-        return url;
+            HttpURLConnection httpURLConnect = (HttpURLConnection) url.openConnection();
+
+            httpURLConnect.setConnectTimeout(3000);
+
+            httpURLConnect.connect();
+
+            if (httpURLConnect.getResponseCode() == 200) {
+                System.out.println(linkUrl + " - " + httpURLConnect.getResponseMessage());
+            }
+            if (httpURLConnect.getResponseCode() == HttpURLConnection.HTTP_NOT_FOUND) {
+                System.out.println(linkUrl + " - " + httpURLConnect.getResponseMessage() + " - " + HttpURLConnection.HTTP_NOT_FOUND);
+            }
+        } catch (Exception e) {
+
+        }
+
     }
+
+
+//    public String getCurrentUrl(){
+//        String url=driver.getCurrentUrl();
+//        return url;
+//    }
 
 
 
