@@ -7,7 +7,7 @@ public class WorldPageHome extends WebAPI {
 
 public void checkWorld() throws InterruptedException{
 
-checkWorld.click();
+
 
 
 
