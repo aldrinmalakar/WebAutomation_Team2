@@ -9,30 +9,35 @@ import org.testng.Assert;
 
 import static walmart_inside_homepage.SearchWebElementLocator.*;
 
-public class SearchWebElement extends WebAPI{
-    @FindBy( how = How.CSS,using =SearchBox)public WebElement  WalmartSearchBox;
-    @FindBy( how = How.CSS,using =clickSearchButton)public WebElement  WalmartclickSearchButton;
-    @FindBy( how = How.CSS,using =validedWebElement)public WebElement  WalmartvalidedWebElement;
-    @FindBy( how = How.CSS,using =clickCart)public WebElement  WalmartclickCart;
- @FindBy( how = How.XPATH,using =validedShoes)public WebElement  WalmartvalidedShoes;
+public class SearchWebElement extends WebAPI {
+    @FindBy(how = How.CSS, using = SearchBox)
+    public WebElement WalmartSearchBox;
+    @FindBy(how = How.CSS, using = clickSearchButton)
+    public WebElement WalmartclickSearchButton;
+    @FindBy(how = How.CSS, using = validedWebElement)
+    public WebElement WalmartvalidedWebElement;
+    @FindBy(how = How.CSS, using = clickCart)
+    public WebElement WalmartclickCart;
+    @FindBy(how = How.XPATH, using = validedShoes)
+    public WebElement WalmartvalidedShoes;
 
-public void walmartSearchproduct1(){
-    WalmartSearchBox.sendKeys("shoes");
-    WalmartclickSearchButton.click();
-}
-public void WalmartValidedSearchProduct1() {
+    public void walmartSearchproduct1() {
+        WalmartSearchBox.sendKeys("shoes");
+        WalmartclickSearchButton.click();
+    }
 
-    String expectedResult = "Shoes";
-    String actualResult =  WalmartvalidedShoes.getText();
-    Assert.assertEquals(actualResult,expectedResult,"DoesNot match Test fail");
-}
+    public void WalmartValidedSearchProduct1() {
 
-public void ClickWalmartAddToCart(){
-    WalmartclickCart.click();
+        String expectedResult = "Shoes";
+        String actualResult = WalmartvalidedShoes.getText();
+        Assert.assertEquals(actualResult, expectedResult, "DoesNot match Test fail");
+    }
+
+    public void ClickWalmartAddToCart() {
+        WalmartclickCart.click();
 
 
-}
-
+    }
 
 
 }

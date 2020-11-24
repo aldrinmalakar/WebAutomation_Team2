@@ -8,31 +8,31 @@ import org.testng.annotations.Test;
 import walmart_inside_homepage.SearchWebElement;
 
 public class SearchWebElementTest extends WebAPI {
-   SearchWebElement searchWebElement;
+    SearchWebElement searchWebElement;
+
     @BeforeMethod
-    public void getInit(){
-        searchWebElement= PageFactory.initElements(driver,SearchWebElement.class);
+    public void getInit() {
+        searchWebElement = PageFactory.initElements(driver, SearchWebElement.class);
     }
 
-    @Test( enabled = false)
-    public void  walmartSearchproduct1(){
+    @Test(enabled = false)
+    public void walmartSearchproduct1() {
         walmartSearchproduct1();
 
     }
 
 
-    @Test( enabled = false)
-    public void WalmartValidedSearchproduct1(){
+    @Test(enabled = false)
+    public void WalmartValidedSearchproduct1() {
         searchWebElement.WalmartValidedSearchProduct1();
     }
 
 
-    @Test( enabled = false)
-    public void ClickWalmartAddToCart(){
+    @Test(enabled = false)
+    public void ClickWalmartAddToCart() {
         searchWebElement.ClickWalmartAddToCart();
 
     }
-
 
 
 }
