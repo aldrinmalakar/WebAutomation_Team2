@@ -410,8 +410,12 @@ public class WebAPI {
         select.selectByVisibleText(value);
     }
 
-    public static void sleepFor(int sec) throws InterruptedException {
-        Thread.sleep(sec * 1000);
+    public static void sleepFor(int sec)  {
+        try {
+            Thread.sleep(sec * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void mouseHoverByCSS(String locator) {
