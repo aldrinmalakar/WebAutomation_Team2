@@ -9,38 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">TestSuit</th></tr>
-<tr><td><a href="#t0">Bank Of America Location Test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">100,139</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Bank Of America Location Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">30,252</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuit</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Bank Of America Location Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.BOAtest.BOATest</td><td><a href="#m0">openFilterFunctions</a></td><td rowspan="1">1605329013435</td><td rowspan="1">1076</td></tr><tr><th colspan="4">Bank Of America Location Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">com.BOAtest.BOATest</td><td><a href="#m1">BOAHomePage</a></td><td rowspan="1">1605328936910</td><td rowspan="1">13</td></tr><tr class="passedeven"><td><a href="#m2">LocationByFilters</a></td><td rowspan="1">1605328944236</td><td rowspan="1">2482</td></tr><tr class="passedeven"><td><a href="#m3">LocationPage</a></td><td rowspan="1">1605328954419</td><td rowspan="1">8359</td></tr><tr class="passedeven"><td><a href="#m4">SearchBox</a></td><td rowspan="1">1605328970129</td><td rowspan="1">3386</td></tr><tr class="passedeven"><td><a href="#m5">checkNearMeButtonMap</a></td><td rowspan="1">1605328980798</td><td rowspan="1">1867</td></tr><tr class="passedeven"><td><a href="#m6">closeFilterFunctions</a></td><td rowspan="1">1605328989690</td><td rowspan="1">4589</td></tr><tr class="passedeven"><td><a href="#m7">findLocationByState</a></td><td rowspan="1">1605329001489</td><td rowspan="1">3533</td></tr><tr class="passedeven"><td><a href="#m8">validateTheLocationInMap</a></td><td rowspan="1">1605329025988</td><td rowspan="1">3321</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuit</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Bank Of America Location Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">bancofamericamuseumTest.BOATest</td><td><a href="#m0">chatBoxFunction</a></td><td rowspan="1">1605836720948</td><td rowspan="1">20284</td></tr></tbody>
 </table>
-<h2>Bank Of America Location Test</h2><h3 id="m0">com.BOAtest.BOATest#openFilterFunctions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;footer_bofa_locations&quot; href=&quot;https://locators.bankofamerica.com/&quot;&gt;...&lt;/a&gt; is not clickable at point (374, 915). Other element would receive the click: &lt;a id=&quot;AMT2HXAC&quot; href=&quot;https://about.bankofamerica.com/promo/assistance/latest-updates-from-bank-of-america-coronavirus/?cm_sp=EBZ-BAC-Announcement-_-BACAnnouncement-_-AMT2HXAC01_Engagement_Banner_CV_Payments_ShowToAll_EB_cvStimulusHlCta&quot; class=&quot;engagement-banner-link&quot;&gt;...&lt;/a&gt;
-  (Session info: chrome=86.0.4240.198)
+<h2>Bank Of America Location Test</h2><h3 id="m0">bancofamericamuseumTest.BOATest#chatBoxFunction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&apos;chatWidgetModule&apos;]/button[1] (tried for 8 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-8DAJPHUM&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 30154016920eb9e5236ca302b5acdc5b
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at bankofamerica.BOAHmePage.openFilterFunctions(BOAHmePage.java:74)
-	at com.BOAtest.BOATest.openFilterFunctions(BOATest.java:39)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4b2eb2f1ba4acb37fb93c8411cfc0042
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at bankofamericamuseum.BOAHmePage.chatBoxFunctionElement(BOAHmePage.java:236)
+	at bancofamericamuseumTest.BOATest.chatBoxFunction(BOATest.java:89)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.BOAtest.BOATest#BOAHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.BOAtest.BOATest#LocationByFilters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.BOAtest.BOATest#LocationPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.BOAtest.BOATest#SearchBox</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.BOAtest.BOATest#checkNearMeButtonMap</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.BOAtest.BOATest#closeFilterFunctions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.BOAtest.BOATest#findLocationByState</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.BOAtest.BOATest#validateTheLocationInMap</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -3,16 +3,72 @@ package walmartmuseum;
 public class MuseumWebElements {
 
     // Navigate to Museum
-    public static final String navigateToMuseum = "Digital Museum";
-    // Validate Navigate to Museum
-    public static final String shoppingPage = "//div[1]/nav[1]/ul[1]/li[5]/a[1]";//body/segmentation-timeout[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[5]/a[1]
-    public static final String Logo = "//img[@id='logo']";
+    public static final String clickOnLanguageLocator= "//*[@id='wmmmenu']/nav/ul/li[6]/a/i";
+    public static final String SpanishLanguageLocator = "//a[contains(text(),'English')]";
+    public static final String vSpanishLanguageLocator = "//header/div[2]/div[1]/div[1]/div[1]/div[1]/h2[1]";
+    public static final String clickOnEspenLanguage = "//a[contains(text(),'Español')]";
+    public static final String clickOnEnglishLanguage = "//a[contains(text(),'English')]";
     //click on shop
-//    public static final String validationOfShoppingPage = "//*[@id='post-1769850']/div/h1/span";
-//    //click on shop menu
-    public static final String deskSupplieMoseHover = "//header/div[1]/div[2]/nav[1]/ul[1]/li[2]/a[1]";
-    public static final String DeskSupplieslink = "Desk Supplies";
-//
+    public static final String shopPageFunctionLocator = "//*[@id='wmmmenu']/nav/ul/li[5]/a";
+//    //timeLine Function
+    public static final String timeLineFunctionLocator = "//*[@id='wmmmenu']/nav/ul/li[1]/a";
+    // visit Function Page
+    public static final String visitFunctionPageLocator = "//*[@id='wmmmenu']/nav/ul/li[2]/a";
+    public static final String validateVisitFunctionPageLocator = "//p[contains(text(),'Experience the story of Walmart.')]";
+    //
+    public static final String eventsFunctionPageLocator = "//*[@id='wmmmenu']/nav/ul/li[3]/a";
+    public static final String validateEventsFunctionPageLocator = "//div[contains(text(),'Join in on all the fun.')]";
+    //NorthMain Function Page Locator
+    public static final String NorthMainFunctionPageLocator = "//a[contains(text(),'105NORTHMAIN')]";
+    //search functions
+    public static final String searchFunctionsLocator = "//*[@id='wmmmenu']/nav/ul/li[7]/a/i";
+    public static final String SendSearchFunctionsLocator = "//*[@id='header-search-bar']/form/input";
+    public static final String clickSearchButtonLocator = "//*[@id='header-search-bar']/form/div[1]/i";
+    public static final String validateSearchActualLocator = "//div[contains(text(),'The Walmart Oral History Project')]";
+    //search invalid element
+    public static final String searchInvalidElementsLocator = "//div[contains(text(),'No results found')]";
+    // scroll to explore
+    public static final String clickOnScrollLocators = "//*[@id='timelinePage']/div[2]/div[1]/div[2]";
+    public static final String validateScrollActualLocators = "";
+    //reserve A TourVisit Elements
+    public static final String ClickOnReserveTourLocator = "//*[@id='wmmmenu']/nav/ul/li[2]/ul/li/div[1]/a";
+    public static final String validateReserveTourActual = "//header[1]/div[1]/div[2]/div[1]";
+    // subscribe
+    public static final String clickOnSignupButtonLocator = "SIGN UP";
+    public static final String sendEmailLocator = "#MERGE0";
+    public static final String sendFirstNameLocator = "#MERGE1";
+    public static final String sendLastNameLocator = "#MERGE2";
+    public static final String submitButtonLocator = "//body[1]/div[1]/div[1]/form[1]/div[3]/input[1]";
+    public static final String  subscribeActualLocator = ".rounded6 > h2:nth-child(1)";
+    // schedule admission
+    public static final String  clickOnTheDayLocator = "//div[2]/div[2]/div[2]/div/div[2]/button/span[1]";
+    public static final String  clickOnTheTimeLocator = "//div[2]/div[2]/div/div/div[6]/div[2]/button";
+    public static final String  sendEmailLocators = "#email";
+    public static final String  continueAsGuestLocators = "//*[@id='formRegister']/div/div[3]/div";
+    public static final String  sendFirstNameLocators = "#first-name";
+    public static final String  sendLastNameLocators = "#last-name";
+    public static final String  sendPhoneNumLocators = "#mobile";
+    public static final String  clickOnNextLocators = "/html/body/app-root/div/app-thor/div/div[1]/div[1]/div/div[2]/label";
+    public static final String  validateAdmissionLocator = "h4-responsive ng-tns-c6-24 ng-star-inserted";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    //click on deck supplies
     public static final String  actualsupplieDesk= "wp-block-image size-large";
 //    public static final String
@@ -27,7 +83,7 @@ public class MuseumWebElements {
 
     //validate MasksFromAccessory
     public static final String MasksFromAccessory = "//header/div[1]/div[2]/nav[1]/ul[1]/li[1]/a[1]";
-    public static final String AccessoriesLink = "Accessories";
+
     public static final String MasksLink = "Masks";
 
     //secure masks

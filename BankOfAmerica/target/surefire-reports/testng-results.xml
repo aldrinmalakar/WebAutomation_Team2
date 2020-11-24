@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\alaed\IdeaProjects\WebAutomation_Team2\BankOfAmerica\target\surefire-reports\html]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-11-13T23:42:09 EST" name="TestSuit" finished-at="2020-11-13T23:43:49 EST" duration-ms="100139">
+  <suite started-at="2020-11-19T20:45:12 EST" name="TestSuit" finished-at="2020-11-19T20:45:43 EST" duration-ms="30252">
     <groups>
     </groups>
-    <test started-at="2020-11-13T23:42:09 EST" name="Bank Of America Location Test" finished-at="2020-11-13T23:43:49 EST" duration-ms="100139">
-      <class name="com.BOAtest.BOATest">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:09 EST" name="extentSetup" finished-at="2020-11-13T23:42:09 EST" duration-ms="151" status="PASS">
+    <test started-at="2020-11-19T20:45:12 EST" name="Bank Of America Location Test" finished-at="2020-11-19T20:45:43 EST" duration-ms="30252">
+      <class name="bancofamericamuseumTest.BOATest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:12 EST" name="extentSetup" finished-at="2020-11-19T20:45:12 EST" duration-ms="149" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@593a6726]]>
+                <![CDATA[org.testng.TestRunner@3f4cd155]]>
               </value>
             </param>
           </params>
@@ -24,7 +24,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:09 EST" name="setUp" finished-at="2020-11-13T23:42:16 EST" duration-ms="7065" status="PASS">
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:13 EST" name="setUp" finished-at="2020-11-19T20:45:20 EST" duration-ms="7863" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,564 +58,49 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[https://www.bankofamerica.com]]>
+                <![CDATA[https://www.bankofamerica.com/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:16 EST" name="startExtent" finished-at="2020-11-13T23:42:16 EST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:20 EST" name="startExtent" finished-at="2020-11-19T20:45:20 EST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.BOAtest.BOATest.BOAHomePage()]]>
+                <![CDATA[public void bancofamericamuseumTest.BOATest.chatBoxFunction() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:16 EST" name="getInit" finished-at="2020-11-13T23:42:16 EST" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="getInit()[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:20 EST" name="getInit" finished-at="2020-11-19T20:45:20 EST" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getInit -->
-        <test-method signature="BOAHomePage()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:16 EST" name="BOAHomePage" finished-at="2020-11-13T23:42:16 EST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BOAHomePage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:16 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:42:17 EST" duration-ms="859" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=BOAHomePage status=SUCCESS method=BOATest.BOAHomePage()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:17 EST" name="setUp" finished-at="2020-11-13T23:42:24 EST" duration-ms="6450" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:24 EST" name="startExtent" finished-at="2020-11-13T23:42:24 EST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.LocationByFilters() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:24 EST" name="getInit" finished-at="2020-11-13T23:42:24 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="LocationByFilters()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:24 EST" name="LocationByFilters" finished-at="2020-11-13T23:42:26 EST" duration-ms="2482" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LocationByFilters -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:26 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:42:27 EST" duration-ms="1137" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=LocationByFilters status=SUCCESS method=BOATest.LocationByFilters()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:27 EST" name="setUp" finished-at="2020-11-13T23:42:34 EST" duration-ms="6562" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:34 EST" name="startExtent" finished-at="2020-11-13T23:42:34 EST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.LocationPage()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:34 EST" name="getInit" finished-at="2020-11-13T23:42:34 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="LocationPage()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:34 EST" name="LocationPage" finished-at="2020-11-13T23:42:42 EST" duration-ms="8359" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LocationPage -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:42 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:42:43 EST" duration-ms="655" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=LocationPage status=SUCCESS method=BOATest.LocationPage()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:43 EST" name="setUp" finished-at="2020-11-13T23:42:50 EST" duration-ms="6694" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:50 EST" name="startExtent" finished-at="2020-11-13T23:42:50 EST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.SearchBox() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:50 EST" name="getInit" finished-at="2020-11-13T23:42:50 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="SearchBox()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:50 EST" name="SearchBox" finished-at="2020-11-13T23:42:53 EST" duration-ms="3386" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchBox -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:53 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:42:54 EST" duration-ms="680" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=SearchBox status=SUCCESS method=BOATest.SearchBox()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:42:54 EST" name="setUp" finished-at="2020-11-13T23:43:00 EST" duration-ms="6600" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:00 EST" name="startExtent" finished-at="2020-11-13T23:43:00 EST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.checkNearMeButtonMap() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:00 EST" name="getInit" finished-at="2020-11-13T23:43:00 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="checkNearMeButtonMap()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:00 EST" name="checkNearMeButtonMap" finished-at="2020-11-13T23:43:02 EST" duration-ms="1867" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkNearMeButtonMap -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:02 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:43:03 EST" duration-ms="622" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkNearMeButtonMap status=SUCCESS method=BOATest.checkNearMeButtonMap()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:03 EST" name="setUp" finished-at="2020-11-13T23:43:09 EST" duration-ms="6401" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:09 EST" name="startExtent" finished-at="2020-11-13T23:43:09 EST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.closeFilterFunctions() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:09 EST" name="getInit" finished-at="2020-11-13T23:43:09 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="closeFilterFunctions()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:09 EST" name="closeFilterFunctions" finished-at="2020-11-13T23:43:14 EST" duration-ms="4589" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeFilterFunctions -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:14 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:43:14 EST" duration-ms="677" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=closeFilterFunctions status=SUCCESS method=BOATest.closeFilterFunctions()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:14 EST" name="setUp" finished-at="2020-11-13T23:43:21 EST" duration-ms="6529" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:21 EST" name="startExtent" finished-at="2020-11-13T23:43:21 EST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.findLocationByState() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:21 EST" name="getInit" finished-at="2020-11-13T23:43:21 EST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="findLocationByState()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:21 EST" name="findLocationByState" finished-at="2020-11-13T23:43:25 EST" duration-ms="3533" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- findLocationByState -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:25 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:43:26 EST" duration-ms="1510" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=findLocationByState status=SUCCESS method=BOATest.findLocationByState()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:26 EST" name="setUp" finished-at="2020-11-13T23:43:33 EST" duration-ms="6901" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:33 EST" name="getInit" finished-at="2020-11-13T23:43:33 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:33 EST" name="startExtent" finished-at="2020-11-13T23:43:33 EST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.openFilterFunctions() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="openFilterFunctions()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:33 EST" name="openFilterFunctions" finished-at="2020-11-13T23:43:34 EST" duration-ms="1076" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="chatBoxFunction()[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:20 EST" name="chatBoxFunction" finished-at="2020-11-19T20:45:41 EST" duration-ms="20284" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element <a id="footer_bofa_locations" href="https://locators.bankofamerica.com/">...</a> is not clickable at point (374, 915). Other element would receive the click: <a id="AMT2HXAC" href="https://about.bankofamerica.com/promo/assistance/latest-updates-from-bank-of-america-coronavirus/?cm_sp=EBZ-BAC-Announcement-_-BACAnnouncement-_-AMT2HXAC01_Engagement_Banner_CV_Payments_ShowToAll_EB_cvStimulusHlCta" class="engagement-banner-link">...</a>
-  (Session info: chrome=86.0.4240.198)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='chatWidgetModule']/button[1] (tried for 8 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-8DAJPHUM', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 30154016920eb9e5236ca302b5acdc5b]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4b2eb2f1ba4acb37fb93c8411cfc0042]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a id="footer_bofa_locations" href="https://locators.bankofamerica.com/">...</a> is not clickable at point (374, 915). Other element would receive the click: <a id="AMT2HXAC" href="https://about.bankofamerica.com/promo/assistance/latest-updates-from-bank-of-america-coronavirus/?cm_sp=EBZ-BAC-Announcement-_-BACAnnouncement-_-AMT2HXAC01_Engagement_Banner_CV_Payments_ShowToAll_EB_cvStimulusHlCta" class="engagement-banner-link">...</a>
-  (Session info: chrome=86.0.4240.198)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='chatWidgetModule']/button[1] (tried for 8 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-8DAJPHUM', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 30154016920eb9e5236ca302b5acdc5b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy14.click(Unknown Source)
-at bankofamerica.BOAHmePage.openFilterFunctions(BOAHmePage.java:74)
-at com.BOAtest.BOATest.openFilterFunctions(BOATest.java:39)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\alaed\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4b2eb2f1ba4acb37fb93c8411cfc0042
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at bankofamericamuseum.BOAHmePage.chatBoxFunctionElement(BOAHmePage.java:236)
+at bancofamericamuseumTest.BOATest.chatBoxFunction(BOATest.java:89)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -650,97 +135,30 @@ at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openFilterFunctions -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:34 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:43:35 EST" duration-ms="1063" status="PASS">
+        </test-method> <!-- chatBoxFunction -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:41 EST" name="afterEachTestMethod" finished-at="2020-11-19T20:45:43 EST" duration-ms="2008" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openFilterFunctions status=FAILURE method=BOATest.openFilterFunctions()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
+                <![CDATA[[TestResult name=chatBoxFunction status=FAILURE method=BOATest.chatBoxFunction()[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:35 EST" name="setUp" finished-at="2020-11-13T23:43:45 EST" duration-ms="10407" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[browserStack]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[86]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[https://www.bankofamerica.com]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:43 EST" name="cleanUp" finished-at="2020-11-19T20:45:43 EST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:45 EST" name="getInit" finished-at="2020-11-13T23:43:45 EST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:45 EST" name="startExtent" finished-at="2020-11-13T23:43:45 EST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.BOAtest.BOATest.validateTheLocationInMap() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startExtent -->
-        <test-method signature="validateTheLocationInMap()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:45 EST" name="validateTheLocationInMap" finished-at="2020-11-13T23:43:49 EST" duration-ms="3321" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTheLocationInMap -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:49 EST" name="afterEachTestMethod" finished-at="2020-11-13T23:43:49 EST" duration-ms="638" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateTheLocationInMap status=SUCCESS method=BOATest.validateTheLocationInMap()[pri:0, instance:com.BOAtest.BOATest@1eb5174b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.BOAtest.BOATest@1eb5174b]" started-at="2020-11-13T23:43:49 EST" name="generateReport" finished-at="2020-11-13T23:43:49 EST" duration-ms="15" status="PASS">
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:bancofamericamuseumTest.BOATest@19d481b]" started-at="2020-11-19T20:45:43 EST" name="generateReport" finished-at="2020-11-19T20:45:43 EST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.BOAtest.BOATest -->
+      </class> <!-- bancofamericamuseumTest.BOATest -->
     </test> <!-- Bank Of America Location Test -->
   </suite> <!-- TestSuit -->
 </testng-results>

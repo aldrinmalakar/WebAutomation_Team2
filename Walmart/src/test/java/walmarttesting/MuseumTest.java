@@ -15,66 +15,131 @@ public class MuseumTest extends WebAPI {
         museumBase = PageFactory.initElements(driver, MuseumBase.class);
     }
 
-    @Test(priority = 1)
+    @Test
     public void NavigateToMuseum() throws InterruptedException {
-        museumBase.museumNavigation();
-        Thread.sleep(10000);
         museumBase.validateMuseumNavigation();
-
     }
 
-    @Test(priority = 2)
+    @Test
     public void navigateToShoppingPage() throws InterruptedException {
-        museumBase.museumShopping();
-        museumBase.validateMuseumShopping();
+        museumBase.EspañolLanguageFunction();
+        museumBase.validateEspañolLanguageFunction();
     }
 
-    @Test(priority = 3)
-    public void NavigateToDeskSupplies() throws InterruptedException {
-
-        museumBase.desksSupplies();
-        Thread.sleep(10000);
-        museumBase.validateDesksSupplies();
+    @Test
+    public void EnglishLanguageFunction() throws InterruptedException {
+        museumBase.backToEnglishLanguageFunction();
+        museumBase.validateBackToEnglishLanguageFunction();
     }
 
-    @Test(priority = 4)
-    public void verifySmileProduct() throws InterruptedException {
-
-        museumBase.smileProduct();
-        Thread.sleep(10000);
-        museumBase.validateSmileProduct();
+    @Test(enabled = false)
+    public void timeLineFunction() throws InterruptedException {
+        museumBase.timeLineFunctionElements();
+        museumBase.validateTimeLineFunction();
     }
 
-    @Test(priority = 5)
+    @Test
+    public void shopPageFunction() throws InterruptedException {
+        museumBase.shopPageFunctionElements();
+        museumBase.validateShopPageFunction();
+    }
+
+    @Test
+    public void visitFunctionPage() throws InterruptedException {
+        museumBase.visitFunctionPageElements();
+        museumBase.validateVisitFunctionPage();
+    }
+
+    @Test
+    public void eventsFunctionPage() throws InterruptedException {
+        museumBase.eventsFunctionPageElements();
+        museumBase.validateEventsFunctionPage();
+    }
+
+    @Test
+    public void NorthMainFunctionPage() throws InterruptedException {
+        museumBase.NorthMainFunctionPageElements();
+        museumBase.validateNorthMainFunctionPage();
+    }
+
+    @Test
+    public void searchFunctionalities() throws InterruptedException {
+        museumBase.searchFunctionalitiesElements();
+        museumBase.validateSearchFunctionalities();
+    }
+
+    @Test
+    public void invalidSearchFunctionalities() throws InterruptedException {
+        museumBase.searchInvalidElements();
+        museumBase.validateSearchInvalidElements();
+    }
+
+    @Test
+    public void ScrollToExploreFunctions() throws InterruptedException {
+        museumBase.ScrollToExploreFunction();
+        museumBase.validateSearchInvalidElements();
+    }
+
+    @Test
+    public void reserveATourVisit() throws InterruptedException {
+        museumBase.reserveATourVisitElements();
+        museumBase.validateReserveATourVisitElements();
+    }
+
+    @Test
+    public void subscribeMuseum() throws InterruptedException {
+        museumBase.subscribeMuseumElements();
+        museumBase.validateSubscribeMuseumElements();
+    }
+
+    @Test
+    public void scheduleAdmission() throws InterruptedException {
+        museumBase.scheduleAdmissionElements();
+        museumBase.validateScheduleAdmissionElements();
+    }
+
+    @Test
+    public void DesksSupplies() throws InterruptedException {
+        museumBase.DesksSuppliesElements();
+        museumBase.validateDesksSuppliesElements();
+    }
+
+    @Test
+    public void selectSmileItem() throws InterruptedException {
+        museumBase.smileItemElements();
+        museumBase.validateSmileItemElements();
+    }
+
+    @Test
     public void MasksFromAccessory() throws InterruptedException {
-
         museumBase.selectMasksFromAccessory();
-        Thread.sleep(10000);
-        museumBase.ValidateSelectMasksFromAccessory();
+        museumBase.validateMasksFromAccessory();
     }
 
-    @Test(priority = 6)
-    public void selectSecureFitMask() throws InterruptedException {
-
-        museumBase.selectSecurefitMasks();
-        Thread.sleep(10000);
-        museumBase.validateSelectSecurefitMasks();
+    @Test
+    public void MasksItem() throws InterruptedException {
+        museumBase.SelectMasksItemsElements();
+        museumBase.validateSelectMasksItems();
     }
 
-    //
-    @Test(priority = 7)
-    public void VerifyMasksInCart() throws InterruptedException {
-
-        museumBase.verifyMasksInCart();
-        Thread.sleep(10000);
-        museumBase.validateVerifyMasksInCart();
-    }
-
-    @Test(priority = 8)
+    @Test
     public void removeItemsFromCart() throws InterruptedException {
-
-        museumBase.removeItems();
-        Thread.sleep(10000);
+        museumBase.removeItemsElements();
         museumBase.validateRemoveItems();
+    }
+    @Test
+    public void sparkShopScrollingFunction() throws InterruptedException {
+        museumBase.sparkShopElements();
+        museumBase.validateSparkShopElements();
+    }
+    @Test
+    public void scrollingUpAndDown() throws InterruptedException {
+        museumBase.scrollingUpAndDownElements();
+        museumBase.validateScrollingUpAndDown();
+    }
+    @Test
+    public void sparkShop() throws InterruptedException {
+        museumBase.sparkShopElements();
+        museumBase.validateSparkShopElements();
     }
 }

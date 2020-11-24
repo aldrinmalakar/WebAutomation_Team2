@@ -6,20 +6,21 @@
   <parameter name="browserVersion" value="86"/>
   <parameter name="browserName" value="chrome"/>
   <parameter name="cloudEnvName" value="browserStack"/>
-  <parameter name="url" value="https://www.bankofamerica.com"/>
+  <parameter name="url" value="https://www.bankofamerica.com/"/>
   <test thread-count="5" name="Bank Of America Location Test(failed)" verbose="0">
     <classes>
-      <class name="com.BOAtest.BOATest">
+      <class name="bancofamericamuseumTest.BOATest">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="openFilterFunctions"/>
-          <include name="getInit"/>
           <include name="setUp"/>
+          <include name="chatBoxFunction"/>
           <include name="startExtent"/>
           <include name="generateReport"/>
+          <include name="cleanUp"/>
+          <include name="getInit"/>
           <include name="extentSetup"/>
         </methods>
-      </class> <!-- com.BOAtest.BOATest -->
+      </class> <!-- bancofamericamuseumTest.BOATest -->
     </classes>
   </test> <!-- Bank Of America Location Test(failed) -->
 </suite> <!-- Failed suite [TestSuit] -->
