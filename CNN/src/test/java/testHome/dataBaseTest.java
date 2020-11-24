@@ -2,6 +2,7 @@ package testHome;
 
 import common.WebAPI;
 import home.HomePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,8 +32,12 @@ public class dataBaseTest extends WebAPI {
   Statement smt=  con.createStatement();
   ResultSet rs= smt.executeQuery("select * from employeeinfo");
   while (rs.next()){
-  String name=   rs.getString("name");
-  System.out.println("Database record is:"+name);
+//  String name=   rs.getString("name");
+//  System.out.println("Database record is:"+name);
+  driver.findElement(By.xpath("//header/div[1]/div[1]/div[1]/div[6]/div[1]/*[1]")).click();
+   driver.findElement(By.name("loginEmail")) .sendKeys(rs.getString("name"));
+driver.findElement(By.name("loginPassword")).sendKeys(rs.getString("location"));
+driver.findElement(By.xpath("//body/div[@id='nav__plain-header']/div[1]/div[1]/div[1]/div[1]/div[3]/form[1]/button[1]/span[1]")).click();
   }
  }
 

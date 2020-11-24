@@ -18,6 +18,8 @@ import static home.HomePageLocators.*;
 public class databaseConnector extends WebAPI {
 @FindBy(how= How.XPATH,using =signin ) public WebElement Cnnsignin;
 @FindBy(how= How.NAME,using =EmailAddress) public WebElement CnnEmailAddress;
+@FindBy(how= How.NAME,using = passsword ) public WebElement Cnnpasssword;
+
 
 public void Cnnsignin(){
     Cnnsignin.click();
