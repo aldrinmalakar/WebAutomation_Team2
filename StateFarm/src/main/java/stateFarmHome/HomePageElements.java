@@ -43,10 +43,36 @@ public class HomePageElements {
     public static final String findAgentOkButtonCss = "#quote-main-zip-code-button_1";
     public static final String assertFindAgentZipBoxID = "locationText";
 
+    public static final String searchHeaderXpath = "//button[contains(@data-for,'search')]//span";
+    public static final String searchBoxID = "util-sf-search";
+    public static final String searchOKButtonXpath = "button[class='-oneX-util-search-button -oneX-btn-primary']";
+    public static final String searchInResultXpath = "//label[@for='inpage-search']";
 
+    public static final String getIphoneAppCss = "img[alt='Apple App Store button for State Farm mobile app']";
+    public static final String getIphoneAppURL = "https://apps.apple.com/us/app/state-farm-pocket-agent/id318142137";
+    public static final String getAndroidAppCss = "img[alt='Google Play button for State Farm mobile app']";
+    public static final String getAndroidAppURL = "https://play.google.com/store/apps/details?id=com.statefarm.pocketagent";
 
+    public static final String optCCPAReadmoreID = "optccpaReadmore";
+    public static final String assertPrivacyTextCSS = "div[id='opttestexpand'] p strong";
 
+    public static final String socialFBButtonCss = "a[aria-label=\"Visit State Farm's Facebook page\"]";
+    public static final String socialFBUrl = "https://www.facebook.com/statefarm";
 
+    public static final String socialLinkedInCss = "a[aria-label=\"Visit State Farm's LinkedIn page\"]";
+    public static final String socialLinkedInUrl = "https://www.linkedin.com/company/state_farm";
 
+    public static final String socialYouTubeCss = "a[aria-label=\"Visit State Farm's YouTube page\"]";
+    public static final String socialYoutubeUrl = "https://www.youtube.com/c/statefarm";
+
+    public static final String helpHeaderXpath = "//button[contains(@data-for,'help')]//span";
+    public static final String contactUsXpath = "//section[@id='oneX-submenu-help']//li[1]//a[1]";
+    public static final String contactUsUrl = "https://www.statefarm.com/customer-care/contact-us";
+
+    public static final String customerCareXpath = "//section[@id='oneX-submenu-help']//li[2]//a[1]";
+    public static final String customerCareUrl = "https://www.statefarm.com/customer-care";
+
+    public static final String faqsHelpXpath = "//section[@id='oneX-submenu-help']//li[3]//a[1]";
+    public static final String faqsHelpUrl = "https://www.statefarm.com/customer-care/faqs";
 
 }

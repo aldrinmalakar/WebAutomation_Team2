@@ -3,6 +3,7 @@ package testHome;
 import common.WebAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import stateFarmHome.HomePage;
 
@@ -24,6 +25,17 @@ public class HomePageTest extends WebAPI {
     public void testAssertHomePageURL() {
         driver.navigate().refresh();
         homePage.assertHomepageURL(stateFarmHomepageUrl);
+    }
+
+    @Test
+    public void testBrokenLinks() {
+        homePage.findBrokenLinks(stateFarmHomepageUrl);
+    }
+
+    @Test
+    public void testReadMorePrivacy() {
+        homePage.getToReadMorePrivacy();
+        homePage.assertReadMorePrivacy("We value your privacy.");
     }
 
     @Test
@@ -90,9 +102,70 @@ public class HomePageTest extends WebAPI {
         homePage.findAnAgent("11377");
         homePage.assertFindAnAgent("11377");
     }
+
     @Test
     public void testFindAnAgentForNewYork() {
         homePage.findAnAgent("NewYork");
         homePage.assertFindAnAgent("NewYork");
+    }
+
+    @DataProvider(name = "searchData")
+    public Object[] searchData() {
+        Object[] data = new Object[5];
+        data[0] = "Home Loan";
+        data[1] = "Auto Loan";
+        data[2] = "ATM Booth";
+        data[4] = "Rental Loan";
+        return data;
+    }
+
+    @Test(dataProvider = "searchData")
+    public void testSearchFunctionality(String searchKey) {
+        homePage.searchWithDataProvider(searchKey);
+        homePage.assertSearchWithDataProvider();
+    }
+
+    @Test
+    public void testGetIphoneApp() {
+        homePage.getIphoneApp();
+        homePage.assertGetIphoneApp();
+    }
+
+    @Test
+    public void testGetAndroidApp() {
+        homePage.getAndroidApp();
+        homePage.assertGetAndroidApp();
+    }
+
+    @Test
+    public void testSocialFacebookPage() {
+        homePage.SocialFacebookPage(socialFBButtonCss);
+        homePage.assertSocialFacebookPage(socialFBUrl);
+    }
+    @Test
+    public void testSocialLinkedInPage() {
+        homePage.SocialFacebookPage(socialLinkedInCss);
+        homePage.assertSocialFacebookPage(socialLinkedInUrl);
+    }
+    @Test
+    public void testSocialYouTubePage() {
+        homePage.SocialFacebookPage(socialYouTubeCss);
+        homePage.assertSocialFacebookPage(socialYoutubeUrl);
+    }
+
+    @Test
+    public void testSeekHelpHeaderContactUs() {
+        homePage.seekHelpHeader(contactUsXpath);
+        homePage.assertSeekHelpHeader(contactUsUrl);
+    }
+    @Test
+    public void testSeekHelpHeaderCustomerCare() {
+        homePage.seekHelpHeader(customerCareXpath);
+        homePage.assertSeekHelpHeader(customerCareUrl);
+    }
+    @Test
+    public void testSeekHelpHeaderFAQs() {
+        homePage.seekHelpHeader(faqsHelpXpath);
+        homePage.assertSeekHelpHeader(faqsHelpUrl);
     }
 }

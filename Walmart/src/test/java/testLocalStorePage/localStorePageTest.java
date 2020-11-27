@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static localStore.localStorePageElements.*;
+
 public class localStorePageTest extends WebAPI {
     LocalStorePage localStorePage;
 
@@ -20,6 +22,9 @@ public class localStorePageTest extends WebAPI {
 
         localStorePage.validateNavigateToLocalStorePage();
     }
+    @Test
+    public void testBrokenLinks() {
+        localStorePage.findBrokenLinks(localStoreURL);}
 
     @Test
     public void makeThisMyStoreTest() {
