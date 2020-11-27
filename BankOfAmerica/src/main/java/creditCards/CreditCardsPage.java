@@ -74,7 +74,7 @@ public class CreditCardsPage extends WebAPI {
     @FindBy(how = How.CSS, using = calculateRewardsInBlue)
     public WebElement calculateRewards;
 
-    @FindBy(how = How.CSS, using = sliderNumberNineHundredAmount)
+    @FindBy(how = How.CSS, using = sliderNumberValue)
     public WebElement sliderNumber;
 
     @FindBy(how = How.CSS, using = footerElementDisplay)
@@ -95,15 +95,28 @@ public class CreditCardsPage extends WebAPI {
     @FindBy(how = How.CSS, using = airlinesFooterCard)
     public WebElement airlinesFooter;
 
+    @FindBy(how = How.CSS, using = pointsRewardsCardOnCreditCardMenu)
+    public WebElement pointsRewardsCardOnCreditMenu;
+
+    @FindBy(how = How.CSS, using = applyNowButton)
+    public WebElement applyNow;
+
+    @FindBy(how = How.CSS, using = footerForHomeButton)
+    public WebElement footerForHome;
+
+    @FindBy(how = How.CSS, using = footerPrivacyPage)
+    public WebElement footerPrivacy;
+
+    @FindBy(how = How.CSS, using = careersFromFooter)
+    public WebElement careersFooter;
+
+    @FindBy(how = How.CSS, using = siteMapFromFooter)
+    public WebElement siteMapFooter;
+
 
     public void calculateRewards() {
         calculateRewards.click();
     }
-
-    public void calculatePageOpens() {
-
-    }
-
 
     public void navigateToCreditCards() {
         creditCards.click();
@@ -257,6 +270,7 @@ public class CreditCardsPage extends WebAPI {
     public void acceptTwitterPopup() {
         boolean continueTwitterDisplayed = connectToTwitter.isDisplayed();
         Assert.assertTrue(continueTwitterDisplayed);
+        driver.navigate().refresh();
     }
 
     public void navigateToTwitter() {
@@ -302,6 +316,78 @@ public class CreditCardsPage extends WebAPI {
         String actual = driver.getTitle();
         String expected = airlinesPageTitle;
         Assert.assertEquals(actual, expected, "Failed:Title does not match Airlines");
+    }
+
+    public void pointsRewardFromMenu() {
+        pointsRewardsCardOnCreditMenu.click();
+    }
+
+    public void pointsRewardTitle() {
+        String actual = driver.getTitle();
+        String expected = rewardsPageTitle;
+        Assert.assertEquals(actual, expected, "Failed:Title does not match");
+    }
+
+    public void typeValueInsteadSlider() {
+        sliderNumber.sendKeys("200");
+    }
+
+    public void numberBoxValue() {
+        String actual = "200";
+        String expected = sliderNumber.getText();
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+    public void applyNowClick() {
+        calculateRewards();
+        applyNow.click();
+    }
+
+    public void applyNowValidation() {
+        String actual = driver.getTitle();
+        String expected = applicationPageTitle;
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+    public void navigateToHomeFromFooter() {
+        footerForHome.click();
+    }
+
+    public void homeFromFooterValidation() {
+        String actual = driver.getTitle();
+        String expected = homePageTitle;
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+    public void privacyPageNavigation() {
+        footerPrivacy.click();
+    }
+
+    public void privacyPageValidation() {
+        String actual = driver.getTitle();
+        String expected = privacyPageTitle;
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+    public void careersPageNavigation() {
+        careersFooter.click();
+    }
+
+    public void careersPageValidation() {
+        String actual = driver.getTitle();
+        String expected = careerPageTitle;
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+
+    public void siteMapPageNavigation() {
+        siteMapFooter.click();
+    }
+
+    public void sieMapPageValidation() {
+        String actual = driver.getTitle();
+        String expected = siteMapPageTitle;
+        Assert.assertEquals(actual, expected, "Failed");
     }
 
 

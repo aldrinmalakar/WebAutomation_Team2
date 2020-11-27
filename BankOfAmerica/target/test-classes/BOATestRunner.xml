@@ -24,7 +24,7 @@
         <classes>
             <class name="testCreditCards.CreditCardsPageTest">
                 <methods>
-                    <include name="airlinesPageTest"></include>
+                    <include name="dragSliderToFiveThousand"></include>
                 </methods>
             </class>
 

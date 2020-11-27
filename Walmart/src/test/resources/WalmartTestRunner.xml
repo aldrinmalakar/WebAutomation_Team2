@@ -24,7 +24,7 @@
                     <exclude name="scrollDownTest"></exclude>
                     <exclude name="testBirthdayOccasion"></exclude>
                     <exclude name="navigatetestGiftPageNavigation"></exclude>
-                    <include name="backToTopButton"></include>
+                    <include name="typeOfGiftList"></include>
                 </methods>
             </class>
         </classes>

@@ -65,8 +65,9 @@ public class CreditCardsPageTest extends WebAPI {
     }
 
     @Test//9
-    public void glassSliderToNineHundred() {
+    public void glassSliderToNineHundred() throws InterruptedException {
         creditCardsPage.checkGlassSlider();
+        sleepFor(4);
         creditCardsPage.glassSliderNineHundred();
     }
 
@@ -124,6 +125,46 @@ public class CreditCardsPageTest extends WebAPI {
         creditCardsPage.airlinesFooterPageTitle();
     }
 
+    @Test//19
+    public void rewardsPageTitleTest() {
+        creditCardsPage.pointsRewardFromMenu();
+        creditCardsPage.pointsRewardTitle();
+    }
 
+    @Test//20
+    public void insertValueWithoutSlider() {
+        creditCardsPage.typeValueInsteadSlider();
+        creditCardsPage.numberBoxValue();
+    }
+
+    @Test//21
+    public void applicationPageNavigation() {
+        creditCardsPage.applyNowClick();
+        creditCardsPage.applyNowValidation();
+    }
+
+    @Test//22
+    public void goToHomePageFooter() {
+        creditCardsPage.navigateToHomeFromFooter();
+        creditCardsPage.homeFromFooterValidation();
+    }
+
+    @Test//23
+    public void goToPrivacyPageFooter() {
+        creditCardsPage.privacyPageNavigation();
+        creditCardsPage.privacyPageValidation();
+    }
+
+    @Test//24
+    public void goToCareersFromFooter() {
+        creditCardsPage.careersPageNavigation();
+        creditCardsPage.careersPageValidation();
+    }
+
+    @Test//25
+    public void goToSiteMapFromFooter() {
+        creditCardsPage.siteMapPageNavigation();
+        creditCardsPage.sieMapPageValidation();
+    }
 
 }
