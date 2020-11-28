@@ -25,7 +25,7 @@
 
             <class name="testInsurance.InsurancePageTest">
                 <methods>
-                    <include name="testInvalidCredentials"></include>
+                    <include name="facebookOpensNewTab"></include>
                 </methods>
             </class>
 

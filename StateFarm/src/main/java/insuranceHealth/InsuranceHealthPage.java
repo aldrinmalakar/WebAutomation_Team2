@@ -1,21 +1,23 @@
 package insuranceHealth;
 
+import com.google.common.base.Joiner;
 import common.WebAPI;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.Assert;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import static utilities.ReadExcel.*;
 import static insuranceHealth.InsuranceWebPageElements.*;
 
 public class InsuranceHealthPage extends WebAPI {
@@ -23,6 +25,11 @@ public class InsuranceHealthPage extends WebAPI {
     public InsuranceHealthPage() {
 
     }
+
+    public static List<Integer> firstColumn = new ArrayList<>();
+    public static List<String> secondColumn = new ArrayList<>();
+    public static List<String> actualUrl = new ArrayList<>();
+
 
     @FindBy(how = How.XPATH, using = emailBox)
     public WebElement emailBoxKey;
@@ -43,15 +50,61 @@ public class InsuranceHealthPage extends WebAPI {
     @FindBy(how = How.XPATH, using = errorRecordNotFoundMessage)
     public WebElement errorRecordNotFound;
 
+    @FindBy(how = How.XPATH, using = findAnAgentNear)
+    public WebElement findAnAgent;
 
-    public void loginInvalidCredentials(String someId,String somePassword){
+    @FindBy(how = How.XPATH, using = enterZipCodeBox)
+    public WebElement enterZipCode;
+
+    @FindBy(how = How.XPATH, using = findAgentZipCodeEntered)
+    public WebElement findAgentZipEntered;
+
+    @FindBy(how = How.XPATH, using = helpButton)
+    public WebElement help;
+
+    @FindBy(how = How.XPATH, using = espanolButton)
+    public WebElement espanol;
+
+    @FindBy(how = How.XPATH, using = copyRightText)
+    public WebElement copyRight;
+
+    @FindBy(how = How.XPATH, using = payABillButton)
+    public WebElement payABill;
+
+    @FindBy(how = How.XPATH, using = enterPhoneNumberBox)
+    public WebElement enterPhoneNumber;
+
+    @FindBy(how = How.XPATH, using = enterDOBBox)
+    public WebElement enterDOB;
+
+    @FindBy(how = How.XPATH, using = payNowButton)
+    public WebElement payNow;
+
+    @FindBy(how = How.XPATH, using = errorMessageForCorrect)
+    public WebElement errorMessageBill;
+
+    @FindBy(how = How.XPATH, using = stateFarmLogoPic)
+    public WebElement stateFarmLogo;
+
+    @FindBy(how = How.XPATH, using = facebookNavigation)
+    public WebElement facebookNav;
+
+    @FindBy(how = How.XPATH, using = goPaperless)
+    public WebElement goPaperlessOption;
+
+    @FindBy(how = How.XPATH, using = goPaperlessTextEx)
+    public WebElement goPaperlessText;
+
+
+    public void loginInvalidCredentials(String someId, String somePassword) {
         login.click();
         clearAndSendKeys(userId, someId);
         clearAndSendKeys(passwordInput, somePassword);
         loginAfterCredentials.click();
     }
 
-    public void errorDisplaysForInvalidCred(){
+
+    public void errorDisplaysForInvalidCred() {
         eleIsDisplayed(errorRecordNotFound);
     }
 
@@ -60,11 +113,10 @@ public class InsuranceHealthPage extends WebAPI {
         element.sendKeys(keys);
     }
 
-    public void sendKeys(WebElement element, String email) {
+    public void clearAndSendKeysInteger(WebElement element, int number) {
         element.clear();
-        element.sendKeys(email);
+        element.sendKeys();
     }
-
 
     public void findBrokenLinks() {
         String url = "";
@@ -116,9 +168,110 @@ public class InsuranceHealthPage extends WebAPI {
 
     }
 
-    public boolean eleIsDisplayed(WebElement element){
+    public boolean eleIsDisplayed(WebElement element) {
         element.isDisplayed();
         return true;
+    }
+
+    public void findAgentWithZipCode(WebElement element) throws InterruptedException {
+        readExcelFile(getFileName(), 0, firstColumn, secondColumn);
+        for (int i = 0; i < firstColumn.size(); i++) {
+            findAnAgent.click();
+            enterZipCode.clear();
+            element.sendKeys(String.valueOf(firstColumn.get(i)));
+            sleepFor(2);
+            findAgentZipEntered.click();
+            String currentUrl = driver.getCurrentUrl();
+            actualUrl.add(currentUrl);
+        }
+    }
+
+    public void validateUrlForZipCode() {
+        for (int i = 0; i < secondColumn.size(); i++) {
+            equalAssertion(actualUrl.get(i), secondColumn.get(i));
+        }
+    }
+
+    public void equalAssertion(String actual, String expected) {
+        Assert.assertEquals(actual, expected, "Failed");
+    }
+
+    public void changeLanguageToSpanish() {
+        espanol.click();
+    }
+
+    public void checkSpanishTitle() {
+        equalAssertion(getTitleGeneric(), spanishTitleExpected);
+    }
+
+    public String getTitleGeneric() {
+        String title = driver.getTitle();
+        return title;
+    }
+
+    public void navigatingBackToEnglish() {
+        changeLanguageToSpanish();
+        driver.navigate().refresh();
+        driver.navigate().back();
+    }
+
+    public void checkEnglishLanguage() {
+        equalAssertion(getTitleGeneric(), englishTitleExpected);
+    }
+
+    public void scrollDownToCopyright() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollHeight();");
+    }
+
+    public void copyRightsDisplayed() {
+        eleIsDisplayed(copyRight);
+    }
+
+    public void payABillWithInvalidCredentials(String phone, String dob) {
+        payABill.click();
+        clearAndSendKeys(enterPhoneNumber, phone);
+        clearAndSendKeys(enterDOB, dob);
+        payNow.click();
+    }
+
+    public void checkForInformationError() {
+        eleIsDisplayed(errorMessageBill);
+    }
+
+    public void stateFarmLogo() {
+        stateFarmLogo.click();
+    }
+
+    public void checkLogoNavigatesToHome() {
+        equalAssertion(englishTitleExpected, getTitleGeneric());
+    }
+
+    public void facebookNavigatesNewTab() {
+        facebookNav.click();
+    }
+
+    public void validateNewTabFacebook() {
+        nextTabHandle();
+        equalAssertion(getTitleGeneric(),facebookTitleEx);
+    }
+
+    public void nextTabHandle() {
+        String currentTabHandle = driver.getWindowHandle();
+        String newTabHandle = driver.getWindowHandles()
+                .stream()
+                .filter(handle -> !handle.equals(currentTabHandle))
+                .findFirst()
+                .get();
+        driver.switchTo().window(newTabHandle);
+    }
+
+    public void goPaperLess(){
+        goPaperlessOption.click();
+    }
+
+    public void goPaperlessText(){
+        eleIsDisplayed(goPaperlessText);
     }
 
 

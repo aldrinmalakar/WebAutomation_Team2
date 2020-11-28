@@ -9,10 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.net.HttpURLConnection;
-
-import static utilities.ReadExcel.*;
-import static utilities.WriteExcelFile.*;
 
 public class InsurancePageTest extends WebAPI {
     InsuranceHealthPage insuranceHealthPage;
@@ -24,43 +20,9 @@ public class InsurancePageTest extends WebAPI {
 //        options.addArguments("incognito");
 //        ChromeDriver driver = new ChromeDriver(options);
 
-
-
-        //  }
-        // private static final String FILE_NAME = System.getProperty("user.dir") + "/DataTest/TestExcelFile.xlsx";
-//
-//    @Test
-//    public void testing (){
-//        writeExcel(FILE_NAME);
-//    }
-//
-//
-
-        //private static final String FILE_NAME = System.getProperty("user.dir") + "/DataTest/TestExcelFile.xlsx";
-
-
-        //String url ="https://www.walmart.com/account/trackorder";
-//
-//    @Test
-//    public void sample(){
-
-        //driver.get(url);
-//        readExcelFile(FILE_NAME,0);
-//        System.out.println(emails);
-        //System.out.println(passwords);
-
-//        insuranceHealthPage.sendKeys(insuranceHealthPage.emailBoxKey,emails.get(0));
-//        insuranceHealthPage.sendKeys(insuranceHealthPage.password,passwords.get(0));
-//        //click sign in
-
-//        for (int i=0; i<emails.size(); i++){
-//            insuranceHealthPage.sendKeys(insuranceHealthPage.emailBoxKey,emails.get(i));
-//            insuranceHealthPage.sendKeys(insuranceHealthPage.password,passwords.get(i));
-
-        // }
-
     }
-    @DataProvider(name = "InvalidData")
+
+    @DataProvider(name = "InvalidData")//20
     public Object[][] getData() {
 
         Object[][] data = new Object[5][2];
@@ -79,16 +41,83 @@ public class InsurancePageTest extends WebAPI {
         return data;
     }
 
-    @Test(dataProvider = "InvalidData")
-    public void testInvalidCredentials(String someId,String somePassword){
-        insuranceHealthPage.loginInvalidCredentials(someId,somePassword);
+    @Test(dataProvider = "InvalidData")//5
+    public void testInvalidCredentials(String someId, String somePassword) {
+        insuranceHealthPage.loginInvalidCredentials(someId, somePassword);
         insuranceHealthPage.errorDisplaysForInvalidCred();
     }
 
-
-    @Test
+    @Test//6
     public void broken() {
         insuranceHealthPage.findBrokenLinks();
+    }
+
+    @Test//11 excel reader used
+    public void searchAgentZipTest() throws InterruptedException {
+        insuranceHealthPage.findAgentWithZipCode(insuranceHealthPage.enterZipCode);
+        insuranceHealthPage.validateUrlForZipCode();
+    }
+
+    @Test//12
+    public void changeLanguageTest() {
+        insuranceHealthPage.changeLanguageToSpanish();
+        insuranceHealthPage.checkSpanishTitle();
+
+    }
+
+    @Test//13
+    public void testLanguageAfterNavigatingBack() {
+        insuranceHealthPage.navigatingBackToEnglish();
+        insuranceHealthPage.checkEnglishLanguage();
+    }
+
+    @Test//14
+    public void copyRightIsDisplayedAtBottom() {
+        insuranceHealthPage.scrollDownToCopyright();
+        insuranceHealthPage.copyRightsDisplayed();
+    }
+
+    @DataProvider(name = "PayBillInformation")
+    public Object[][] information() {
+
+        Object[][] data = new Object[5][2];
+
+        data[0][0] = "7184567890";
+        data[0][1] = "02041990";
+        data[1][0] = "3475678901";
+        data[1][1] = "02221954";
+        data[2][0] = "9176789012";
+        data[2][1] = "10091994";
+        data[3][0] = "9177890123";
+        data[3][1] = "07092014";
+        data[4][0] = "7188901234";
+        data[4][1] = "06102012";
+
+        return data;
+    }
+
+    @Test(dataProvider = "PayBillInformation")//20
+    public void testErrorForInvalidInfo(String phone, String dob) {
+        insuranceHealthPage.payABillWithInvalidCredentials(phone, dob);
+        insuranceHealthPage.checkForInformationError();
+    }
+
+    @Test//21
+    public void logoTest() {
+        insuranceHealthPage.stateFarmLogo();
+        insuranceHealthPage.checkLogoNavigatesToHome();
+    }
+
+    @Test//22
+    public void facebookOpensNewTab() {
+        insuranceHealthPage.facebookNavigatesNewTab();
+        insuranceHealthPage.validateNewTabFacebook();
+    }
+
+    @Test//23
+    public void goPaperlessValidation(){
+        insuranceHealthPage.goPaperLess();
+        insuranceHealthPage.goPaperlessText();
     }
 
 
