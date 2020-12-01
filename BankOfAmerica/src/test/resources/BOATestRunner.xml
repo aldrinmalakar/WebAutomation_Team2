@@ -14,45 +14,22 @@
     <!--    <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="######"/>
     <parameter name="browserVersion" value="###"/>
-    <parameter name="url" value="###########"/>
+    <parameter name="url" value="https://www.bankofamerica.com/"/>
 
-<!--    <test name="###########">-->
-<!--&lt;!&ndash;        <parameter name="browserName" value="chrome"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        <parameter name="browserVersion" value="86"/>&ndash;&gt;-->
+    <test name="CreditCards">
+        <parameter name="OS" value="OS X"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="86"/>
 
-<!--        <classes>-->
-<!--&lt;!&ndash;            <class name="testHome.HomePageTest">&ndash;&gt;-->
-<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <exclude name="testSearchBoxCheck"></exclude>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <exclude name="testSearchBoxCheck1"></exclude>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <include name="testSearchBoxCheck2"></include>&ndash;&gt;-->
-<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
-<!--&lt;!&ndash;            </class>&ndash;&gt;-->
+        <classes>
+            <class name="testCreditCards.CreditCardsPageTest">
+                <methods>
+                    <include name="dragSliderToFiveThousand"></include>
+                </methods>
+            </class>
 
-<!--            <class name="testHome.HomePageTest"></class>-->
-
-
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test name="#########">-->
-<!--                <parameter name="browserName" value="firefox"/>-->
-<!--                <parameter name="browserVersion" value="##"/>-->
-<!--        <classes>-->
-<!--            &lt;!&ndash;            <class name="testhome.HomePageTest">&ndash;&gt;-->
-<!--            &lt;!&ndash;                <methods>&ndash;&gt;-->
-<!--            &lt;!&ndash;                    <exclude name="testSearchBoxCheck"></exclude>&ndash;&gt;-->
-<!--            &lt;!&ndash;                    <exclude name="testSearchBoxCheck1"></exclude>&ndash;&gt;-->
-<!--            &lt;!&ndash;                    <include name="testSearchBoxCheck2"></include>&ndash;&gt;-->
-<!--            &lt;!&ndash;                </methods>&ndash;&gt;-->
-<!--            &lt;!&ndash;            </class>&ndash;&gt;-->
-<!--            <class name="testHome.HomePageTest"></class>-->
-
-<!--        </classes>-->
-
-<!--    </test>-->
-
-
+        </classes>
+    </test>
 
 
 </suite>

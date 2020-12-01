@@ -135,30 +135,31 @@ public class GiftFinderPage extends WebAPI {
         Assert.assertEquals(actual, expected, "Failed: Did not navigate to gift finder page");
     }
 
-    public void selectForHer(){
+    public void selectForHer() {
         forWho.click();
         forHer.click();
     }
 
-    public void forHerSelectValidation(){
+    public void forHerSelectValidation() {
         boolean selectedForHer = forHer.isDisplayed();
         Assert.assertTrue(selectedForHer, "Failed: For her is no selected and displayed");
     }
 
-    public void selectAgeBaby(){
+    public void selectAgeBaby() {
         ageGroupBox.click();
         forBaby.click();
     }
-    public void babySelected(){
+
+    public void babySelected() {
         boolean isBabySelected = forBaby.isEnabled();
     }
 
-    public void priceRangeSelect(){
+    public void priceRangeSelect() {
         priceRangeBox.click();
         lessThan25.click();
     }
 
-    public void priceRangeIs25(){
+    public void priceRangeIs25() {
         boolean lessThan25Selected = lessThan25.isDisplayed();
     }
 
