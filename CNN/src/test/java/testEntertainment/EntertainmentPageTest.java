@@ -8,6 +8,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utilities.ReadExcel;
 
+import java.awt.*;
+
 public class EntertainmentPageTest extends WebAPI {
 
     EntertainmentPage entertainmentPage;
@@ -38,14 +40,14 @@ public class EntertainmentPageTest extends WebAPI {
         return data;
     }
 
-    @Test(dataProvider = "SearchEntertainment")
+    @Test(dataProvider = "SearchEntertainment")//2-6
     public void searchBarResults(String data) {
         entertainmentPage.searchEntertainmentsPage(data);
 
     }
 
-    @Test//13
-    public void testSignInInvalidCred(){
+    @Test//7-13
+    public void testSignInInvalidCred() throws InterruptedException {
         entertainmentPage.signInUsingInvalidCredentials();
     }
 
@@ -59,6 +61,17 @@ public class EntertainmentPageTest extends WebAPI {
         entertainmentPage.scrollDown();
         entertainmentPage.validateScrollDown();
     }
+
+    @Test//15-20
+    public void testAllCatergoriesWithClassArePresent() {
+        entertainmentPage.allCategoriesAreDisplayed();
+    }
+
+//hello
+
+
+
+
 
 
 
