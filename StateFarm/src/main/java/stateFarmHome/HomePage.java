@@ -3,13 +3,13 @@ package stateFarmHome;
 import common.WebAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -127,6 +127,7 @@ public class HomePage extends WebAPI {
         clickByCss(loginElementCss);
         typeById(loginUserIDElementsID, username);
         typeById(loginPasswordElementID, password);
+        sleepFor(2);
         clickByXpath(loginOKButtonElementXpath);
     }
 
@@ -233,12 +234,14 @@ public class HomePage extends WebAPI {
     }
 
     public void getToReadMorePrivacy() {
-        clickById(optCCPAReadmoreID);
-        sleepFor(2);
+  sleepFor(6);
+        clickByCss(optCCPAReadmoreCss);
+
     }
 
     public void assertReadMorePrivacy(String expected) {
         String actual = getTextByCss(assertPrivacyTextCSS);
+        Assert.assertEquals(actual,expected,"Test Failed");
     }
 
     public void SocialFacebookPage(String givenCss) {
