@@ -7,12 +7,12 @@
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="86"/>
-    <parameter name="url" value="https://coupons.cnn.com/"/>
+    <parameter name="url" value="https://www.cnn.com/"/>
 
     <test name="CNN Test Cases">
 
         <classes>
-            <class name="com.cnncouponsTest.CNNCouponsTest">
+            <class name="com.cnncouponsTest.CNNStoreTest">
 <!--                <methods>-->
 <!--                    <exclude name="testSearchBoxCheck"></exclude>-->
 <!--                    <exclude name="testSearchBoxCheck1"></exclude>-->

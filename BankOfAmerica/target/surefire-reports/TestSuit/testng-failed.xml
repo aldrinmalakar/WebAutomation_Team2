@@ -12,13 +12,19 @@
       <class name="bancofamericamuseumTest.BOATest">
         <methods>
           <include name="afterEachTestMethod"/>
+          <include name="calculateCostDeptFunctions"/>
+          <include name="sendMessageIntoChatBox"/>
           <include name="setUp"/>
-          <include name="chatBoxFunction"/>
+          <include name="merrillGuideAdviser"/>
           <include name="startExtent"/>
-          <include name="generateReport"/>
-          <include name="cleanUp"/>
-          <include name="getInit"/>
           <include name="extentSetup"/>
+          <include name="LocationPage"/>
+          <include name="LocationByFilters"/>
+          <include name="chatBoxFunction"/>
+          <include name="generateReport"/>
+          <include name="closeFilterFunctions"/>
+          <include name="investingMerrillHomePage"/>
+          <include name="getInit"/>
         </methods>
       </class> <!-- bancofamericamuseumTest.BOATest -->
     </classes>

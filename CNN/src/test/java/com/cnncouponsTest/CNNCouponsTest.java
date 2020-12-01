@@ -1,65 +1,60 @@
 package com.cnncouponsTest;
 
-import com.cnncoupons.CNNCouponsPage;
+import com.cnncoupons.CNNCHomePage;
 import common.WebAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class CNNCouponsTest extends WebAPI {
-    static CNNCouponsPage cnnCouponsPage;
+    static CNNCHomePage CNNCHomePage;
 
     @BeforeMethod
     public void getInit() {
-        cnnCouponsPage = PageFactory.initElements(driver, CNNCouponsPage.class);
+        CNNCHomePage = PageFactory.initElements(driver, CNNCHomePage.class);
     }
 
     @Test
     public void CNNCouponsPage() {
-        cnnCouponsPage.validateCNNCouponsPage();
+        CNNCHomePage.validateCNNCouponsPage();
     }
 
     @Test
     public void homePageOfferImagesRight() {
-        cnnCouponsPage.OfferImagesRightSlide();
-        cnnCouponsPage.validateOfferImagesRightSlide();
+        CNNCHomePage.OfferImagesRightSlide();
+        CNNCHomePage.validateOfferImagesRightSlide();
     }
+
     @Test
     public void homePageOfferImagesLeft() {
-        cnnCouponsPage.OfferImagesLeftSlide();
-        cnnCouponsPage.validateOfferImagesLeftSlide();
+        CNNCHomePage.OfferImagesLeftSlide();
+        CNNCHomePage.validateOfferImagesLeftSlide();
     }
+
     @Test
     public void selectTopStores() {
-        cnnCouponsPage.selectTopStores();
-        cnnCouponsPage.validateSelectTopStores();
+        CNNCHomePage.selectTopStores();
+        CNNCHomePage.validateSelectTopStores();
     }
 
     @Test
     public void searchFunctionality() {
-        cnnCouponsPage.searchFunctionalityElements();
-        cnnCouponsPage.validateSearchFunctionalityElements();
+        CNNCHomePage.searchFunctionalityElements();
+        CNNCHomePage.validateSearchFunctionalityElements();
 
     }
 
     @Test
     public void searchFunctionalityUsingNumbers() {
-        cnnCouponsPage.searchFunctionalityNumbers();
-        cnnCouponsPage.validateSearchFunctionalityNumbers();
+        CNNCHomePage.searchFunctionalityNumbers();
+        CNNCHomePage.validateSearchFunctionalityNumbers();
     }
 
-//    @Test
-//    public void ASOSDealsCods() throws InterruptedException {
-//        cnnCouponsPage.fetchUpDealsCods();
-//        cnnCouponsPage.validateFetchUpDealsCods();
-//    }
-//
-//    @Test
-//    public void name() {
-//    }
-//
-//    @Test
-//    public void name() {
-//    }
+    @Test
+    public void ASOSDealsCods() throws InterruptedException {
+        CNNCHomePage.fetchUpDealsCods();
+        CNNCHomePage.validateFetchUpDealsCods();
+    }
+
 
 }

@@ -137,6 +137,7 @@ public class MuseumTest extends WebAPI {
         museumBase.scrollingUpAndDownElements();
         museumBase.validateScrollingUpAndDown();
     }
+
     @Test
     public void sparkShop() throws InterruptedException {
         museumBase.sparkShopElements();

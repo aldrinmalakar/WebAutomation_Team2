@@ -8,60 +8,46 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import static bankofamericamuseum.BOALocators.*;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-
 public class BOAHmePage extends WebAPI {
-    //location home page
     @FindBy(how = How.CSS, using = LocationsLocator)
     public WebElement Locations;
-    // search location
     @FindBy(how = How.XPATH, using = newYorkLocator)
     public WebElement searchKey;
     @FindBy(how = How.ID, using = clickOnnSearchButtonLocator)
     public WebElement clickOnnSearchButton;
     @FindBy(how = How.CSS, using = AlbanyLocatorActual)
     public WebElement AlbanyActual;
-    //open filter functions
     @FindBy(how = How.LINK_TEXT, using = clickOnFilterLocator)
     public WebElement clickOnFilter;
     @FindBy(how = How.CSS, using = filterActual)
     public WebElement filterValidation;
     @FindBy(how = How.CLASS_NAME, using = clickOnCloseFilterLocator)
     public WebElement CloseFilter;
-    // location by state
     @FindBy(how = How.XPATH, using = clickOnLocationByStateLocator)
     public WebElement clickOnLocationByState;
     @FindBy(how = How.CSS, using = clickOnLocationMassachusettsLocator)
     public WebElement clickOnLocationMassachusetts;
     @FindBy(how = How.XPATH, using = validateOnLocationMassachusettsLocator)
     public WebElement validateOnLocationMassachusetts;
-    // check Near MeButton
     @FindBy(how = How.ID, using = clickCheckNearMeButtonLocation)
     public WebElement clickCheckNearMeButton;
     @FindBy(how = How.ID, using = validateCheckNearMeButtonLocation)
     public WebElement validateCheckNearMeButton;
-    // Search Location By Filters
     @FindBy(how = How.XPATH, using = SearchLocationByFiltersLocator)
     public WebElement SearchLocationByFilters;
     @FindBy(how = How.XPATH, using = validateSearchLocationByFiltersLocator)
     public WebElement validateSearchLocationByFilters;
-    ////////MerrillHomePage
     @FindBy(how = How.XPATH, using = MerrillHomePageLocator)
     public WebElement NavigateToMerrillHomePage;
-    //video
     @FindBy(how = How.XPATH, using = PlayVideoMerrillLocator)
     public WebElement playVideoMerrill;
     @FindBy(how = How.XPATH, using = PlayVideoMerrillActual)
     public WebElement validatePlayVideo;
-    //guide advisor
     @FindBy(how = How.XPATH, using = guideAdviserLocator)
     public WebElement guideAdviser;
     @FindBy(how = How.XPATH, using = validateGuideAdvisorActual)
@@ -72,7 +58,6 @@ public class BOAHmePage extends WebAPI {
     public WebElement actualChatBoxFunction;
     @FindBy(how = How.XPATH, using = closeChatBoxFunctionActual)
     public WebElement closeChatBoxFunction;
-
     @FindBy(how = How.XPATH, using = clickOnMessageBoxLocator)
     public WebElement clickOnMessageBox;
     @FindBy(how = How.XPATH, using = clickOnMessageBoxLocatorclass)
@@ -93,34 +78,37 @@ public class BOAHmePage extends WebAPI {
     public WebElement mainSliderRate;
     @FindBy(how = How.XPATH, using = SliderRateLocator)
     public WebElement SliderRate;
-
-
+    @FindBy(how = How.ID, using = clickOnResearchLocator)
+    public WebElement clickOnResearch;
+    @FindBy(how = How.XPATH, using = SNDLActualLocator)
+    public WebElement SNDLActual;
+    @FindBy(how = How.XPATH, using = iframeHandlingLocator)
+    public WebElement iframeHandling;
+    @FindBy(how = How.XPATH, using = submitLocator)
+    public WebElement submit;
     public void validateBOAHomePage() {
         String expected = "Bank of America - Banking, Credit Cards, Loans and Merrill Investing";
         String actual = driver.getTitle();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void navigateToLocationPage() {
-
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2500)");
         Locations.click();
     }
-
     public void validateLocationPage() {
         String expected = "Bank of America Financial Centers and ATMs";
         String actual = driver.getTitle();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void openFilterFunctions() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Locations.click();
         clickOnFilter.click();
     }
-
     public void searchLocationUsingFilters() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
+        navigateToLocationPage();
         clickOnFilter.click();
         String element = "spid4511";
         List<WebElement> checklist = driver.findElements(By.xpath("//*[@id='spid4511']"));
@@ -133,25 +121,21 @@ public class BOAHmePage extends WebAPI {
         }
         SearchLocationByFilters.click();
     }
-
     public void validateSearchLocationByFilters() {
         String expected = "1";
         String actual = validateSearchLocationByFilters.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void validateOpenFilterFunctions() {
         String expected = "Filter Results";
         String actual = filterValidation.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void closeFilterFunctions() throws InterruptedException {
         Locations.click();
         clickOnFilter.click();
         CloseFilter.click();
     }
-
     public void newYorkInSearchBox() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Locations.click();
@@ -159,37 +143,31 @@ public class BOAHmePage extends WebAPI {
         searchKey.sendKeys("New York");
         clickOnnSearchButton.click();
     }
-
     public void validateNewYorkInSearchBox() throws InterruptedException {
         String expected = "Financial centers and ATMs in New York";
         String actual = AlbanyActual.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void searchLocationByState() throws InterruptedException {
         Locations.click();
         clickOnLocationByState.click();
         clickOnLocationMassachusetts.click();
     }
-
     public void validateSearchLocationByState() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         String expected = "Financial centers and ATMs in Massachusetts";
         String actual = validateOnLocationMassachusetts.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void checkNearMeButton() throws InterruptedException {
         Locations.click();
         clickCheckNearMeButton.click();
     }
-
     public void validateCheckNearMeButton() throws InterruptedException {
         String expected = "Search near me";
         String actual = validateCheckNearMeButton.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void validateLocationInMap() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Locations.click();
@@ -197,70 +175,62 @@ public class BOAHmePage extends WebAPI {
         searchKey.sendKeys("Miami");
         clickOnnSearchButton.click();
     }
-
     public void merrillHomePage() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
+        navigateToLocationPage();
+        sleepFor(3);
         NavigateToMerrillHomePage.click();
     }
-
     public void validateMerrillHomePage() throws InterruptedException {
         String expected = "Merrill Edge - Online Investing, Trading, Brokerage and Advice";
         String actual = driver.getTitle();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void playVideoMerrillElement() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Locations.click();
-        NavigateToMerrillHomePage.click();
+        sleepFor(3);
+        merrillHomePage();
         playVideoMerrill.click();
     }
-
     public void validatePlayVideoMerrill() throws InterruptedException {
         String expected = "";
         String actual = validatePlayVideo.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void merrillGuideAdviserElement() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
-        NavigateToMerrillHomePage.click();
+        sleepFor(3);
+        merrillHomePage();
         WebElement source = driver.findElement(By.xpath(guideAdviserLocator));
         Actions action = new Actions(driver);
         action.moveToElement(source).perform();
         WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav2_col2WhyEdge"))).click();
     }
-
     public void validateMerrillGuideAdviserElement() throws InterruptedException {
         String expected = "MERRILL GUIDED INVESTING™";
         String actual = validateGuideAdvisor.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void chatBoxFunctionElement() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
-        NavigateToMerrillHomePage.click();
+        sleepFor(3);
+        merrillHomePage();
         Actions action = new Actions(driver);
         action.moveToElement(clickchatBoxFunctionElement).click();
         WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(clickOnMessageBoxLocator))).click();
         closeChatBoxFunction.click();
     }
-
     public void validateChatBoxFunction() throws InterruptedException {
         String expected = "Chat";
         String actual = clickchatBoxFunctionElement.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void ButtonMessageBoxElements() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
-        NavigateToMerrillHomePage.click();
+        sleepFor(3);
+        merrillHomePage();
         Actions action = new Actions(driver);
         action.moveToElement(clickchatBoxFunctionElement).click();
         WebDriverWait wait = new WebDriverWait(driver, 8);
@@ -268,56 +238,78 @@ public class BOAHmePage extends WebAPI {
         clickOnMessageBoxclass.sendKeys("Hi");
 
     }
-
     public void validateButtonMessageBox() throws InterruptedException {
         String expected = "Barbara Ann";
         String actual = validateMessageBoxActual.getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void calculateCostOfDebtElements() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        Locations.click();
-        NavigateToMerrillHomePage.click();
+        sleepFor(3);
+        merrillHomePage();
         Actions action = new Actions(driver);
         action.moveToElement(clickOnTryItOUt).perform();
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='l2IE_CMS']/div/ul/li[3]/a"))).click();
-        waitTimeExplicit(clickOnCostOfDeptLocator);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
         clickOnCostOfDept.click();
     }
-
     public void validateCalculateCostOfDebt() throws InterruptedException {
         String expected = "Cost of Debt Calculator from Merrill Edge";
         String actual = driver.getTitle();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
     public void CostOfDebtElements() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         calculateCostOfDebtElements();
         Thread.sleep(10);
-        driver.switchTo().defaultContent();
-        waitTimeExplicit(sendTotalAmountLocator);
-//        Actions action = new Actions(driver);
-//        action.contextClick(sendTotalAmount).sendKeys("50000");
-//        sendTotalAmount.sendKeys("50000");
-        driver.switchTo().frame(0);
-        Select select = new Select(loanPayment);
-        select.selectByValue("1");
-//        driver.switchTo().frame(0);
-////        WebElement mainslider = driver.findElement(By.xpath("//*[@id=\"js-scale-quiz__question-1\"]/div[2]/div/span"));
-//        int width = mainSliderRate.getSize().width / 2;
-//        //sliding there is a method called dragAndDrop
-////        WebElement slider = driver.findElement(By.xpath("//*[@id=\"js-scale-quiz__question-1\"]/div[2]/div/div[3]/button"));
-//        new Actions(driver).dragAndDropBy(SliderRate, width, 0).perform();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,300)");
+        iframeHandle(iframeHandling);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", sendTotalAmount);
+        sendTotalAmount.sendKeys("5000");
+        JavascriptExecutor executor2 = (JavascriptExecutor)driver;
+        executor2.executeScript("arguments[0].click();", loanPayment);
+        loanPayment.isSelected();
+        JavascriptExecutor executor3 = (JavascriptExecutor)driver;
+        executor3.executeScript("arguments[0].click();", SliderRate);
+        int width = mainSliderRate.getSize().width / 2;
+        new Actions(driver).dragAndDropBy(SliderRate, width, 0).perform();
+        JavascriptExecutor executor4 = (JavascriptExecutor)driver;
+        executor4.executeScript("arguments[0].click();", submit);
+        submit.click();
     }
-
     public void validateCostOfDebt() throws InterruptedException {
+        sleepFor(6);
         String expected = "Cost of Debt Calculator from Merrill Edge";
         String actual = driver.getTitle();
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
-
+    public void getPriceFromTableElements() throws InterruptedException {
+        sleepFor(5);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        sleepFor(3);
+        merrillHomePage();
+        Actions action = new Actions(driver);
+        action.moveToElement(clickOnResearch).perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Stock Research"))).click();
+        String volume = "SNDL";
+        System.out.println();
+        List<WebElement> volumes = driver.findElements(By.xpath("//table[@class='align-r txt-s']/tbody/tr/td[1]"));
+        List<WebElement> currentPrice = driver.findElements(By.xpath("//table[@class='align-r txt-s']/tbody/tr[3]"));
+        for (int i = 0; i < volumes.size(); ++i) {
+            if (volume.equals(volumes.get(i).getText()))
+                System.out.println(volumes.get(i).getText() + "....." + currentPrice.get(i).getText());
+        }
+    }
+    public void validateTable() throws InterruptedException {
+        sleepFor(5);
+        String expected = "9.67";
+        String actual = SNDLActual.getText();
+        Assert.assertEquals(actual, expected, "Failed Test ");
+    }
 
 }

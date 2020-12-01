@@ -338,7 +338,7 @@ public class MuseumBase extends WebAPI {
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
 
-    @FindBy(xpath = "//a[contains(text(),'Sticker Decal - Smiley')]")
+    @FindBy(xpath = actualItemValidationLocators)
     public WebElement actualItemValidation;
 
     public void smileItemElements() throws InterruptedException {
@@ -359,8 +359,6 @@ public class MuseumBase extends WebAPI {
         Assert.assertEquals(actual, expected, "Failed Test ");
     }
 
-    //    @FindBy(xpath = "//a[contains(text(),'Sticker Decal - Smiley')]")
-//    public WebElement actualItemValidation;
     public void selectMasksFromAccessory() throws InterruptedException {
         shopPageFunctionElements();
         WebElement source = driver.findElement(By.xpath("//header/div[1]/div[2]/nav[1]/ul[1]/li[1]/a[1]"));
@@ -430,6 +428,7 @@ public class MuseumBase extends WebAPI {
         Assert.assertEquals(actual, expected, "Failed Test ");
 
     }
+
     public void scrollingUpAndDownElements() throws InterruptedException {
         shopPageFunctionElements();
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -439,6 +438,7 @@ public class MuseumBase extends WebAPI {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".et-pb-icon.et-visible:nth-child(2)"))).click();
 
     }
+
     public void validateScrollingUpAndDown() throws InterruptedException {
         sleepFor(5);
         String expected = "SparkShop | Official Walmart Branded Merchandise";

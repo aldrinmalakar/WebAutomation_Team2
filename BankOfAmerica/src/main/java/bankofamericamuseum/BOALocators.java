@@ -45,9 +45,13 @@ public class BOALocators {
     public static final String clickOnTryItOUtLocator = "//*[@id='spnMenuItem_115']";
     public static final String clickOnCostOfDeptLocator = "//*[@id='RH_CostOfDebt']";
     // calculate cost of dept
-    public static final String sendTotalAmountLocator = "//*[@id=\"top\"]/div/div[1]/div/div[2]";
+    public static final String sendTotalAmountLocator = "//*[@id='PlanAmountOwed']";
     public static final String loanPaymentLocator = "//*[@id='PeriodsinYear']";
     public static final String mainSliderRateLocator = "//*[@id='top']/div/div[3]/div/div[2]/span[1]";
     public static final String SliderRateLocator = "//*[@id='slider-AnnRate']";
-
+    // stock table
+    public static final String clickOnResearchLocator = "ancMenuItem_98";
+    public static final String SNDLActualLocator = "//*[@id='ctl00_ctl00_siteContent_MainContent_MarketDataControlDesigner3_ctl00_mmwMostActiveSecurities']/div[2]/table/tbody/tr[2]/td[4]";
+    public static final String iframeHandlingLocator = "//*[@id='ctl00_ctl00_siteContent_MainContent_SimpleContentControl2_ctl00_ecmsWPRECMSContentCtrl1']/div/iframe";
+    public static final String submitLocator = "//*[@id='submitDiv']/input";
 }
