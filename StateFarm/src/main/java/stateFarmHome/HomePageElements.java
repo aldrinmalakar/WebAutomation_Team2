@@ -53,7 +53,7 @@ public class HomePageElements {
     public static final String getAndroidAppCss = "img[alt='Google Play button for State Farm mobile app']";
     public static final String getAndroidAppURL = "https://play.google.com/store/apps/details?id=com.statefarm.pocketagent";
 
-    public static final String optCCPAReadmoreID = "optccpaReadmore";
+    public static final String optCCPAReadmoreCss = "#optccpaReadmore";
     public static final String assertPrivacyTextCSS = "div[id='opttestexpand'] p strong";
 
     public static final String socialFBButtonCss = "a[aria-label=\"Visit State Farm's Facebook page\"]";

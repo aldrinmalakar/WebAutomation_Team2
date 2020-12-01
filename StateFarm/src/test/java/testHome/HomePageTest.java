@@ -32,10 +32,17 @@ public class HomePageTest extends WebAPI {
         homePage.findBrokenLinks(stateFarmHomepageUrl);
     }
 
-    @Test
-    public void testReadMorePrivacy() {
+    @DataProvider(name = "privacyAssertion")
+    public Object[] assertionPrivacy() {
+        return new Object[]{
+                "We value your privacy.",
+                "We value your privacy. But we will steal your money anyway"
+        };
+    }
+    @Test (dataProvider = "privacyAssertion")
+    public void testReadMorePrivacy(String assertionMessage) {
         homePage.getToReadMorePrivacy();
-        homePage.assertReadMorePrivacy("We value your privacy.");
+        homePage.assertReadMorePrivacy(assertionMessage);
     }
 
     @Test
@@ -78,10 +85,27 @@ public class HomePageTest extends WebAPI {
         homePage.loginFunctionality("testUser@testserver.com", "testPassword!@@31");
         homePage.assertURL(loginErrorURL);
     }
+    @DataProvider(name = "InvalidData")//20
+    public Object[][] getData() {
 
-    @Test
-    public void testLoginFunctionalityThree() {
-        homePage.loginFunctionality("**************", "");
+        Object[][] data = new Object[5][2];
+
+        data[0][0] = "Shaila";
+        data[0][1] = "crazyKiyare1123";
+        data[1][0] = "Runa";
+        data[1][1] = "MyMywhatcanIsay";
+        data[2][0] = "Aldrin";
+        data[2][1] = "Iamtheking007";
+        data[3][0] = "Emelda";
+        data[3][1] = "KingsQueen";
+        data[4][0] = "Yeti";
+        data[4][1] = "3141";
+
+        return data;
+    }
+    @Test (dataProvider = "InvalidData")
+    public void testLoginFunctionalityThree(String someId, String somePassword) {
+        homePage.loginFunctionality(someId,somePassword);
         homePage.assertURL(loginErrorURL);
     }
 
