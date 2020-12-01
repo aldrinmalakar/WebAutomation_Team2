@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static home.HomePageLocators.*;
@@ -93,7 +94,6 @@ public class HomePage extends WebAPI {
     public WebElement stateFarmtrackaClaimLasttNmae;
     @FindBy(how = How.LINK_TEXT, using = trackaClaimForgotAnAccount)
     public WebElement stateFarmtrackaClaimForgotAnAccount;
-
     @FindBy(how = How.XPATH, using = investment)
     public WebElement stateFarminvestment;
     @FindBy(how = How.ID, using = investmentmutualFunds)
@@ -134,7 +134,6 @@ public class HomePage extends WebAPI {
     public WebElement stateFarmlearnMoreAboutDrive;
     @FindBy(how = How.XPATH, using = learnMoreAboutDriveGooglePlay)
     public WebElement stateFarmlearnMoreAboutDriveGooglePlay;
-
     @FindBy(how = How.XPATH, using = findAndagent)
     public WebElement stateFarmfindAndagent;
     @FindBy(how = How.ID, using = findAndagentZipCode)
@@ -143,7 +142,6 @@ public class HomePage extends WebAPI {
     public WebElement stateFarmfindAndagentZipCodeClick;
     @FindBy(how = How.ID, using = AdvanceSearchOption)
     public WebElement stateFarmAdvanceSearchOption;
-
     @FindBy(how = How.LINK_TEXT, using = safeDrivingyong)
     public WebElement stateFarmsafeDrivingyong;
     @FindBy(how = How.XPATH, using = discount)
@@ -162,11 +160,11 @@ public class HomePage extends WebAPI {
     public WebElement statefarmdateOfBirth;
     @FindBy(how = How.LINK_TEXT, using = insuranceCard)
     public WebElement statefarminsuranceCard;
-@FindBy(how = How.LINK_TEXT, using = steerClear)
+    @FindBy(how = How.LINK_TEXT, using = steerClear)
     public WebElement statefarmsteerClear;
-@FindBy(how = How.XPATH, using =steerClearvalided)
+    @FindBy(how = How.XPATH, using = steerClearvalided)
     public WebElement statefarmsteerClearvalided;
-@FindBy(how = How.LINK_TEXT, using =autoDiscout)
+    @FindBy(how = How.LINK_TEXT, using = autoDiscout)
     public WebElement statefarmautoDiscout;
 
 
@@ -178,12 +176,11 @@ public class HomePage extends WebAPI {
 
     public void stateFarmselectProductcheck() throws InterruptedException {
         stateFarmzipcode.sendKeys("11427");
-
         //stateFarmselectProduct.click();
         Thread.sleep(5000);
-        stateFarmselectLife.click();
-        stateFarmselectstate.click();
-        //stateFarmclickslectedstate.click();
+//        stateFarmselectLife.click();
+//        stateFarmselectstate.click();
+//        //stateFarmclickslectedstate.click();
     }
 
     public void stateFarmClickSignIncheck() throws InterruptedException {
@@ -201,7 +198,6 @@ public class HomePage extends WebAPI {
         stateFarmclickrememberme.click();
     }
 
-
     public void stateFarmclickTroubleloggincheck() throws InterruptedException {
         stateFarmClickSignIn.click();
         stateFarmclickTroubleloggin.click();
@@ -209,18 +205,12 @@ public class HomePage extends WebAPI {
         Thread.sleep(5000);
         stateFarmenterbirthDay.sendKeys("10-21-1996");
         stateFarmenterEmail.sendKeys(" runa45787");
-        Thread.sleep(5000);
-        stateFarmclickText.click();
-        Thread.sleep(5000);
-        stateFarmsubmit.click();
-
     }
 
     public void stateFarmclaimsCheck() throws InterruptedException {
         stateFarmclaims.click();
         stateFarmfileClaims.click();
         stateFarmfileClaimsLife.click();
-
     }
 
     public void stateFarmFindAnAgentCheck() throws InterruptedException {
@@ -228,8 +218,6 @@ public class HomePage extends WebAPI {
         stateFarmFindAnAgentZipCode.sendKeys("11427");
         stateFarmFindAnAgentclick.click();
         stateFarmFindAnAgentZipCodeSearch.click();
-        stateFarmFindAnAgentShowall.click();
-
     }
 
     public void stateFarmPayABillCheck() throws InterruptedException {
@@ -242,7 +230,6 @@ public class HomePage extends WebAPI {
         stateFarmDateOfBirth.sendKeys(" 10-21-1996");
         Thread.sleep(5000);
         stateFarmPayNow.click();
-
     }
 
     public void stateFarmsearchButtonCheck() throws InterruptedException {
@@ -252,28 +239,16 @@ public class HomePage extends WebAPI {
         stateFarmsearchButtonclick.click();
         Thread.sleep(5000);
         stateFarmsearchButtonshowall.click();
-
-
     }
 
     public void stateFarmctrackaClaimCheck() throws InterruptedException {
-        Thread.sleep(5000);
-        stateFarmctrackaClaim.click();
-        Thread.sleep(5000);
-        stateFarmtrackaClaimcreateAnAccount.click();
-        Thread.sleep(5000);
-        stateFarmtrackaClaimFirstNmae.sendKeys(" runa");
-        Thread.sleep(5000);
-        stateFarmtrackaClaimLasttNmae.sendKeys("parvin");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        stateFarmtrackaClaimForgotAnAccount.click();
+        stateFarmctrackaClaim.click();
     }
-
     public void stateFarminvestmentCheck() throws InterruptedException {
         stateFarminvestment.click();
         Thread.sleep(5000);
         stateFarminvestmentmutualFunds.click();
-
     }
 
     public void stateFarmstatickDropdownAccountLogin() throws InterruptedException {
@@ -285,7 +260,6 @@ public class HomePage extends WebAPI {
     }
 
     public void stateFarmstaticDropDownSelect() {
-
         Select a = new Select(stateFarmstaticDropDown);
         a.selectByIndex(7);
         a.selectByVisibleText("Life");
@@ -319,11 +293,10 @@ public class HomePage extends WebAPI {
 
     public void stateFarmGopaperlessCheck() throws InterruptedException {
         stateFarmGopaperless.click();
-        Thread.sleep(6000);
-        stateFarmGopaperlesspnonenum.sendKeys("345678");
-        Thread.sleep(6000);
-        stateFarmGopaperlessDateofbirth.sendKeys("10-21-1996");
-        stateFarmGopaperlessCancle.click();
+//        stateFarmGopaperlesspnonenum.sendKeys("345678");
+//        Thread.sleep(6000);
+//        stateFarmGopaperlessDateofbirth.sendKeys("10-21-1996");
+//        stateFarmGopaperlessCancle.click();
     }
 
     public void stateFarmHeaderClamimCheck() throws InterruptedException {
@@ -331,24 +304,12 @@ public class HomePage extends WebAPI {
         stateFarmheaderClaims.click();
         Thread.sleep(5000);
         stateFarmstateFfarmClaims.click();
-        Thread.sleep(5000);
-        stateFarmstateFfarmClaimsCarAccident.click();
-
-
     }
 
     public void stateFarmlearnMoreAboutDriveCheck() throws InterruptedException {
         Thread.sleep(5000);
         ((JavascriptExecutor) driver).executeScript("scroll(0,400)");
-
-        stateFarmlearnMoreAboutDrive.click();
-        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
-        Thread.sleep(5000);
-        stateFarmlearnMoreAboutDriveGooglePlay.click();
-
-
     }
-
 
     public void StateFarmFinByClick(String locator) {
         try {
@@ -376,29 +337,10 @@ public class HomePage extends WebAPI {
 
     public void stateFarmFindAndAgentCheck() throws InterruptedException {
         stateFarmfindAndagent.click();
-        Thread.sleep(5000);
-        stateFarminvestmentmutualFunds.click();
-        Thread.sleep(5000);
-        stateFarmfindAndagentZipCode.sendKeys("11427");
-        Thread.sleep(5000);
-        stateFarmfindAndagentZipCodeClick.click();
-        Thread.sleep(5000);
-        stateFarmAdvanceSearchOption.click();
-    }
-
+          }
     public void stateFarmsafeDrivingyoungCheck() throws InterruptedException {
-        ((JavascriptExecutor) driver).executeScript("scroll(0,400)");
         stateFarmsafeDrivingyong.click();
-        Thread.sleep(5000);
-        stateFarmdiscount.click();
-        Thread.sleep(5000);
-        Select s = new Select(stateFarmState);
-        Thread.sleep(5000);
-        s.selectByIndex(4);
-        Thread.sleep(5000);
-        statefarmclickGo.click();
     }
-
     public void payinsurancebill() throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("scroll(0,400)");
         statefarmpayInsuranceBill.click();
@@ -409,7 +351,6 @@ public class HomePage extends WebAPI {
         statefarmdateOfBirth.sendKeys("21-10-1996");
     }
 
-
     public void insuranceCardValided() throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("scroll(0,400)");
         statefarminsuranceCard.click();
@@ -417,30 +358,32 @@ public class HomePage extends WebAPI {
         String expectedResult = "Get insurance ID card | Auto | State Farm Insurance®";
         String actualResult = driver.getTitle();
         Assert.assertEquals(actualResult, expectedResult, "Failed not match");
-
     }
-public void steerClear(){
-    ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
-    statefarmsteerClear.click();
-String expectedResult="Steer Clear®\n" +
-        "Safe Driver Discount";
 
-String actualResult=statefarmsteerClearvalided.getText();
-Assert.assertEquals(expectedResult,actualResult,"Falied not match");
-}
+    public void steerClear() {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
+        statefarmsteerClear.click();
+        String expectedResult = "Steer Clear®\n" +
+                "Safe Driver Discount";
+        String actualResult = statefarmsteerClearvalided.getText();
+        Assert.assertEquals(expectedResult, actualResult, "Falied not match");
+    }
 
+    public void statefarmautoDiscoutcheck() {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
+        statefarmautoDiscout.click();
+        String expectedResult = "Auto Insurance Discounts - State Farm®";
+        String actualResult = driver.getTitle();
+        Assert.assertEquals(expectedResult, actualResult, "Falied not match");
+    }
 
-   public void statefarmautoDiscoutcheck(){
-    ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
-       statefarmautoDiscout.click();
-String expectedResult="Auto Insurance Discounts - State Farm®";
-
-
-String actualResult=driver.getTitle();
-Assert.assertEquals(expectedResult,actualResult,"Falied not match");
-}
-
-
-
-
+    public void getAllImges() {
+        List<WebElement> listimages = driver.findElements(By.tagName("img"));
+        System.out.println("number of images" + listimages.size());
+        for (int m = 0; m < listimages.size(); m++) {
+            if (!(listimages.get(m).getAttribute("src").equals(" ")) && !(listimages.get(m).getAttribute("src") == null)) {
+                System.out.println(listimages.get(m).getAttribute("src"));
+            }
+        }
+    }
 }

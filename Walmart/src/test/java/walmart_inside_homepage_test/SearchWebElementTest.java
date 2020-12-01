@@ -18,15 +18,11 @@ public class SearchWebElementTest extends WebAPI {
     @Test(enabled = false)
     public void walmartSearchproduct1() {
         walmartSearchproduct1();
-
     }
-
-
     @Test(enabled = false)
     public void WalmartValidedSearchproduct1() {
         searchWebElement.WalmartValidedSearchProduct1();
     }
-
 
     @Test(enabled = false)
     public void ClickWalmartAddToCart() {

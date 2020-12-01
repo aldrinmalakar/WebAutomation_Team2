@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.sql.Time;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -137,23 +139,17 @@ public class HomePage extends WebAPI {
         Thread.sleep(5000);
         clickPasscode.sendKeys("323456");
         clickSignInButton.click();
-
-
     }
-
     public void BoACreateNewAccount() {
         clickOpenAnAccount.click();
         clickGetStarted.click();
         clickOpenNow.click();
     }
-
     public void BoaHelpBoxVerify() throws InterruptedException {
         Thread.sleep(5000);
         BoaclickHelpBox.sendKeys("Search My Account");
         BoaClicksearchOption.click();
-
     }
-
     public void BoaForgotAccountCheck() throws InterruptedException {
         Thread.sleep(5000);
         BoaForgotAccount.click();
@@ -163,11 +159,8 @@ public class HomePage extends WebAPI {
         SendForgotaccountSoc.sendKeys("################");
         Thread.sleep(5000);
         ForGotAccountcontinueclick.click();
-
     }
-
     public void BoAcreditCards() throws InterruptedException {
-
         BoAcreditCard.click();
         Thread.sleep(5000);
         ((JavascriptExecutor) driver).executeScript(" scroll(0,1200)");
@@ -175,58 +168,46 @@ public class HomePage extends WebAPI {
         BoaScheduleabAppointment.click();
         //BoaOpenNewAccount.click();
     }
-
     public void BoaHomeloanscheckout() throws InterruptedException {
-
         BoaHomeloans.click();
         Boamortgage.click();
-Thread.sleep(5000);
+        Thread.sleep(5000);
         BoaPurchaseprice.sendKeys("234567");
-Thread.sleep(5000);
+        Thread.sleep(5000);
         BoayearFixed.click();
     }
-
     public void BoaBonusOffercheck() {
         BoaBonusOffer.click();
         BoaFirstName.sendKeys("RunaParvin");
         BoaMiddleName.sendKeys(" 3456789");
         BoalastName.sendKeys("345678");
-
     }
-
-
     public void BoafindAtmSearch() {
         BoafindAtm.click();
         BoaenterAddress.sendKeys("11427");
         BoaclickSeaarchAddress.click();
     }
-
     public void BoaValidatedFilter() throws InterruptedException {
         BoafindAtm.click();
         BoaenterAddress.sendKeys("11427");
         BoaclickSeaarchAddress.click();
-Thread.sleep(5000);
+        Thread.sleep(5000);
         BoaclickFilter.click();
         Thread.sleep(5000);
         BoaselectDriveThru.click();
         Boaapplyfilters.click();
     }
-
     public void BoaScheduleAnAppoinmentCheck() throws InterruptedException {
         BoaScheduleAnAppoinment.click();
-Thread.sleep(5000);
+        Thread.sleep(5000);
         BoaCheckingAndSaving.click();
         Thread.sleep(5000);
         BoaOpenanewAccount.click();
-Thread.sleep(5000);
+        Thread.sleep(5000);
         BoaOpenanewAccountNext.click();
-
     }
-
-
     public void mouseHoverByXpath(String locator) {
         try {
-
             WebElement element = BoaClicksearchOption;
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
@@ -237,43 +218,30 @@ Thread.sleep(5000);
             Actions action = new Actions(driver);
             action.moveToElement(element).perform();
         }
-
     }
-
     public void BoaVisitBetterMoneyHabitsCheck() {
         BoaVisitBetterMoneyHabits.click();
         BoaclientLogin.click();
         BoaCreditScore.click();
-
-
     }
-
     public void CheckBoxes() throws InterruptedException {
         BoaScheduleAnAppoinment.click();
-
         BoaCheckingAndSaving.click();
-
         System.out.println((BoaCheckboxes.isSelected()));
         driver.findElements(By.cssSelector("label[class='btnLongDescription']")).size();
         System.out.println((BoaCheckboxes.isSelected()));
     }
-
     public void BoaBusniess$instititutionCheck() {
         BoaBusniess$instititution.click();
         BoaClickshareIn.click();
         BoaclickIn.click();
     }
-
-
     public void BoaBusniess$instititutionClientLoginCheck() throws InterruptedException {
         BoaBusniess$instititution.click();
         BoaclientLogin.click();
         Thread.sleep(5000);
         BoaCashPro$.click();
-
     }
-
-
     public void BoaCashPro() throws InterruptedException {
         BoaBusniess$instititution.click();
         BoaclientLogin.click();
@@ -281,15 +249,12 @@ Thread.sleep(5000);
         BoaCashPro$.click();
         BoaCompaynId.sendKeys("1234");
     }
-
     public void BoaSerchBox() throws InterruptedException {
         BoaBusniess$instititution.click();
         Thread.sleep(5000);
         BoaSearchhBox.sendKeys("credit balance");
         BoaSearchhBoxClick.click();
-
     }
-
     public void BoaSerchBoxValidated() throws InterruptedException {
         BoaBusniess$instititution.click();
         Thread.sleep(5000);
@@ -299,23 +264,16 @@ Thread.sleep(5000);
         String act = "credit+balance";
         Assert.assertEquals(act, exp, "Test Failed");
     }
-
-
     public void clearSearchElement() {
         BoaBusniess$instititution.click();
         BoaSearchhBox.sendKeys("credit+balance");
         BoaSearchhBox.sendKeys(Keys.RETURN);
         try {
-
             BoaSearchhBox.clear();
-
-
         } catch (Exception e) {
             System.out.println("Unable to clear Elemnet not found ");
         }
-
     }
-
     public void clickField1(String locator) {
         BoaBusniess$instititution.click();
         try {
@@ -340,9 +298,7 @@ Thread.sleep(5000);
             }
         }
     }
-
     public void SeachBoxclenAndSendKey() throws InterruptedException {
-
         BoaBusniess$instititution.click();
         Thread.sleep(5000);
         BoaSearchhBox.sendKeys("credit balances");
@@ -354,14 +310,9 @@ Thread.sleep(5000);
         BoaSearchhBox.sendKeys("Debit Card");
         BoaSearchhBoxClick.click();
     }
-
     public void waitTimeUsingFluent(String locator) {
-
-
         OnlineIdClick.click();
         Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-
-
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(2))
                 .withMessage("Time out after 30 seconds")
@@ -373,25 +324,19 @@ Thread.sleep(5000);
                 WebElement XpathElement = OnlineIdClick;
                 if (XpathElement.isEnabled()) {
                     System.out.println(" Element Found");
-
                 }
                 return XpathElement;
             }
         });
         element.click();
-
-
     }
-
     public void clickByXpath1(String loc) {
-
         BoasmallBusness.click();
     }
 
     public void click1(String loc) {
         BoaWealthMannagement.click();
     }
-
 
     public void click2(String loc) {
         try {
@@ -403,20 +348,44 @@ Thread.sleep(5000);
             BoaSecurity.click();
         } catch (Exception e) {
         }
-
-
     }
 
     public void getLinks(String locator) {
         BoaByTagNmae.getText();
     }
-
     public List<WebElement> getListOfWebElementsByXpath(String locator) {
-
         List<WebElement> list = new ArrayList<WebElement>();
-
         list = driver.findElements(By.xpath(clickByarryList));
         return list;
+    }
+    public void handleIframe() throws InterruptedException {
+        //https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit
+        driver.switchTo().frame("iframeResult");
+        driver.findElement(By.xpath("//input[@name='fname']")).sendKeys("Runa");
+        driver.switchTo().parentFrame();
+        Thread.sleep(5000);
+    }
+    public void rooBotClass() throws AWTException, InterruptedException {
+        BoAcreditCard.click();
+        Robot r = new Robot();
+        Thread.sleep(5000);
+        r.keyPress(KeyEvent.VK_DOWN);
+        Thread.sleep(5000);
+        r.keyPress(KeyEvent.VK_TAB);
+        Thread.sleep(4000);
+        System.out.println("a");
+        r.keyPress(KeyEvent.VK_TAB);
+        Thread.sleep(5000);
+        System.out.println("b");
+        r.keyPress(KeyEvent.VK_TAB);
+        Thread.sleep(5000);
+        System.out.println("c");
+        r.mouseMove(30, 100);
+        System.out.println("d");
+    }
+    public void newTab() {
+        driver.findElement(By.cssSelector("Body")).sendKeys(Keys.CONTROL + "t");
+        driver.get("https://www.bcbs.com/");
     }
 
 

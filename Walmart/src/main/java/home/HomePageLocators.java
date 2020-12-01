@@ -21,8 +21,6 @@ public class HomePageLocators {
     public static final String Sendemali = "//*[@id='hf-email-input']";
     public static final String EmailId = " runa114272gmail.com";
     public static final String clickSignUp = "#hf-email-signup-btn > span";
-
-
     public static final String clickproduct = "//*[@id='searchProductResult']/ul/li[1]/div/div[2]/div[5]/div/a";
     public static final String clickqty = "//*[@id='add-on-atc-container']/div[1]/section/div[1]/div[2]/select";
     public static final String ClickAddToCart = "//*[@id='add-on-atc-container']/div[1]/section/div[1]/div[3]/button/span/span";

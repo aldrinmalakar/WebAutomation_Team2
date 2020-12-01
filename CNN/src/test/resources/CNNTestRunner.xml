@@ -28,7 +28,7 @@
 <!--                    <include name="testSearchBoxCheck2"></include>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testHome.dataBaseTest"></class>
+            <class name="testHome.HomePageTest"></class>
 
         </classes>
     </test>

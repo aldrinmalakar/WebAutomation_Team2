@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 
+import java.util.List;
+
 import static home.HomePageLocators.*;
 
 
@@ -23,10 +25,8 @@ public class HomePage extends WebAPI {
     public WebElement ClickSearchButton;
     @FindBy(how = How.CSS, using = checkAccount)
     public WebElement walMartAccountClick;
-
     @FindBy(how = How.XPATH, using = clickSignin)
     public WebElement clickSigninButton;
-
     @FindBy(how = How.ID, using = sendemail)
     public WebElement enterEmailId;
     @FindBy(how = How.ID, using = sendPassword)
@@ -77,10 +77,8 @@ public class HomePage extends WebAPI {
     public WebElement WalmartgetPick$deliverycreateAccount;
     @FindBy(how = How.XPATH, using = getPick$deliverycreateAccountfirstName)
     public WebElement WalmartgetPick$deliverycreateAccountfirstName;
-
     @FindBy(how = How.XPATH, using = getPick$deliverycreateAccountLastName)
     public WebElement WalmartgetPick$deliverycreateAccountLastName;
-
     @FindBy(how = How.XPATH, using = getPick$deliverycreateAccountEmail)
     public WebElement WalmartgetPick$deliverycreateAccountEmail;
     @FindBy(how = How.XPATH, using = getPick$deliverycreateAccountpassword)
@@ -92,19 +90,16 @@ public class HomePage extends WebAPI {
 
 
     public void CheckSearchBar() throws InterruptedException {
+        Thread.sleep(900000);
         SearchBox.sendKeys("haircare");
         Thread.sleep(5000);
         ClickSearchButton.click();
-
-
     }
-
     public void ValidedWalmartAccount() throws InterruptedException {
         Thread.sleep(5000);
         walMartAccountClick.click();
         clickSigninButton.click();
     }
-
     public void WalmartCheckSigninButton() throws InterruptedException {
         Thread.sleep(5000);
         walMartAccountClick.click();
@@ -113,7 +108,6 @@ public class HomePage extends WebAPI {
         enterPassword.sendKeys("Ma7402997@@@@@");
         SigninButtonclick.click();
     }
-
     public void WalmartGetErrorText() throws InterruptedException {
         Thread.sleep(5000);
         walMartAccountClick.click();
@@ -123,41 +117,35 @@ public class HomePage extends WebAPI {
         SigninButtonclick.click();
         System.out.println();
         getErrorMassage.getText();
-
     }
-
     public void WalmartClickForgotAccount() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(90000);
         walMartAccountClick.click();
         clickSigninButton.click();
         enterEmailId.sendKeys("runall427@gmail.com");
         enterPassword.sendKeys("Ma7402997@@@@@");
-
         SigninButtonclick.click();
         System.out.println();
         getErrorMassage.getText();
         clickForgotAccount.click();
         // clickCreateAccount.click();
     }
-
     public void WalmartBurgerClick() throws InterruptedException {
         Thread.sleep(5000);
         clickBurger.click();
         clickWalmaartSparkHeader.click();
         clickWalmartrecoredIteam.click();
     }
-
     public void dropdown() {
         clickWalmartDropDown.click();
         clickWalmartDropDownBeauti.click();
     }
-
     public void WalmartEmailbox() {
         WalmartSendemali.sendKeys(EmailId);
-
     }
 
-    public void mouseHoverByXpath(String locator) {
+    public void mouseHoverByXpath(String locator) throws InterruptedException {
+        Thread.sleep(90000);
         try {
             WebElement element = walMartAccountClick;
             Actions action = new Actions(driver);
@@ -169,7 +157,6 @@ public class HomePage extends WebAPI {
             Actions action = new Actions(driver);
             action.moveToElement(element).perform();
         }
-
     }
 
     public void clickField1(String locator) {
@@ -192,15 +179,12 @@ public class HomePage extends WebAPI {
         }
     }
 
-
     public void clearSearchElement() {
         SearchBox.sendKeys("haircare");
         SearchBox.sendKeys(Keys.RETURN);
         try {
             Thread.sleep(5000);
             SearchBox.clear();
-
-
         } catch (Exception e) {
             System.out.println("Unable to clear Elemnet not found ");
         }
@@ -210,14 +194,11 @@ public class HomePage extends WebAPI {
         SearchBox.clear();
         SearchBox.sendKeys("giftBox");
     }
-
     public void AddtoCartProdct() {
         SearchBox.sendKeys("haircare ");
         ClickSearchButton.click();
         Walmartclickproduct.click();
-
     }
-
     public void AddtoCartProdct2() {
         SearchBox.sendKeys("haircare ");
         ClickSearchButton.click();
@@ -227,7 +208,6 @@ public class HomePage extends WebAPI {
     }
 
     public void validedShampoo() throws InterruptedException {
-
         SearchBox.sendKeys("Shampoo");
         Thread.sleep(5000);
         ClickSearchButton.click();
@@ -244,21 +224,16 @@ public class HomePage extends WebAPI {
         String exp = "Hair Care";
         Assert.assertEquals(act, exp, " failed");
     }
-
-
     public void WalmartAllClickCheck() {
         ClickSearchButton.click();
-
         clickWalmaartSparkHeader.click();
     }
-
     public void WalmartWalmartpick$delivery() throws InterruptedException {
         Walmartpick$delivery.click();
         Thread.sleep(60000);
         Walmarpick$deliverySearch.sendKeys(" grocery");
         Walmarpick$deliverySearchclick.click();
     }
-
     public void WalmartWalmarpick$deliveryadediteamscheck() throws InterruptedException {
         Walmartpick$delivery.click();
         Thread.sleep(60000);
@@ -267,7 +242,6 @@ public class HomePage extends WebAPI {
         Walmarpick$deliveryadediteams.click();
         Walmarpick$deliveryadediteamssign.click();
     }
-
     public void WalmartgetPick$deliverycreateAccountcheck() throws InterruptedException {
         Walmartpick$delivery.click();
         Thread.sleep(5000);
@@ -279,9 +253,7 @@ public class HomePage extends WebAPI {
         WalmartgetPick$deliverycreateAccountfirstName.sendKeys(" runa");
         WalmartgetPick$deliverycreateAccountLastName.sendKeys(" parvin");
         WalmartgetPick$deliverycreateAccountEmail.sendKeys("runa111427@gmail.com");
-
     }
-
     public void WalmartgetPick$deliverycreateAccountpasswordcheck() throws InterruptedException {
         Walmartpick$delivery.click();
         Thread.sleep(5000);
@@ -301,6 +273,30 @@ public class HomePage extends WebAPI {
         WalmartgetPick$deliverycreateAccountSignin.click();
 
     }
+    public void switchWindow()  {
+        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"n");
+        try{
+            Thread.sleep(3000);
+            for(String winHandle:driver.getWindowHandles()){
+                driver.switchTo().window(winHandle);
+            }
+            driver.get("https://www.google.com/");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+  public void getAllLink(){
+      List<WebElement> links=driver.findElements(By.tagName("a")) ;
+      for(WebElement ele:links){
+          System.out.println(ele.getAttribute("href"));
+      }
+  }
+
+
+
+
+
 
 
 }

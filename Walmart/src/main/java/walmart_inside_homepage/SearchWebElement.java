@@ -25,14 +25,11 @@ public class SearchWebElement extends WebAPI {
         WalmartSearchBox.sendKeys("shoes");
         WalmartclickSearchButton.click();
     }
-
     public void WalmartValidedSearchProduct1() {
-
         String expectedResult = "Shoes";
         String actualResult = WalmartvalidedShoes.getText();
         Assert.assertEquals(actualResult, expectedResult, "DoesNot match Test fail");
     }
-
     public void ClickWalmartAddToCart() {
         WalmartclickCart.click();
 

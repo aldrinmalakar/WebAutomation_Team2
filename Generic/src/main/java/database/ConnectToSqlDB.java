@@ -28,7 +28,7 @@ public class ConnectToSqlDB {
     }
 
     public static Connection connectToSqlDatabase() throws IOException, SQLException, ClassNotFoundException {
-        Properties prop = loadProperties("../Generic/src/main/secret.properties");
+        Properties prop = loadProperties("..Generic/src/main/java/secret.properties");
         String driverClass = prop.getProperty("MYSQLJDBC.driver");
         String url = prop.getProperty("MYSQLJDBC.url");
         String userName = prop.getProperty("MYSQLJDBC.userName");

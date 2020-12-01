@@ -12,7 +12,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
 import static home.HomePageLocators.*;
 
 public class databaseConnector extends WebAPI {
@@ -20,11 +19,8 @@ public class databaseConnector extends WebAPI {
 @FindBy(how= How.NAME,using =EmailAddress) public WebElement CnnEmailAddress;
 @FindBy(how= How.NAME,using = passsword ) public WebElement Cnnpasssword;
 
-
 public void Cnnsignin(){
     Cnnsignin.click();
 }
-
-
 
     }
