@@ -16,6 +16,10 @@ public class EntertainmentPageElements {
     public static final String passwordInput= "//input[@aria-label='Password']";
     public static final String loginButton= "#login-form-button";
     public static final String copyRight= "//span[contains(text(),'CNN Sans ™ & © 2016 Cable News Network.')]";
+    public static final String invalidEmailErrorMessage= "//div[contains(text(),'You have entered an invalid username or password.')]";
+    public static final String closeLoginWindow= "//button[@data-testid='modal-close-icon']";
+    public static final String allCategories= "sc-kAzzGY jWsvKN";
+    public static final String copyRightDisplay= "//span[contains(text(),'All Rights Reserved.')]";
 
 
 }
