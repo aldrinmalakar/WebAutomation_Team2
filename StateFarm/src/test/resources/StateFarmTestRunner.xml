@@ -25,7 +25,7 @@
 
             <class name="testInsurance.InsurancePageTest">
                 <methods>
-                    <include name="facebookOpensNewTab"></include>
+                    <include name="searchAgentZipTest"></include>
                 </methods>
             </class>
 

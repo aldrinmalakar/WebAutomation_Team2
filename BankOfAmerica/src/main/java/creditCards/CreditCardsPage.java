@@ -206,7 +206,6 @@ public class CreditCardsPage extends WebAPI {
         calculateRewards();
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].scrollIntoView();", glassSlider);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Actions move = new Actions(driver);
         move.dragAndDropBy(glassSlider, 100, 0).release().perform();
     }

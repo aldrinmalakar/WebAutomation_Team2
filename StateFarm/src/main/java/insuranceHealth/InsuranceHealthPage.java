@@ -16,6 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static utilities.ReadExcel.*;
 import static insuranceHealth.InsuranceWebPageElements.*;
@@ -173,18 +174,25 @@ public class InsuranceHealthPage extends WebAPI {
         return true;
     }
 
+//    public void addDataToList() {
+//        readExcelFile(getFileName(), 0, firstColumn, secondColumn);
+//    }
+
     public void findAgentWithZipCode(WebElement element) throws InterruptedException {
         readExcelFile(getFileName(), 0, firstColumn, secondColumn);
         for (int i = 0; i < firstColumn.size(); i++) {
             findAnAgent.click();
-            enterZipCode.clear();
-            element.sendKeys(String.valueOf(firstColumn.get(i)));
             sleepFor(2);
+            element.sendKeys(String.valueOf(firstColumn.get(i)));
             findAgentZipEntered.click();
+            sleepFor(3);
             String currentUrl = driver.getCurrentUrl();
             actualUrl.add(currentUrl);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.get(homePage);
         }
     }
+
 
     public void validateUrlForZipCode() {
         for (int i = 0; i < secondColumn.size(); i++) {
@@ -253,7 +261,7 @@ public class InsuranceHealthPage extends WebAPI {
 
     public void validateNewTabFacebook() {
         nextTabHandle();
-        equalAssertion(getTitleGeneric(),facebookTitleEx);
+        equalAssertion(getTitleGeneric(), facebookTitleEx);
     }
 
     public void nextTabHandle() {
@@ -266,11 +274,11 @@ public class InsuranceHealthPage extends WebAPI {
         driver.switchTo().window(newTabHandle);
     }
 
-    public void goPaperLess(){
+    public void goPaperLess() {
         goPaperlessOption.click();
     }
 
-    public void goPaperlessText(){
+    public void goPaperlessText() {
         eleIsDisplayed(goPaperlessText);
     }
 

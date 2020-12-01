@@ -28,6 +28,7 @@ public class ReadExcel {
                 Iterator<Cell> cellIterator = currentRow.iterator();
                 while (cellIterator.hasNext()) {
                     Cell currentCell = cellIterator.next();
+
                     if (currentCell.getCellType() == CellType.STRING) {
                         secondColumn.add(currentCell.getStringCellValue());
                     } else if (currentCell.getCellType() == CellType.NUMERIC) {
@@ -48,9 +49,49 @@ public class ReadExcel {
 
     }
 
+    /**
+     * This method is to read and store Excel file based on Columns, Sheet index and Only for String Type
+     */
+    public static void readExcelString(String fileName, int sheetNumber,List<String> firstColumn, List<String> secondColumn ) {
+        int cellIndex=2;
+        try {
+            FileInputStream inputStream = new FileInputStream(new File(fileName));
+            Workbook workbook = new XSSFWorkbook(inputStream);
+            Sheet dataTypeSheet = workbook.getSheetAt(sheetNumber);
+            Iterator<Row> rowIterator = dataTypeSheet.iterator();
+            while (rowIterator.hasNext()) {
+                Row currentRow = rowIterator.next();
+                Iterator<Cell> cellIterator = currentRow.iterator();
+                while (cellIterator.hasNext()) {
+                    Cell currentCell = cellIterator.next();
+
+                    if (currentCell.getCellType() == CellType.STRING){
+                     if(cellIndex%2==0){
+                        firstColumn.add(currentCell.getStringCellValue());
+                         //System.out.println(currentCell.getStringCellValue());
+                         cellIndex++;
+                     }else {
+                         secondColumn.add(currentCell.getStringCellValue());
+                         //System.out.println(currentCell.getStringCellValue());
+                         cellIndex++;
+                     }
+                    }
+                }
+                System.out.println();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("File not found Exception");
+
+        } catch (IOException e1) {
+            e1.printStackTrace();
+            System.out.println("Input Output Exception");
+        }
+
+    }
+
     public static String getFileName() {
         return FILE_NAME;
     }
-
 
 }
