@@ -41,10 +41,6 @@ public class UsPageHome extends WebAPI {
     public WebElement searchCnBox1;
     @FindBy(how = How.XPATH, using = searchCnnBox1ActualResultWebElement)
     public WebElement searCnnBox1tWebElement;
-    @FindBy(how = How.ID, using = checkBoxUsWebElement)
-    public WebElement checkBoxUs;
-    @FindBy(how = How.CSS, using = checkBoxUsxWebElement)
-    public WebElement checkBoxUsx;
     @FindBy(how = How.XPATH, using = checkBoxUsActualResultWebElement)
     public WebElement checkBoxUstWebElement;
     @FindBy(how = How.ID, using = editionHoverWebElement)
@@ -53,14 +49,6 @@ public class UsPageHome extends WebAPI {
     public WebElement editionHove;
     @FindBy(how = How.XPATH, using = editionHoverActualResultWebElement)
     public WebElement editionHovWebElement;
-    @FindBy(how = How.ID, using = selectLanguageWebElement)
-    public WebElement selectLanguage;
-    @FindBy(how = How.CSS, using = selectLangeWebElement)
-    public WebElement selectLange;
-    @FindBy(how = How.XPATH, using = selectLangWebElement)
-    public WebElement selectLang;
-    @FindBy(how = How.XPATH, using = selectLanguageActualResultWebElement)
-    public WebElement selectLgtWebElement;
     @FindBy(how = How.CSS, using = termOfUseWebElement)
     public WebElement termOfUse;
     @FindBy(how = How.XPATH, using = termOfUseWebElement1)
@@ -71,10 +59,6 @@ public class UsPageHome extends WebAPI {
     public WebElement checkUs1;
     @FindBy(how = How.XPATH, using = extremeWeatherWebElement)
     public WebElement extremeWeather1;
-    @FindBy(how = How.XPATH, using = climateWebElement1)
-    public WebElement climate1;
-    @FindBy(how = How.XPATH, using = climateActualResultWebElement)
-    public WebElement validateClimateWebElement;
     @FindBy(how = How.CSS, using = addChoicesWebElement)
     public WebElement addChoices;
     @FindBy(how = How.CSS, using = moreOptionsWebElement)
@@ -93,10 +77,31 @@ public class UsPageHome extends WebAPI {
     public WebElement leadership;
     @FindBy(how = How.XPATH, using = leadershipActualResultWebElement)
     public WebElement leadershipActualWebElement;
+    @FindBy(how = How.CSS, using = aboutUsNWebElement)
+    public WebElement aboutUsN;
+    @FindBy(how = How.XPATH, using = aboutUsNActualResultWebElement)
+    public WebElement aboutUsNActualWebElement;
+    @FindBy(how = How.CSS, using = checkUsWebElement)
+    public WebElement checkUsWeb;
+    @FindBy(how = How.CSS, using = crimeAndJusticeWebElement)
+    public WebElement crimeAndJustice;
+    @FindBy(how = How.XPATH, using = crimeAndJusticeActualResultWebElement)
+    public WebElement crimeAndJusticeAtWebElement;
+    @FindBy(how = How.CSS, using = photosWebElement)
+    public WebElement photos;
+    @FindBy(how = How.XPATH, using = photosActualResultWebElement)
+    public WebElement photosActualWebElement;
+    @FindBy(how = How.CSS, using = travelSWebElement)
+    public WebElement travelS;
+    @FindBy(how = How.CSS, using = travelSActualResultWebElement)
+    public WebElement travelSActWebElement;
+    @FindBy(how = How.CSS, using = destinationsSWebElement)
+    public WebElement destinationsS;
+    @FindBy(how = How.XPATH, using = destinationsSActualResultWebElement)
+    public WebElement destinationsSActWebElement;
 
 
 
-    //test1
     public void checkUS() throws InterruptedException {
         checkUs.click();
         Thread.sleep(3000);
@@ -108,37 +113,17 @@ public class UsPageHome extends WebAPI {
         Assert.assertEquals(expectedText, actualText, "test fail: language setting not shows");
     }
 
-//    @FindBy(how = How.CSS, using = checkUsWebElement)
-//    public WebElement checkUs2;
-    @FindBy(how = How.CSS, using = aboutUsNWebElement)
-    public WebElement aboutUsN;
-    @FindBy(how = How.XPATH, using = aboutUsNActualResultWebElement)
-    public WebElement aboutUsNActualWebElement;
-
-    //test2
     public void aboutUs() throws InterruptedException {
         aboutUsN.click();
         Thread.sleep(3000);
-//        aboutUsNActualWebElement.click();
-//        Thread.sleep(3000);
-        //driver.findElement(By.cssSelector(checkUsWebElement)).click();
-        //driver.findElement(By.xpath(crimeAndJusticeWebElement)).click();
     }
     public void validateAboutUs(){
         String expectedResult="ABOUT CNN DIGITAL";
         String actualResult=aboutUsNActualWebElement.getText();
-        //String actualResult=driver.findElement(By.xpath(crimeAndJusticeActualResultWebElement)).getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
 
     }
-    @FindBy(how = How.CSS, using = checkUsWebElement)
-    public WebElement checkUsWeb;
-    @FindBy(how = How.CSS, using = crimeAndJusticeWebElement)
-    public WebElement crimeAndJustice;
-    @FindBy(how = How.XPATH, using = crimeAndJusticeActualResultWebElement)
-    public WebElement crimeAndJusticeAtWebElement;
 
-    //test3
     public void crimeAndJustice() throws InterruptedException {
         checkUsWeb.click();
         Thread.sleep(3000);
@@ -151,76 +136,48 @@ public class UsPageHome extends WebAPI {
         String actualResult = crimeAndJusticeAtWebElement.getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
-    @FindBy(how = How.CSS, using = photosWebElement)
-    public WebElement photos;
-    @FindBy(how = How.XPATH, using = photosActualResultWebElement)
-    public WebElement photosActualWebElement;
 
-    //test4
     @Test(enabled = true)
     public void Photos() throws InterruptedException {
         photos.click();
         Thread.sleep(3000);
-        //driver.get(cnnUrl);
-        // driver.findElement(By.cssSelector(photosWebElement)).click();
+
     }
     public void validatePhotos(){
         String expectedResult="";
         String actualResult=photosActualWebElement.getText();
-        //String actualResult=driver.findElement(By.xpath(photosActualResultWebElement)).getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
 
     }
-    @FindBy(how = How.CSS, using = travelSWebElement)
-    public WebElement travelS;
-    @FindBy(how = How.CSS, using = travelSActualResultWebElement)
-    public WebElement travelSActWebElement;
-    //test5
+
     @Test(enabled = true)
     public void travelS() throws InterruptedException {
         travelS.click();
         Thread.sleep(3000);
-        //driver.get(cnnUrl);
-        // driver.findElement(By.cssSelector(travelSWebElement)).click();
+
     }
     public void validateTravelS(){
         String expectedResult = "";
         String actualResult = travelSActWebElement.getText();
-        //String actualResult = driver.findElement(By.cssSelector(travelSActualResultWebElement)).getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
-    //test6
 
     public void energyAndEnvironment() throws InterruptedException {
         checkUs.click();
         Thread.sleep(3000);
         energyAndEnvironment.click();
         Thread.sleep(3000);
-        //driver.get(cnnUrl);
-//        driver.findElement(By.cssSelector(checkUsWebElement)).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.cssSelector(energyAndEnvironmentWebElement)).click();
-//        Thread.sleep(3000);
     }
 
     public void validateEnergyAndEnvironment() {
         String expectedResult = "Energy + Environment";
-        //String actualResult=driver.findElement(By.xpath(energyAndEnvironmentActualResultWebElement)).getText();
         String actualResult = energyAndEnvironmentAWbElement.getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
 
-    @FindBy(how = How.CSS, using = destinationsSWebElement)
-    public WebElement destinationsS;
-    @FindBy(how = How.XPATH, using = destinationsSActualResultWebElement)
-    public WebElement destinationsSActWebElement;
-    //test7
-
     public void destinationsS() throws InterruptedException {
         destinationsS.click();
         Thread.sleep(3000);
-        // driver.get(cnnUrl);
-        // driver.findElement(By.cssSelector(destinationsSWebElement)).click();
     }
     public void validateDestinationsS(){
         String expectedResult="DESTINATIONS";
@@ -235,23 +192,19 @@ public class UsPageHome extends WebAPI {
     @FindBy(how = How.XPATH, using = extremeWeatherSActualResultWebElement)
     public WebElement extremeWeatherSActualWebElement;
 
-    //test8
 
     public void extremeWeather() throws InterruptedException {
         extremeWeatherS.click();
         Thread.sleep(3000);
-//        //driver.get(cnnUrl);
-//        driver.findElement(By.xpath(extremeWeatherWebElement)).click();
-//        Thread.sleep(3000);
+
     }
     public void validateExtremeWeather() {
         String expectedResult = "Weather";
-        //String actualResult=driver.findElement(By.xpath(extremeWeatherActualResultWebElement)).getText();
         String actualResult = extremeWeatherSActualWebElement.getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
 
-    //9
+
     @FindBy(how = How.CSS, using = checkUsWebElement)
     public WebElement checkUsWebE;
     @FindBy(how = How.XPATH, using = spaceAndScienceSWebElement)
@@ -264,20 +217,15 @@ public class UsPageHome extends WebAPI {
         Thread.sleep(3000);
         spaceAndScienceS.click();
         Thread.sleep(3000);
-        // driver.get(cnnUrl);
-//        driver.findElement(By.cssSelector(checkUsWebElement)).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath(spaceAndScienceSWebElement)).click();
-//        Thread.sleep(3000);
+
     }
     public void validateSpaceAndScience(){
         String expectedResult="";
         String actualResult=spaceAndScienceSActWebElement.getText();
-        //String actualResult=driver.findElement(By.xpath(spaceAndScienceSActualResultWebElement)).getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
 
     }
-//10
+
     @FindBy(how = How.CSS, using = checkUsWebElement)
     public WebElement checkUsWe;
     @FindBy(how = How.CSS, using = cnnStoreSWebElement)
@@ -290,33 +238,23 @@ public class UsPageHome extends WebAPI {
         Thread.sleep(2000);
         cnnStoreS.click();
         Thread.sleep(2000);
-        //driver.findElement(By.cssSelector(checkUsWebElement)).click();
-        //driver.findElement(By.cssSelector(cnnStoreSWebElement)).click();
     }
     public void validateCnnStoreS(){
         String expectedResult="";
         String actualResult=cnnStoreSActualWebElement.getText();
-        //String actualResult=driver.findElement(By.xpath(cnnStoreSActualResultWebElement)).getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
-    //11
 
     public void menuButton() throws InterruptedException {
         menuButton.sendKeys(searchMenu);
         Thread.sleep(2000);
-
-//        driver.findElement(By.id(menuButtonWebElement)).sendKeys(searchMenu);
-//        Thread.sleep(2000);
     }
 
     public void validateMenuButton() {
         String expectedResult = "Close Menu";
-        //String actualResult=driver.findElement(By.cssSelector( menuButtonActualResultWebElement)).getText();
         String actualResult = menuButtonActual.getText();
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
     }
-
-    //12
 
     public void searchCnnSBox() throws InterruptedException {
         menuButton.sendKeys(searchMenu);
@@ -325,31 +263,13 @@ public class UsPageHome extends WebAPI {
         Thread.sleep(2000);
         searchCnnButton.click();
         Thread.sleep(2000);
-
-
-//        driver.findElement(By.id(menuButtonWebElement)).sendKeys(searchMenu);
-//        Thread.sleep(2000);
-//        driver.findElement(By.id(searchCnnBoxWebElement)).sendKeys(searchNewPresident);
-//        Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(searchCnnButtonWebElement)).click();
-//        Thread.sleep(2000);
     }
 
     public void validateSearchCnnSBox() {
         String expectedResult = "New President";
-        // String actualResult= driver.findElement(By.cssSelector(searchCnnBoxActualResultWebElement)).getText();
         String actualResult = searchCnnBoxElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
-//
-//    @FindBy(how = How.ID, using = searchCnnBoxWebElement)
-//    public WebElement searchCnnBox;
-//    @FindBy(how = How.CSS, using = searchCnnButtonWebElement)
-//    public WebElement searchCnnButton;
-//    @FindBy(how = How.CSS, using = searchCnnBoxActualResultWebElement)
-//    public WebElement searchCnnBoxElement;
-
-    //13
 
     public void searchCnnSBox1() throws InterruptedException {
         menuButton.sendKeys(searchMenu);
@@ -359,21 +279,13 @@ public class UsPageHome extends WebAPI {
         searchCnBox1.click();
         Thread.sleep(2000);
 
-//        driver.findElement(By.id(menuButtonWebElement)).sendKeys(searchMenu);
-//        Thread.sleep(2000);
-//        driver.findElement(By.id(searchCnnBox1WebElement)).sendKeys(searchCovid_19);
-//        Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(searchCnBoxWebElement)).click();
-//        Thread.sleep(2000);
     }
     public void validateSearchCnnSBox1() {
-        //validate result
         String expectedResult = "Covid_19";
-        //String actualResult= driver.findElement(By.xpath(searchCnnBox1ActualResultWebElement)).getText();
         String actualResult = searCnnBox1tWebElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
-   // 14
+
    @FindBy(how = How.ID, using = menuButtonWebElement)
     public WebElement menuButtonWeb;
     @FindBy(how = How.ID, using = searchCnnBox1WebElement)
@@ -395,44 +307,45 @@ public class UsPageHome extends WebAPI {
         Thread.sleep(2000);
         clearBoxSWeb.click();
         Thread.sleep(5000);
-        // driver.get(cnnUrl);
-//        driver.findElement(By.id(menuButtonWebElement)).sendKeys(searchMenu);
-//        driver.findElement(By.id(searchCnnBox1WebElement)).sendKeys(searchCovid_19);
-//        driver.findElement(By.cssSelector(searchCnBoxWebElement)).click();
-//        Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(clearBoxSWebElement)).click();
-//        Thread.sleep(5000);
     }
     public void validateClearBox(){
         String expectedResult = "Clear";
         String actualResult=clearBoxSActualWebElement.getText();
-        //String actualResult= driver.findElement(By.xpath(clearBoxSActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
+
+    @FindBy(how = How.ID, using = menuButtonWebElement)
+    public WebElement menuButtonWebE;
+    @FindBy(how = How.ID, using = searchCnnBox1WebElement)
+    public WebElement searchCnnBox1WebE;
+    @FindBy(how = How.CSS, using = searchCnBoxWebElement)
+    public WebElement searchCnBoxWeb;
+    @FindBy(how = How.ID, using = checkBoxUsSWebElement)
+    public WebElement checkBoxUsS;
+    @FindBy(how = How.CSS, using = checkBoxUsASWebElement)
+    public WebElement checkBoxUsAS;
+    @FindBy(how = How.XPATH, using = checkUsActualResultWebElement)
+    public WebElement checkUsActWebElement;
+
     //15
-    public void checkSBoxUs() throws InterruptedException {
-        checkBoxUs.sendKeys(searchUS);
+    @Test(enabled = true)
+    public void checkBoxUs() throws InterruptedException {
+        menuButtonWebE.sendKeys(searchMenu);
         Thread.sleep(2000);
-        checkBoxUsx.click();
+        searchCnnBox1WebE.sendKeys(searchCovid_19);
         Thread.sleep(2000);
-
-        //driver.get(cnnUrl);
-//        driver.get("https://www.cnn.com/search?q=Covid_19&size=10");
-//        driver.findElement(By.id(checkBoxUsWebElement)).sendKeys(searchUS);
-//        Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(checkBoxUsxWebElement)).click();
-//        Thread.sleep(2000);
+        searchCnBoxWeb.click();
+        Thread.sleep(2000);
+        checkBoxUsS.sendKeys(searchUS);
+        Thread.sleep(2000);
+        checkBoxUsAS.click();
+        Thread.sleep(2000);
     }
-
-    public void validateCheckSBoxUs() {
-        //validate result
+    public void validateCheckBoxUs(){
         String expectedResult = "";
-        //String actualResult= driver.findElement(By.xpath(checkBoxUsActualResultWebElement)).getText();
-        String actualResult = checkBoxUstWebElement.getText();
+        String actualResult= checkUsActWebElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
-
-    //16
 
     public void editionHover() throws InterruptedException {
         driver.findElement(By.id(editionHoverWebElement)).sendKeys(searchEdition);
@@ -444,104 +357,81 @@ public class UsPageHome extends WebAPI {
     public void validateEditionHover() {
         String expectedResult = "U.S.\n" + "International\n" + "Arabic\n" + "Español";
         String actualResult = editionHovWebElement.getText();
-        // String actualResult= driver.findElement(By.xpath(editionHoverActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-    //17
-    @Test(enabled = false)
-    public void selectLanguage() throws InterruptedException {
-        //driver.get(cnnUrl);
-        driver.findElement(By.id(selectLanguageWebElement)).sendKeys(schEdition);
+
+    @FindBy(how = How.ID, using = selectLanguageWebElement)
+    public WebElement selectLanguage;
+    @FindBy(how = How.CSS, using = selectLangeWebElement)
+    public WebElement selectLange;
+    @FindBy(how = How.XPATH, using = selectLangWebElement)
+    public WebElement selectLang;
+    @FindBy(how = How.ID, using = selectLanguageActualResultWebElement)
+    public WebElement selectLanguageActualWebElement;
+
+    public void selectLanguageS() throws InterruptedException {
+        selectLanguage.sendKeys(schEdition);
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector(selectLangeWebElement)).click();
+        selectLange.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath(selectLangWebElement)).click();
+        selectLang.click();
         Thread.sleep(2000);
     }
-
-    public void validateSelectLanguage() {
+    public void validateSelectLanguageS() {
         String expectedResult = "";
-        // String actualResult= driver.findElement(By.id(selectLanguageActualResultWebElement)).getText();
-        String actualResult = selectLgtWebElement.getText();
+        String actualResult = selectLanguageActualWebElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-
-    //18
-    public void termOfUse() throws InterruptedException {
+    public void termOfUses() throws InterruptedException {
         termOfUse.click();
         Thread.sleep(2000);
         termOfUse1.click();
         Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(termOfUseWebElement)).click();
-//        Thread.sleep(2000);
-//        driver.findElement(By.xpath(termOfUseWebElement1)).click();
-//        Thread.sleep(2000);
     }
 
-    public void validateTermOfUse() {
-        //validate result
+    public void validateTermOfUses() {
         String expectedResult = "CNN Terms of Use";
-        // String actualResult= driver.findElement(By.cssSelector(termOfUseActualResultWebElement)).getText();
         String actualResult = termOfUseResultWebElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
-//    @FindBy(how = How.CSS, using = checkUsWebElement)
-//    public WebElement checkUs1;
-//    @FindBy(how = How.XPATH, using = extremeWeatherWebElement)
-//    public WebElement extremeWeather1;
-//    @FindBy(how = How.XPATH, using = climateWebElement1)
-//    public WebElement climate1;
-//    @FindBy(how = How.XPATH, using = climateActualResultWebElement)
-//    public WebElement validateClimateWebElement;
-    //19
+    @FindBy(how = How.CSS, using = climateSWebElement)
+    public WebElement climateS;
+    @FindBy(how = How.CSS, using = climateSWebElement1)
+    public WebElement climateSWeb1;
+    @FindBy(how = How.XPATH, using = climateSWebElement2)
+    public WebElement climateSWeb2;
+    @FindBy(how = How.XPATH, using = climateSActualResultWebElement)
+    public WebElement climateSActualWebElement;
 
-    public void climate() throws InterruptedException {
-        checkUs1.click();
+    public void climateS() throws InterruptedException {
+        climateS.click();
         Thread.sleep(2000);
-        extremeWeather1.click();
+        climateSWeb1.click();
         Thread.sleep(2000);
-        climate1.click();
-        Thread.sleep(2000);
+        climateSWeb2.click();
+        Thread.sleep(3000);
 
-        //driver.get(cnnUrl);
-//        driver.findElement(By.cssSelector(checkUsWebElement)).click();
-//        Thread.sleep(2000);
-//        driver.findElement(By.xpath(extremeWeatherWebElement)).click();//chang locator
-//        Thread.sleep(2000);
-//        driver.findElement(By.xpath(climateWebElement1)).click();
-//        Thread.sleep(3000);
     }
-
-    public void validateClimate() {
-        //validate result
+    public void validateClimateS(){
         String expectedResult = "";
-        //String actualResult= driver.findElement(By.xpath(climateActualResultWebElement)).getText();
-        String actualResult = validateClimateWebElement.getText();
+        String actualResult= climateSActualWebElement.getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-
-//20
     public void addChoices() throws InterruptedException {
         addChoices.click();
         Thread.sleep(2000);
-        //driver.get(cnnUrl);
-//        driver.findElement(By.cssSelector(addChoicesWebElement)).click();
-//        Thread.sleep(2000);
     }
         public void validateAddChoices() {
 
     }
 
-//21
     @Test(enabled = true)
     public void moreOptions() throws InterruptedException {
         moreOptions.click();
         Thread.sleep(2000);
-        //driver.findElement(By.cssSelector(moreOptionsWebElement)).click();
-        //Thread.sleep(2000);
     }
     public void validateMoreOption(){
         String expectedResult = "More";
@@ -550,48 +440,35 @@ public class UsPageHome extends WebAPI {
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-
-//22
-
     public void longForms() throws InterruptedException {
         longForms.click();
         Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(longFormsWebElement)).click();
-//        Thread.sleep(2000);
     }
     public void validateLongForms(){
         String expectedResult = "CNN Longform";
         String actualResult= LongFormsActualWebElement.getText();
-        //String actualResult= driver.findElement(By.xpath(LongFormsActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-    //23
     public void investigations() throws InterruptedException {
         investigation.click();
         Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(investigationWebElement)).click();
-//        Thread.sleep(2000);
     }
     public void validateInvestigations(){
         String expectedResult = "";
         String actualResult=investigationActualWebElement.getText();
-        //String actualResult= driver.findElement(By.xpath(investigationActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
-    //24
     @Test(enabled = false)
     public void leadership() throws InterruptedException {
         leadership.click();
         Thread.sleep(2000);
-//        driver.findElement(By.cssSelector(leadershipWebElement)).click();
-//        Thread.sleep(2000);
+
     }
     public void validateLeadership(){
         String expectedResult = "CNN Profiles";
         String actualResult= leadershipActualWebElement.getText();
-        //String actualResult= driver.findElement(By.xpath(leadershipActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 
@@ -599,17 +476,14 @@ public class UsPageHome extends WebAPI {
     public WebElement cnnNewsLettersS;
     @FindBy(how = How.XPATH, using = cnnNewsLettersSActualResultWebElement)
     public WebElement cnnNewsLettersSActualWebElement;
-    //25
 
     public void cnnNewsLettersS() throws InterruptedException {
         cnnNewsLettersS.click();
         Thread.sleep(2000);
-        // driver.findElement(By.cssSelector(cnnNewsLettersSWebElement)).click();
     }
     public void validateCnnNewsLettersS(){
         String expectedResult = "CNN Newsletters";
         String actualResult= cnnNewsLettersSActualWebElement.getText();
-        //String actualResult= driver.findElement(By.xpath(cnnNewsLettersSActualResultWebElement)).getText();
         Assert.assertEquals(actualResult, expectedResult, "Test Failed: search keyword doe not match");
     }
 

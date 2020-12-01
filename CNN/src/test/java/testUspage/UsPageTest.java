@@ -14,178 +14,151 @@ public class UsPageTest extends WebAPI {
         usPageHome = PageFactory.initElements(driver, UsPageHome.class);
     }
 
-    //1
-    @Test(enabled = false)
+    @Test
     public void testCheckUS() throws InterruptedException {
         usPageHome.checkUS();
         usPageHome.validateCheckUS();
 
     }
-    //2
-    @Test(enabled = false)
+
+    @Test
     public void testAboutUs() throws InterruptedException {
         usPageHome.aboutUs();
         usPageHome.validateAboutUs();
     }
 
-
-    //3
-    @Test(enabled = false)
+    @Test
     public void testCrimeAndJustice() throws InterruptedException {
         usPageHome.crimeAndJustice();
         usPageHome.validateCrimeAndJustice();
     }
 
-
-    //4
-    @Test(enabled = false)
+    @Test
     public void Photos() throws InterruptedException {
         usPageHome.Photos();
         usPageHome.validatePhotos();
     }
 
-    //5
-    @Test(enabled = false)
+    @Test
     public void testTravelS() throws InterruptedException {
         usPageHome.travelS();
         usPageHome.validateTravelS();
     }
 
-    //6
-    @Test(enabled = false)
+    @Test
     public void testEnergyAndEnvironment() throws InterruptedException {
         usPageHome.energyAndEnvironment();
         usPageHome.validateEnergyAndEnvironment();
     }
 
-    //7
-    @Test(enabled = false)
+    @Test
     public void testDestinationsS() throws InterruptedException {
         usPageHome.destinationsS();
         usPageHome.validateDestinationsS();
     }
 
-    //8
-    @Test(enabled = false)
+    @Test
     public void testExtremeWeather() throws InterruptedException {
         usPageHome.extremeWeather();
         usPageHome.validateExtremeWeather();
     }
 
-    //9
-    @Test(enabled = false)
+    @Test
     public void testSpaceAndScience() throws InterruptedException {
         usPageHome.spaceAndScience();
         usPageHome.validateSpaceAndScience();
     }
 
-    //10
-    @Test(enabled = false)
+    @Test
     public void testCnnStoreS() throws InterruptedException {
         usPageHome.cnnStoreS();
         usPageHome.validateCnnStoreS();
     }
 
-    //11
-    @Test(enabled = false)
+    @Test
     public void testMenuButton() throws InterruptedException {
         usPageHome.menuButton();
         usPageHome.validateMenuButton();
     }
 
-    //12
-    @Test(enabled = false)
+    @Test
     public void testSearchCnnSBox() throws InterruptedException {
         usPageHome.searchCnnSBox();
         usPageHome.validateSearchCnnSBox();
     }
 
-    //13
-    @Test(enabled = false)
+    @Test
     public void testSearchCnnSBox1() throws InterruptedException {
         usPageHome.searchCnnSBox1();
         usPageHome.validateSearchCnnSBox1();
     }
 
-    //14
-    @Test(enabled = false)
-    public void clearSBox() throws InterruptedException {
+    @Test
+    public void testClearSBox() throws InterruptedException {
         usPageHome.clearSBox();
         usPageHome.validateClearBox();
 
     }
 
-    //15
-    @Test(enabled = false)
-    public void testCheckSBoxUs() throws InterruptedException {
-        usPageHome.checkSBoxUs();
-        usPageHome.validateCheckSBoxUs();
+    @Test
+    public void checkBoxUs() throws InterruptedException {
+        usPageHome.checkBoxUs();
+        usPageHome.validateCheckBoxUs();
     }
 
-    //16
-    @Test(enabled = false)
+    @Test
     public void testEditionHover() throws InterruptedException {
         usPageHome.editionHover();
         usPageHome.validateEditionHover();
     }
 
-    //17
-    @Test(enabled = false)
-    public void testSelectLanguage() throws InterruptedException {
-        usPageHome.selectLanguage();
-        usPageHome.validateSelectLanguage();
+    @Test
+    public void selectLanguageS() throws InterruptedException {
+        usPageHome.selectLanguageS();
+        usPageHome.validateSelectLanguageS();
     }
 
-    //18
-    @Test(enabled = false)
-    public void testTermOfUse() throws InterruptedException {
-        usPageHome.termOfUse();
-        usPageHome.validateTermOfUse();
+    @Test
+    public void testTermOfUses() throws InterruptedException {
+        usPageHome.termOfUses();
+        usPageHome.validateTermOfUses();
     }
 
-    //19
-    @Test(enabled = false)
-    public void testClimate() throws InterruptedException {
-        usPageHome.climate();
-        usPageHome.validateClimate();
+    @Test
+    public void climateS() throws InterruptedException {
+        usPageHome.climateS();
+        usPageHome.validateClimateS();
     }
 
-    //20
-    @Test(enabled = false)
+    @Test
     public void addChoices() throws InterruptedException {
         usPageHome.addChoices();
         usPageHome.validateAddChoices();
     }
-
-    //21
-    @Test(enabled = false)
+    @Test
     public void moreOptions() throws InterruptedException {
         usPageHome.moreOptions();
         usPageHome.validateMoreOption();
     }
-
-    //22
-    @Test(enabled = false)
+    @Test
     public void longForms() throws InterruptedException {
         usPageHome.longForms();
         usPageHome.validateLongForms();
     }
 
-    //23
-    @Test(enabled = false)
+    @Test
     public void investigations() throws InterruptedException {
         usPageHome.investigations();
         usPageHome.validateInvestigations();
     }
 
-    //24
-    @Test(enabled = false)
+    @Test
     public void leadership() throws InterruptedException {
         usPageHome.leadership();
         usPageHome.validateLeadership();
     }
-    //25
-    @Test(enabled = false)
+
+    @Test
     public void cnnNewsLettersS() throws InterruptedException {
         usPageHome.cnnNewsLettersS();
         usPageHome.validateCnnNewsLettersS();
