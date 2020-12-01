@@ -2,6 +2,7 @@ package footer;
 
 import common.WebAPI;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -176,92 +177,104 @@ public class Footer extends WebAPI {
 
     public void returnsCheck() throws InterruptedException {
         returns.click();
-//        String actualResult=returnsPageText.getText();
-//        String expectedResult="In response to COVID-19, we’ve made some changes to our return policy";
-//        Assert.assertEquals(actualResult,expectedResult);
+        String actualResult=returnsPageText.getText();
+        String expectedResult="In response to COVID-19, we’ve made some changes to our return policy";
+        Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(5000);
     }
 
     public void contactUsCheck() throws InterruptedException {
         contactUs.click();
-//        String actualResult=moneyCenterText.getText();
-//        String expectedResult="Walmart MoneyCenter";
-//        Assert.assertEquals(actualResult,expectedResult);
+        String actualResult=moneyCenterText.getText();
+        String expectedResult="Walmart MoneyCenter";
+        Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(5000);
     }
 
     public void careersCheck() throws InterruptedException {
         careers.click();
-//        String actualResult=moneyCenterText.getText();
-//        String expectedResult="Walmart MoneyCenter";
-//        Assert.assertEquals(actualResult,expectedResult);
+        String actualResult=moneyCenterText.getText();
+        String expectedResult="Walmart MoneyCenter";
+        Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(5000);
     }
 
     public void outDoorFurnitureCheck() throws InterruptedException {
         outDoorFurniture.click();
-//        String actualResult=moneyCenterText.getText();
-//        String expectedResult="Walmart MoneyCenter";
-//        Assert.assertEquals(actualResult,expectedResult);
+        String actualResult=moneyCenterText.getText();
+        String expectedResult="Walmart MoneyCenter";
+        Assert.assertEquals(actualResult,expectedResult);
         Thread.sleep(5000);
     }
 
     public void instagramIconCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         instagramIcon.click();
         Thread.sleep(5000);
     }
 
     public void weeklyAdsCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         weeklyAds.click();
         Thread.sleep(5000);
     }
 
     public void digitalMuseumCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         digitalMuseum.click();
         Thread.sleep(5000);
     }
 
     public void termsOfUseCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         termsOfUse.click();
         Thread.sleep(5000);
     }
 
     public void storePickUpCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         storePickup.click();
         Thread.sleep(5000);
     }
 
     public void productRecallsCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         productRecalls.click();
         Thread.sleep(5000);
     }
 
     public void accessibilityCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         accessibility.click();
         Thread.sleep(5000);
     }
 
     public void ourCompanyCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         ourCompany.click();
         Thread.sleep(5000);
     }
 
     public void storeDirectoryCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         storeDirectory.click();
         Thread.sleep(5000);
     }
 
     public void ourSuppliersCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         ourSuppliers.click();
         Thread.sleep(5000);
     }
 
     public void otherServicesCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         otherServices.click();
         Thread.sleep(5000);
     }
 
     public void ourAdsCheck() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("scroll(0,1200)");
         ourAds.click();
         Thread.sleep(5000);
     }

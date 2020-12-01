@@ -23,7 +23,7 @@ public class FooterTest extends WebAPI {
         Thread.sleep(5000);
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testMoneyCenterCheck() throws InterruptedException {
         footer.moneyCenterCheck();
         Thread.sleep(5000);
@@ -59,7 +59,7 @@ public class FooterTest extends WebAPI {
         Thread.sleep(5000);
     }
 
-    @Test(enabled=true)
+    @Test(enabled=false)
     public void testReturnsCheck() throws InterruptedException {
         footer.returnsCheck();
         Thread.sleep(5000);
