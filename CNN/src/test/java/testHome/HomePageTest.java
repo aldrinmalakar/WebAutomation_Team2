@@ -23,7 +23,7 @@ public class HomePageTest extends WebAPI {
         homepage = PageFactory.initElements(driver, HomePage.class);
     }
 
-    @Test(enabled =true)
+    @Test(enabled =false)
     public void databaseConnectionTest() throws SQLException, IOException, ClassNotFoundException {
         homepage.database();
     }
@@ -77,25 +77,21 @@ public class HomePageTest extends WebAPI {
         sleepFor(1);
         homepage.cnnHealth();
     }
-
     @Test(enabled = true)
     public void cnnTravel() throws InterruptedException {
         sleepFor(1);
         homepage.cnnTravel();
     }
-
     @Test(enabled =true)
     public void cnnTrumpInterview() throws InterruptedException {
         sleepFor(5);
         homepage.cnnTrumpInterview();
     }
-
     @Test(enabled =true)
     public void cnnSports() throws InterruptedException {
         sleepFor(5);
         homepage.cnnSports();
     }
-
     @Test(enabled =true)
     public void cnnForgoAccount() throws InterruptedException {
         sleepFor(5);
@@ -107,13 +103,11 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
         homepage.cnnOpinion();
     }
-
     @Test(enabled =true)
     public void cnnWisconsin() throws InterruptedException {
         sleepFor(5);
         homepage.cnnWisconsin();
     }
-
     @Test(enabled =true)
     public void cnnRebelWilson() throws InterruptedException {
         sleepFor(5);
@@ -125,7 +119,6 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
         homepage.fullMoon();
     }
-
     @Test(enabled =true)
     public void fullMoon2() throws InterruptedException {
         sleepFor(5);
@@ -137,7 +130,6 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
         homepage.cyberMonday();
     }
-
     @Test(enabled =true)
     public void cnncyberMandayMoney() throws InterruptedException {
         sleepFor(5);
@@ -152,9 +144,6 @@ public class HomePageTest extends WebAPI {
         sleepFor(8);
     homepage.downLoadFile();
 }
-
-
-
 
 }
 

@@ -90,7 +90,6 @@ public class HomePage extends WebAPI {
 
 
     public void CheckSearchBar() throws InterruptedException {
-        Thread.sleep(900000);
         SearchBox.sendKeys("haircare");
         Thread.sleep(5000);
         ClickSearchButton.click();
@@ -119,7 +118,7 @@ public class HomePage extends WebAPI {
         getErrorMassage.getText();
     }
     public void WalmartClickForgotAccount() throws InterruptedException {
-        Thread.sleep(90000);
+        Thread.sleep(5000);
         walMartAccountClick.click();
         clickSigninButton.click();
         enterEmailId.sendKeys("runall427@gmail.com");
@@ -145,7 +144,7 @@ public class HomePage extends WebAPI {
     }
 
     public void mouseHoverByXpath(String locator) throws InterruptedException {
-        Thread.sleep(90000);
+        Thread.sleep(5000);
         try {
             WebElement element = walMartAccountClick;
             Actions action = new Actions(driver);

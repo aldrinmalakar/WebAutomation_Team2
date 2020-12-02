@@ -125,8 +125,6 @@ public class HomePage extends WebAPI {
     }
     public void Edition() {
         cnnEdition.click();
-        cnneditionUs.click();
-
     }
     public void typeOnInputBox(String locator, String value) {
         Cnnsignin.click();
@@ -242,8 +240,6 @@ driver.navigate().refresh();
         driver.findElement(By.linkText("Excel sample data workbook")).click();
 
     }
-
-
 
 }
 

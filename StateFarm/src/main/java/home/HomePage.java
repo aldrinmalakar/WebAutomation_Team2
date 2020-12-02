@@ -168,7 +168,7 @@ public class HomePage extends WebAPI {
     public WebElement statefarmautoDiscout;
 
 
-    public void stateFarminsurancecheck() {
+    public void stateFarminsurancecheck() throws InterruptedException {
         stateFarminsurance.click();
         stateFarmhealth.click();
         stateFarmzipcode.sendKeys("11427");

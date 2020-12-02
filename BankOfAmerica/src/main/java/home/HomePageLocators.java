@@ -56,6 +56,4 @@ public class HomePageLocators {
     public static final String clickBusness = "//*[@id='NAV_BUSINESS_INSTITUTIONS']";
     public static final String ByTagNmae = "//*[@id='NAV_SECURITY']";
     public static final String clickByarryList = "//*[@id='CCW5HZBP']";
-
-
 }

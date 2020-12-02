@@ -26,9 +26,7 @@ public class Testdata extends WebAPI {
         driver.findElement(By.id("login-form-button")).click();
         Thread.sleep(5000);
         //Assert.assertTrue(driver.getTitle().contains(""));
-
     }
-
     @DataProvider(name = "Cnndata")
     public Object[][] passData() {
         Object[][] data = new Object[3][2];
@@ -41,9 +39,5 @@ public class Testdata extends WebAPI {
         data[2][0] = "admin2";
         data[2][1] = "demo565";
         return data;
-
-
     }
-
-
 }

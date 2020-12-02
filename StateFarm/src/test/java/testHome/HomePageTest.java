@@ -56,7 +56,7 @@ public class HomePageTest extends WebAPI {
         homePage.stateFarmPayABillCheck();
     }
     //9
-    @Test(enabled =false)
+    @Test(enabled =true)
     public void stateFarmsearchButton() throws InterruptedException {
         homePage.stateFarmsearchButtonCheck();
     }

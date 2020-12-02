@@ -19,7 +19,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
