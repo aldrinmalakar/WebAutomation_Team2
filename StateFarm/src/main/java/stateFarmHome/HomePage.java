@@ -220,7 +220,7 @@ public class HomePage extends WebAPI {
 
     }
 
-    public void searchWithDataProvider(String value) {
+    public void searchWithDataProvider(String value) throws InterruptedException {
         clickByXpath(searchHeaderXpath);
         searchBox.clear();
         searchBox.sendKeys(value, Keys.ENTER);
@@ -228,7 +228,7 @@ public class HomePage extends WebAPI {
 
     }
 
-    public void assertSearchWithDataProvider() {
+    public void assertSearchWithDataProvider() throws InterruptedException {
         String expected = "Search";
         sleepFor(2);
         String actual = getTextByXpath(searchInResultXpath);

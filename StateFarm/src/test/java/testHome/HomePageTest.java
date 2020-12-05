@@ -160,7 +160,7 @@ public class HomePageTest extends WebAPI {
     }
 
     @Test(dataProvider = "searchData")
-    public void testSearchFunctionality(String searchKey) {
+    public void testSearchFunctionality(String searchKey) throws InterruptedException {
         homePage.searchWithDataProvider(searchKey);
         homePage.assertSearchWithDataProvider();
     }

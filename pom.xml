@@ -12,12 +12,8 @@
         <module>Generic</module>
         <module>Walmart</module>
         <module>CNN</module>
-        <module>T-Mobile</module>
         <module>StateFarm</module>
-        <module>BCBS</module>
         <module>BankOfAmerica</module>
-        <module>Marriot</module>
-        <module>Expedia</module>
     </modules>
 
 
@@ -149,9 +145,11 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>
-                        <!--                        <suiteXmlFile></suiteXmlFile>-->
-                        <!-- <suiteXmlFile></suiteXmlFile>-->
+                        <suiteXmlFile>target/test-classes/WalmartTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/T-MobileTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/StateFarmTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/CNNTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/BOATestRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
 

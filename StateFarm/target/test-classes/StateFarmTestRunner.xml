@@ -2,12 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="TestSuit">
+<<<<<<< HEAD
     <!--    thread-count="2" parallel="tests"-->
     <!--    Cross Browser Testing-->
+=======
+    <!--        thread-count="2" parallel="tests"-->
+    <!--        Cross Browser Testing-->
+>>>>>>> cc243dbc060e2d866f8b4cae1a2154e0edc33df0
 
     <!--    Parameter to pass the value to WebAPI-->
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserStack"/>
+<<<<<<< HEAD
     <parameter name="OS" value="######"/>
     <!--<parameter name="OS" value="OS X"/>-->
     <parameter name="os_version" value="###"/>
@@ -29,10 +35,33 @@
 <!--                </methods>-->
 <!--            </class>-->
             <class name="testHome.HomePageTest"></class>
+=======
+    <!--    <parameter name="OS" value="######"/>-->
+    <!--    <parameter name="OS" value="OS X"/>-->
+    <!--    <parameter name="os_version" value="###"/>-->
+    <!--    <parameter name="os_version" value="Sierra"/>-->
+    <!--    <parameter name="browserName" value="chrome"/>-->
+    <!--    <parameter name="browserVersion" value="87"/>-->
+    <parameter name="url" value="https://www.statefarm.com/"/>
+
+    <test name="Health Insurance">
+        <parameter name="OS" value="OS X"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="87"/>
+
+        <classes>
+
+            <class name="testInsurance.InsurancePageTest">
+                <methods>
+                    <include name="searchAgentZipTest"></include>
+                </methods>
+            </class>
+>>>>>>> cc243dbc060e2d866f8b4cae1a2154e0edc33df0
 
         </classes>
     </test>
 
+<<<<<<< HEAD
 <!--    <test name="#########">-->
 <!--                <parameter name="browserName" value="firefox"/>-->
 <!--                <parameter name="browserVersion" value="##"/>-->
@@ -52,6 +81,8 @@
 
 
 
+=======
+>>>>>>> cc243dbc060e2d866f8b4cae1a2154e0edc33df0
 
 </suite>
 

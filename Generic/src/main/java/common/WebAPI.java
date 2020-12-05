@@ -117,15 +117,17 @@ public class WebAPI {
 
     // Browser SetUp
     public static WebDriver driver = null;
-    public String browserStack_userName = "amalakar1";
-    public String browserStack_accessKey = "ZN7qVGyGqEZTM7qsxR81";
+    public String browserStack_userName = "shailahasib1";
+    public String browserStack_accessKey = "NXbTMApAaHVKWeRncpYg";
     public String sauceLabs_userName = "";
     public String sauceLabs_accessKey = "";
 
     @Parameters({"useCloudEnv", "cloudEnvName", "OS", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
-    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("chrome") String browserName,
-                      @Optional("86") String browserVersion, @Optional("https://www.google.com") String url) throws IOException {
+
+    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("OS X") String OS, @Optional("10") String os_version, @Optional("chrome") String browserName,
+                      @Optional("86") String browserVersion, @Optional("https://google.com") String url) throws IOException {
+
         // Platform: Local Machine/ cloud machine
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserStack")) {
@@ -137,7 +139,7 @@ public class WebAPI {
             getLocalDriver(OS, browserName);
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.get(url);
         driver.manage().window().maximize();
@@ -203,7 +205,6 @@ public class WebAPI {
         driver.quit();
     }
 
-// Helper Method
 
     // Our code should be dynamic and reusable
 
@@ -410,12 +411,8 @@ public class WebAPI {
         select.selectByVisibleText(value);
     }
 
-    public static void sleepFor(int sec)  {
-        try {
-            Thread.sleep(sec * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public static void sleepFor(int sec) throws InterruptedException {
+        Thread.sleep(sec * 1000);
     }
 
     public void mouseHoverByCSS(String locator) {
