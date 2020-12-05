@@ -1,6 +1,7 @@
 package stateFarmHome;
 
 import common.WebAPI;
+import aldrinsDatabases.ConnectToSqlDB;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -129,6 +130,25 @@ public class HomePage extends WebAPI {
         typeById(loginPasswordElementID, password);
         sleepFor(2);
         clickByXpath(loginOKButtonElementXpath);
+    }
+    public void loginFunctionalityDatabaseSQL() throws Exception {
+        ConnectToSqlDB connect = new ConnectToSqlDB();
+        List <String> username = connect.readDataBase("statefarmcustomerdb","customername");
+        List<String> password = connect.readDataBase("statefarmcustomerdb", "password");
+        clickByCss(loginElementCss);
+        typeById(loginUserIDElementsID, username.get(0));
+        typeById(loginPasswordElementID, password.get(0));
+        sleepFor(2);
+        clickByXpath(loginOKButtonElementXpath);
+    }
+    public void searchWithDatabase() throws Exception {
+        ConnectToSqlDB connect = new ConnectToSqlDB();
+        List <String> keyword = connect.readDataBase("searchkeydb","keyword");
+        clickByXpath(searchHeaderXpath);
+        searchBox.clear();
+        searchBox.sendKeys(keyword.get(0), Keys.ENTER);
+        sleepFor(2);
+
     }
 
     public void changeLanguage() {

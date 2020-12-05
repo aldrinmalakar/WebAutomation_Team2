@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import stateFarmHome.HomePage;
+import aldrinsDatabases.ConnectToSqlDB;
 
 import java.util.concurrent.TimeUnit;
 
@@ -39,7 +40,8 @@ public class HomePageTest extends WebAPI {
                 "We value your privacy. But we will steal your money anyway"
         };
     }
-    @Test (dataProvider = "privacyAssertion")
+
+    @Test(dataProvider = "privacyAssertion")
     public void testReadMorePrivacy(String assertionMessage) {
         homePage.getToReadMorePrivacy();
         homePage.assertReadMorePrivacy(assertionMessage);
@@ -85,6 +87,7 @@ public class HomePageTest extends WebAPI {
         homePage.loginFunctionality("testUser@testserver.com", "testPassword!@@31");
         homePage.assertURL(loginErrorURL);
     }
+
     @DataProvider(name = "InvalidData")//20
     public Object[][] getData() {
 
@@ -103,10 +106,23 @@ public class HomePageTest extends WebAPI {
 
         return data;
     }
-    @Test (dataProvider = "InvalidData")
+
+    @Test(dataProvider = "InvalidData")
     public void testLoginFunctionalityThree(String someId, String somePassword) {
-        homePage.loginFunctionality(someId,somePassword);
+        homePage.loginFunctionality(someId, somePassword);
         homePage.assertURL(loginErrorURL);
+    }
+
+    @Test
+    public void testLoginFunctionalityDataBaseSQL() throws Exception {
+        homePage.loginFunctionalityDatabaseSQL();
+        homePage.assertURL(loginErrorURL);
+    }
+
+    @Test
+    public void testSearchFunctionalityDataBaseSQL() throws Exception {
+        homePage.searchWithDatabase();
+        homePage.assertSearchWithDataProvider();
     }
 
     @Test
@@ -149,6 +165,7 @@ public class HomePageTest extends WebAPI {
         homePage.assertSearchWithDataProvider();
     }
 
+
     @Test
     public void testGetIphoneApp() {
         homePage.getIphoneApp();
@@ -166,11 +183,13 @@ public class HomePageTest extends WebAPI {
         homePage.SocialFacebookPage(socialFBButtonCss);
         homePage.assertSocialFacebookPage(socialFBUrl);
     }
+
     @Test
     public void testSocialLinkedInPage() {
         homePage.SocialFacebookPage(socialLinkedInCss);
         homePage.assertSocialFacebookPage(socialLinkedInUrl);
     }
+
     @Test
     public void testSocialYouTubePage() {
         homePage.SocialFacebookPage(socialYouTubeCss);
@@ -182,11 +201,13 @@ public class HomePageTest extends WebAPI {
         homePage.seekHelpHeader(contactUsXpath);
         homePage.assertSeekHelpHeader(contactUsUrl);
     }
+
     @Test
     public void testSeekHelpHeaderCustomerCare() {
         homePage.seekHelpHeader(customerCareXpath);
         homePage.assertSeekHelpHeader(customerCareUrl);
     }
+
     @Test
     public void testSeekHelpHeaderFAQs() {
         homePage.seekHelpHeader(faqsHelpXpath);
