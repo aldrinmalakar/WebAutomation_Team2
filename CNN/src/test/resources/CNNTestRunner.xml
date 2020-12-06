@@ -28,7 +28,7 @@
 <!--                    <include name="testSearchBoxCheck2"></include>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testUspage.UsPageTest"></class>
+            <class name="testEntertainment.EntertainmentPageTest"></class>
 
         </classes>
     </test>
@@ -36,7 +36,7 @@
         <classes>
             <class name="testEntertainment.EntertainmentPageTest">
                 <methods>
-                    <include name="checkcopyRight"></include>
+                    <include name="testDataBaseConnection"></include>
                 </methods>
             </class>
         </classes>

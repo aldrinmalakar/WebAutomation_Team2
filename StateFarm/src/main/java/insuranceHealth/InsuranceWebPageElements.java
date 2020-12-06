@@ -29,6 +29,7 @@ public class InsuranceWebPageElements {
     public static final String facebookTitleEx="State Farm | Facebook";
     public static final String goPaperless="//a[contains(text(),'Go paperless')]";
     public static final String goPaperlessTextEx="//h1[contains(text(),'Enroll in paperless billing.')]";
+    public static final String headersList="-oneX-header-main-nav-list";
 
 
 }

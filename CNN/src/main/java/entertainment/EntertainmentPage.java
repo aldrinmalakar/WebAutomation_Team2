@@ -1,6 +1,7 @@
 package entertainment;
 
 import common.WebAPI;
+import databases.ConnectToSqlDB;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -219,6 +220,12 @@ public class EntertainmentPage extends WebAPI {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
+    }
+
+    public void connectToDBForSearchTerms() throws Exception {
+        ConnectToSqlDB connect =new ConnectToSqlDB();
+        List <String> value = connect.readDataBase("testData","value");
+        searchEntertainmentsPage(value.get(0));
     }
 
 

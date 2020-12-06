@@ -1,13 +1,14 @@
 package testInsurance;
 
 import common.WebAPI;
+import databases.ConnectToSqlDB;
 import insuranceHealth.InsuranceHealthPage;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 
 public class InsurancePageTest extends WebAPI {
@@ -115,10 +116,29 @@ public class InsurancePageTest extends WebAPI {
     }
 
     @Test//23
-    public void goPaperlessValidation(){
+    public void goPaperlessValidation() {
         insuranceHealthPage.goPaperLess();
         insuranceHealthPage.goPaperlessText();
     }
+
+    @Test
+    public void connectToDBSignIn() throws Exception {
+        insuranceHealthPage.connectToDB();
+        insuranceHealthPage.checkForInformationError();
+    }
+
+    @Test
+    public void getListOflinksTest(){
+        insuranceHealthPage.getListOfLinks();
+    }
+
+    @Test
+    public void listOfHeadersToDataBase() {
+        insuranceHealthPage.listOfHeaders();
+    }
+
+
+
 
 
 }

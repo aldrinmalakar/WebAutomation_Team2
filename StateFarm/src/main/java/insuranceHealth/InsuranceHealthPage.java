@@ -2,6 +2,7 @@ package insuranceHealth;
 
 import com.google.common.base.Joiner;
 import common.WebAPI;
+import databases.ConnectToSqlDB;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -96,6 +97,14 @@ public class InsuranceHealthPage extends WebAPI {
     @FindBy(how = How.XPATH, using = goPaperlessTextEx)
     public WebElement goPaperlessText;
 
+    @FindBy(how = How.TAG_NAME, using = "a")
+    public List<WebElement> linkTags;
+
+    @FindBy(how = How.CLASS_NAME, using = headersList)
+    public List<WebElement> headers;
+
+    ConnectToSqlDB connect = new ConnectToSqlDB();
+
 
     public void loginInvalidCredentials(String someId, String somePassword) {
         login.click();
@@ -103,7 +112,6 @@ public class InsuranceHealthPage extends WebAPI {
         clearAndSendKeys(passwordInput, somePassword);
         loginAfterCredentials.click();
     }
-
 
     public void errorDisplaysForInvalidCred() {
         eleIsDisplayed(errorRecordNotFound);
@@ -174,10 +182,6 @@ public class InsuranceHealthPage extends WebAPI {
         return true;
     }
 
-//    public void addDataToList() {
-//        readExcelFile(getFileName(), 0, firstColumn, secondColumn);
-//    }
-
     public void findAgentWithZipCode(WebElement element) throws InterruptedException {
         readExcelFile(getFileName(), 0, firstColumn, secondColumn);
         for (int i = 0; i < firstColumn.size(); i++) {
@@ -192,7 +196,6 @@ public class InsuranceHealthPage extends WebAPI {
             driver.get(homePage);
         }
     }
-
 
     public void validateUrlForZipCode() {
         for (int i = 0; i < secondColumn.size(); i++) {
@@ -280,6 +283,34 @@ public class InsuranceHealthPage extends WebAPI {
 
     public void goPaperlessText() {
         eleIsDisplayed(goPaperlessText);
+    }
+
+    public void connectToDB() throws Exception {
+        List<String> phone = connect.readDataBase("testStateFarmData", "phoneNumber");
+        List<String> dob = connect.readDataBase("testStateFarmData", "dob");
+        payABillWithInvalidCredentials(phone.get(0), dob.get(0));
+    }
+
+    public void getListOfLinks() {
+        String url = "";
+        Iterator<WebElement> it = linkTags.iterator();
+        while (it.hasNext()) {
+            url = it.next().getAttribute("href");
+            connect.insertDataFromStringToSqlTable(url, "dep", "link");
+            System.out.println(url);
+        }
+
+    }
+
+    public void listOfHeaders() {
+        String headerName = "";
+        List <String> header = new ArrayList<>();
+        Iterator<WebElement> it = headers.iterator();
+        while (it.hasNext()) {
+            headerName = it.next().getText();
+            header.add(headerName);
+            connect.insertDataFromArrayListToSqlTable(header, "headersList", "headersList");
+        }
     }
 
 

@@ -67,7 +67,10 @@ public class EntertainmentPageTest extends WebAPI {
         entertainmentPage.allCategoriesAreDisplayed();
     }
 
-//hello
+    @Test
+    public void testDataBaseConnection() throws Exception {
+        entertainmentPage.connectToDBForSearchTerms();
+    }
 
 
 

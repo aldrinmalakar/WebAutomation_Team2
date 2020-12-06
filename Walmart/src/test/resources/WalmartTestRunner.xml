@@ -6,7 +6,7 @@
     <!--    Cross Browser Testing-->
 
     <!--    Parameter to pass the value to WebAPI-->
-    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <parameter name="OS" value="windows"/>
     <!--<parameter name="OS" value="OS X"/>-->
@@ -17,18 +17,18 @@
     <parameter name="url" value="https://www.walmart.com/"/>
   
 
-  <test name="Walmart automation">
+  <test name="Walmart automation"></test>
 <!--        <parameter name="browserName" value="chrome"/>-->
 <!--        <parameter name="browserVersion" value="86"/>-->
 
     <test name="Walmart">
         <classes>
-           <class name="testHome.HomePageTest">
+           <class name="testGiftFinder.GiftFinderTest">
 
                 <methods>
-                    <include name="testCreateAccount"></include>
+                    <include name=""></include>
 <!--                    <include name="testSearchXobConsoles"></include>-->
-<!--                    <include name="testPrintPhoto"></include>-->
+                    <include name="scrollDownTest"></include>
 <!--                    <include name="testBeauty"></include>-->
 <!--                    <include name="testHomeImprovement"></include>-->
 
@@ -47,7 +47,7 @@
                     <exclude name="scrollDownTest"></exclude>
                     <exclude name="testBirthdayOccasion"></exclude>
                     <exclude name="navigatetestGiftPageNavigation"></exclude>
-                    <include name="typeOfGiftList"></include>
+                    <exclude name="typeOfGiftList"></exclude>
                 </methods>
             </class>
         </classes>
