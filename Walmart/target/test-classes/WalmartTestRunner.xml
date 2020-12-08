@@ -2,7 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="TestSuit">
-    <parameter name="useCloudEnv" value="false"/>
+
+    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="OS" value="catalina"/>
+    <parameter name="OS" value="Windows"/>
+    <!--        <parameter name="os_version" value="###"/>-->
+    <parameter name="os_version" value="Sierra"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>

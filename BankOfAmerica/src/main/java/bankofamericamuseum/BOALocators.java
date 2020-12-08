@@ -34,12 +34,10 @@ public class BOALocators {
     public static final String validateGuideAdvisorActual = "//h1[contains(text(),'Merrill Guided Investing™')]";
     // chat box function
     public static final String chatBoxFunctionLocator = "chat--icon-bubble";
-    public static final String chatBoxFunctionActual = "chat__window js-chat-window";
     public static final String closeChatBoxFunctionActual = "//*[@id='chatWidgetModule']/div[1]/div[2]/button[3]";
     // send message
     public static final String clickOnMessageBoxLocatorclass = "chat__message--entry spa-input-textarea";
     public static final String clickOnMessageBoxLocator = "//*[@id='chatWidgetModule']/button[1]";
-    public static final String clickOnButtonMessageBoxLocator = "//*[@id='chatSiteModule']/div/div[4]/div[3]/div[2]/div/button";
     public static final String validateMessageBoxLocator = "//*[@id='chatSiteModule']/div/div[3]/div[2]/div[4]/span";
     // cost of dept
     public static final String clickOnTryItOUtLocator = "//*[@id='spnMenuItem_115']";
@@ -54,4 +52,11 @@ public class BOALocators {
     public static final String SNDLActualLocator = "//*[@id='ctl00_ctl00_siteContent_MainContent_MarketDataControlDesigner3_ctl00_mmwMostActiveSecurities']/div[2]/table/tbody/tr[2]/td[4]";
     public static final String iframeHandlingLocator = "//*[@id='ctl00_ctl00_siteContent_MainContent_SimpleContentControl2_ctl00_ecmsWPRECMSContentCtrl1']/div/iframe";
     public static final String submitLocator = "//*[@id='submitDiv']/input";
+    public static final String linkLocator = "a";
+    //Login Data provider
+    public static final String OnlineIDLocator = "#onlineId1";
+    public static final String PassCodeLocator = "#passcode1";
+    public static final String SignINLocator = "#signIn";
+    public static final String validateLoginLocator = "/html/body/div[1]/div/div/div[1]/div[4]/div[2]/div/li";
+    public static final String desktopListLocator = "//*[@id='navigationDesktop']";
 }

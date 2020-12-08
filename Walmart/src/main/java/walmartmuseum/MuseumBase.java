@@ -1,5 +1,6 @@
 package walmartmuseum;
 
+import com.mysql.cj.MysqlConnection;
 import common.WebAPI;
 import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.*;
@@ -389,7 +390,6 @@ public class MuseumBase extends WebAPI {
         driver.findElement(By.xpath("//body/div[4]/div[2]/div[2]/div[1]/button[1]")).click();
         driver.findElement(By.xpath("//button[contains(text(),'Add to cart')]")).click();
         driver.findElement(By.id("wpmenucartli")).click();
-
     }
 
     public void validateSelectMasksItems() throws InterruptedException {
@@ -426,7 +426,6 @@ public class MuseumBase extends WebAPI {
         String expected = "Your cart is currently empty.";
         String actual = driver.findElement(By.xpath("//*[@id='post-65']/div/div/div/p")).getText();
         Assert.assertEquals(actual, expected, "Failed Test ");
-
     }
 
     public void scrollingUpAndDownElements() throws InterruptedException {

@@ -7,6 +7,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -43,11 +44,13 @@ public class DataReader {
         return data;
     }
 
+
+
     public String[] fileReader2(String path, int sheetIndex) throws IOException {
         String[] data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
-       // wb = new HSSFWorkbook(fis);
+        // wb = new HSSFWorkbook(fis);
         wb = new XSSFWorkbook(fis);
         sheet = wb.getSheetAt(sheetIndex);
         numberOfRows = sheet.getLastRowNum();

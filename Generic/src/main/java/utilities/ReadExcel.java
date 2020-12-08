@@ -11,7 +11,8 @@ import java.util.Iterator;
 
 public class ReadExcel {
 
-    private static final String FILE_NAME = System.getProperty("user.dir") + "/DataTest/TestExcelFile.xlsx";
+    private static final String FILE_NAME = System.getProperty("user.dir") + "/DataGenerator/DataProvider.xlsx";
+//    private static final String FILE_NAME1 = "/DataGenerator/DataProvider.xlsx";
 
     /**
      * This method is to read Excel file based on sheet Index Number

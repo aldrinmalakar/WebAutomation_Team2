@@ -127,11 +127,13 @@ public class MuseumTest extends WebAPI {
         museumBase.removeItemsElements();
         museumBase.validateRemoveItems();
     }
+
     @Test
     public void sparkShopScrollingFunction() throws InterruptedException {
         museumBase.sparkShopElements();
         museumBase.validateSparkShopElements();
     }
+
     @Test
     public void scrollingUpAndDown() throws InterruptedException {
         museumBase.scrollingUpAndDownElements();

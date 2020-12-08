@@ -4,6 +4,12 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,10 +28,7 @@ import org.testng.annotations.Optional;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.io.*;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -116,8 +119,8 @@ public class WebAPI {
 
     // Browser SetUp
     public static WebDriver driver = null;
-    public String browserStack_userName = "demo548";
-    public String browserStack_accessKey = "rxs6JjJJUiMyDTBFx57k";
+    public String browserStack_userName = "alaeddinekramou1";
+    public String browserStack_accessKey = "zQmmZP7UaHsSN7EsyAdR";
     public String sauceLabs_userName = "";
     public String sauceLabs_accessKey = "";
 
@@ -402,7 +405,56 @@ public class WebAPI {
         }
         return items;
     }
-
+    @DataProvider(name="TestData")
+    public static Object[][] dataProviderMethodGenerator() {
+        Object[][] data = {{"Riyad18823", "Mahrez18834"},
+                {"Mahrez555","Riyad555"},
+                {"Mahrez666","Riyad666"},
+                {"Mahrez777","Riyad777"}};
+        return data;
+    }
+    @DataProvider(name = "ExcelTEST")
+    public static Object[][] dataProviderMethod() throws IOException {
+        FileInputStream file = new FileInputStream("C:\\Users\\alaed\\IdeaProjects\\WebAutomation_Team2\\BankOfAmerica\\DataGenerator\\DataProvider.xlsx");
+        XSSFWorkbook workBook = new XSSFWorkbook(file);
+        XSSFSheet loginSheet = workBook.getSheet("Login");
+        int numberOfData = loginSheet.getPhysicalNumberOfRows();
+        Object[][] data = new Object[numberOfData][2];
+        for (int i = 0; i < numberOfData; i++) {
+            XSSFRow row = loginSheet.getRow(i);
+            XSSFCell userID = row.getCell(0);
+            XSSFCell passWord = row.getCell(1);
+            data[i][0] = userID.getStringCellValue();
+            data[i][1] = passWord.getStringCellValue();
+        }
+        return data;
+    }
+    @DataProvider(name = "ExcelStateFarm")
+    public static Object[][] dataProviderMethodBOA() throws IOException {
+        FileInputStream file = new FileInputStream("C:\\Users\\alaed\\IdeaProjects\\WebAutomation_Team2\\StateFarm\\DataGenerator\\DataProviderSF.xlsx");
+        XSSFWorkbook workBook = new XSSFWorkbook(file);
+        XSSFSheet loginSheet = workBook.getSheet("StateFarmData");
+        int numberOfData = loginSheet.getPhysicalNumberOfRows();
+        Object[][] data = new Object[numberOfData][7];
+        for (int i = 0; i < numberOfData; i++) {
+            XSSFRow row = loginSheet.getRow(i);
+            XSSFCell firstName = row.getCell(0);
+            XSSFCell lastName = row.getCell(1);
+            XSSFCell Email = row.getCell(2);
+            XSSFCell ConfirmEmail = row.getCell(3);
+            XSSFCell Phone = row.getCell(4);
+            XSSFCell Password = row.getCell(5);
+            XSSFCell ConfirmPassword = row.getCell(6);
+            data[i][0] = firstName.getStringCellValue();
+            data[i][1] = lastName.getStringCellValue();
+            data[i][2] = Email.getStringCellValue();
+            data[i][3] = ConfirmEmail.getStringCellValue();
+            data[i][4] = Phone.getStringCellValue().toString();
+            data[i][5] = Password.getStringCellValue();
+            data[i][6] = ConfirmPassword.getStringCellValue();
+        }
+        return data;
+    }
     public void selectOptionByVisibleText(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);

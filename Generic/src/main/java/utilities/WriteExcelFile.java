@@ -12,7 +12,7 @@ import java.io.IOException;
 public class WriteExcelFile {
 
     private static final String FILE_NAME = System.getProperty("user.dir") + "/DataTest/TestExcelFile.xlsx";
-    //private static final String FILE_NAME = "DataTest/myFile.xlsx";
+//    private static final String FILE_NAME = "DataTest/myFile.xlsx";
 
     public static void writeExcel(String fileName) {
         XSSFWorkbook workbook = new XSSFWorkbook();
