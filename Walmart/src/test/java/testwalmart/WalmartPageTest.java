@@ -159,5 +159,6 @@ public class WalmartPageTest extends WebAPI {
         walmartHomePage.validateBoxDataBase();
     }
 
+
     }
 

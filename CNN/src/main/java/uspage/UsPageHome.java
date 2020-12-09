@@ -99,6 +99,10 @@ public class UsPageHome extends WebAPI {
     public WebElement destinationsS;
     @FindBy(how = How.XPATH, using = destinationsSActualResultWebElement)
     public WebElement destinationsSActWebElement;
+    @FindBy(how = How.CSS, using = extremeWeatherWebElement)
+    public WebElement extremeWeatherS;
+    @FindBy(how = How.XPATH, using = extremeWeatherSActualResultWebElement)
+    public WebElement extremeWeatherSActualWebElement;
 
 
 
@@ -186,12 +190,6 @@ public class UsPageHome extends WebAPI {
         Assert.assertEquals(expectedResult, actualResult, "test fail: language setting not shows");
 
     }
-
-    @FindBy(how = How.CSS, using = extremeWeatherWebElement)
-    public WebElement extremeWeatherS;
-    @FindBy(how = How.XPATH, using = extremeWeatherSActualResultWebElement)
-    public WebElement extremeWeatherSActualWebElement;
-
 
     public void extremeWeather() throws InterruptedException {
         extremeWeatherS.click();
