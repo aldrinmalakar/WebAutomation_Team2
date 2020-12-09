@@ -79,7 +79,7 @@ public WebElement testInsideAfricaActualWebElement;
 
 @FindBy(how=How.XPATH,using = AfricaAvantGardWebElement)
 public WebElement AfricaAvantGard;
-@FindBy(how=How.CSS,using =AfricaAvantGardTitleWebElement )
+@FindBy(how=How.XPATH,using =AfricaAvantGardTitleWebElement )
 public WebElement testAfricaAvantGard;
 
 

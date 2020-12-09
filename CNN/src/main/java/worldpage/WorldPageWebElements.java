@@ -36,7 +36,7 @@ package worldpage;
    public static final String InsideAfricaTitleWebElement="/html[1]/body[1]/div[7]/div[3]/div[1]/div[1]/div[1]/img[1]";
 
    public static final String AfricaAvantGardWebElement="/html[1]/body[1]/div[8]/section[4]/div[2]/div[2]/div[4]/ul[1]/a[1]/h2[1]";
-   public static final String AfricaAvantGardTitleWebElement="div.Chrome__component div.Chrome__content:nth-child(4) div.Special__component div.Zone__component.Special__zone.Special__head.Zone__isBleed:nth-child(2) div.Zone__wrapper div.Special__pageTop.Special__hasHeroImage div.Special__title div:nth-child(1) > h1:nth-child(1)";
+   public static final String AfricaAvantGardTitleWebElement="/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/h1[1]";
 
 
 
