@@ -14,44 +14,23 @@
     <!--    <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="86"/>
-    <parameter name="url" value="https://www.walmart.com/"/>
-  
+    <parameter name="url" value="https://www.cnn.com/"/>
 
-  <test name="Walmart automation"></test>
+    <test name="CNN Automation">
 <!--        <parameter name="browserName" value="chrome"/>-->
 <!--        <parameter name="browserVersion" value="86"/>-->
 
-    <test name="Walmart">
         <classes>
-           <class name="testToysPage.ToysPageTest">
+            <!--       <class name="testUsPage.UsPageTest">
+<!-                    <methods>-->
+<!--                    <exclude name="testSearchBoxCheck"></exclude>-->
+<!--                    <exclude name="testSearchBoxCheck1"></exclude>-->
+<!--                    <include name="testSearchBoxCheck2"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="testWorldpage.WorldPageTest"></class>
 
-                <methods>
-                    <include name="testCreateAccount"></include>
-<!--                    <include name="testSearchXobConsoles"></include>-->
-<!--                    <include name="testPrintPhoto"></include>-->
-<!--                    <include name="testBeauty"></include>-->
-<!--                    <include name="testHomeImprovement"></include>-->
-
-<!--                    <exclude name="testSearchBox"></exclude>-->
-<!--                    <exclude name="testCreateAccount"></exclude>-->
-<!--                    <include name="testSingIn"></include>-->
-<!--                    <include name="testForgetPassword"></include>-->
-                </methods>
-            </class>
-<!--            <class name="testHome.HomePageTest"></class>-->
-     
-           
-            <class name="testToysPage.ToysPageTest">
-                <methods>
-                    <exclude name="showAllRadioTest"></exclude>
-                    <exclude name="scrollDownTest"></exclude>
-                    <exclude name="testBirthdayOccasion"></exclude>
-                    <exclude name="navigatetestGiftPageNavigation"></exclude>
-                    <include name="backToTopButton"></include>
-                </methods>
-            </class>
         </classes>
-      
     </test>
 
 <!--    <test name="#########">-->

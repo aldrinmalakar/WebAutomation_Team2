@@ -116,9 +116,9 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
-                        <!--                            <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>-->
-                        <!--                            <suiteXmlFile></suiteXmlFile>-->
-                        <!--                            <suiteXmlFile></suiteXmlFile>-->
+<!--                                                    <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>-->
+<!--                                                    <suiteXmlFile></suiteXmlFile>-->
+<!--                                                    <suiteXmlFile></suiteXmlFile>-->
                     </suiteXmlFiles>
 
 
