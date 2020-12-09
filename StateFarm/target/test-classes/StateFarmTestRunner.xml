@@ -6,7 +6,7 @@
     <!--    Cross Browser Testing-->
 
     <!--    Parameter to pass the value to WebAPI-->
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <parameter name="OS" value="windows"/>
     <!--<parameter name="OS" value="OS X"/>-->
@@ -14,9 +14,9 @@
     <!--    <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="86"/>
-    <parameter name="url" value="https://www.walmart.com/"/>
+    <parameter name="url" value="https://www.statefarm.com/"/>
 
-    <test name="Walmart Automation">
+    <test name="StateFarm Automation">
 <!--        <parameter name="browserName" value="chrome"/>-->
 <!--        <parameter name="browserVersion" value="86"/>-->
 
@@ -28,7 +28,7 @@
 <!--                    <include name="testSearchBoxCheck2"></include>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testwalmart.WalmartPageTest"></class>
+            <class name="teststatefarmepage.StateFarmPageTest"></class>
 
         </classes>
     </test>
