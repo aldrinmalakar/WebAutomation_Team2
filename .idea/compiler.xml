@@ -8,14 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="StateFarm" />
         <module name="Walmart" />
-        <module name="T-Mobile" />
         <module name="CNN" />
         <module name="BankOfAmerica" />
         <module name="Generic" />
-        <module name="Expedia" />
-        <module name="Marriot" />
-        <module name="BCBS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BCBS" target="1.8" />
+      <module name="Expedia" target="1.8" />
+      <module name="Marriot" target="1.8" />
+      <module name="T-Mobile" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

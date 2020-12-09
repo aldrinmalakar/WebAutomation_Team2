@@ -149,7 +149,9 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/StateFarmTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/WalmartTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test=classes/BOATestRunner.xml</suiteXmlFile>
                         <!--                        <suiteXmlFile></suiteXmlFile>-->
                         <!-- <suiteXmlFile></suiteXmlFile>-->
                     </suiteXmlFiles>

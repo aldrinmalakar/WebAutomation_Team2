@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 37.625 s <<< FAILURE! - in TestSuite
+TestCareerPage.CareerPageTest.testCareerpageDropDownmilitary  Time elapsed: 7.391 s  <<< FAILURE!
+java.lang.AssertionError: Test Fail Test expected [Learn more about our Privacy & Security here] but found []
+	at TestCareerPage.CareerPageTest.testCareerpageDropDownmilitary(CareerPageTest.java:148)
+

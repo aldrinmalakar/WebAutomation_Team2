@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="12" total="13" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\helen\IdeaProjects\WebAutomation_Team2\StateFarm\target\surefire-reports\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-11-23T05:40:15 CST" name="TestSuit" finished-at="2020-11-23T05:40:31 CST" duration-ms="16010">
+    <groups>
+    </groups>
+    <test started-at="2020-11-23T05:40:15 CST" name="State Farm Automation" finished-at="2020-11-23T05:40:31 CST" duration-ms="16010">
+      <class name="TestClaim.ClaimPageTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:14 CST" name="extentSetup" finished-at="2020-11-23T05:40:15 CST" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@253b380a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\helen\IdeaProjects\WebAutomation_Team2\StateFarm\target\surefire-reports\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:15 CST" name="setUp" finished-at="2020-11-23T05:40:23 CST" duration-ms="8743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.statefarm.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:23 CST" name="startExtent" finished-at="2020-11-23T05:40:23 CST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestClaim.ClaimPageTest.testTrackaClaim() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:23 CST" name="getInit" finished-at="2020-11-23T05:40:23 CST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method signature="testTrackaClaim()[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:23 CST" name="testTrackaClaim" finished-at="2020-11-23T05:40:29 CST" duration-ms="5894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTrackaClaim -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:29 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:40:31 CST" duration-ms="1253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTrackaClaim status=SUCCESS method=ClaimPageTest.testTrackaClaim()[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:31 CST" name="cleanUp" finished-at="2020-11-23T05:40:31 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:TestClaim.ClaimPageTest@2bfc268b]" started-at="2020-11-23T05:40:31 CST" name="generateReport" finished-at="2020-11-23T05:40:31 CST" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- TestClaim.ClaimPageTest -->
+    </test> <!-- State Farm Automation -->
+  </suite> <!-- TestSuit -->
+</testng-results>

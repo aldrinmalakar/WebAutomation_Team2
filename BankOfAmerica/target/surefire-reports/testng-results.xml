@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="18" total="23" passed="5" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\helen\IdeaProjects\WebAutomation_Team2\BankOfAmerica\target\surefire-reports\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-11-23T05:44:29 CST" name="TestSuit" finished-at="2020-11-23T05:45:24 CST" duration-ms="55264">
+    <groups>
+    </groups>
+    <test started-at="2020-11-23T05:44:29 CST" name="Bank of America Automation" finished-at="2020-11-23T05:45:24 CST" duration-ms="55264">
+      <class name="TestFooter.FooterPageTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:28 CST" name="extentSetup" finished-at="2020-11-23T05:44:29 CST" duration-ms="282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@78226c36]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\helen\IdeaProjects\WebAutomation_Team2\BankOfAmerica\target\surefire-reports\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:29 CST" name="setUp" finished-at="2020-11-23T05:44:39 CST" duration-ms="9895" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.bankofamerica.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:39 CST" name="startExtent" finished-at="2020-11-23T05:44:39 CST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestFooter.FooterPageTest.testFooterInternalTransferPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:39 CST" name="getInit" finished-at="2020-11-23T05:44:39 CST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method signature="testFooterInternalTransferPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:39 CST" name="testFooterInternalTransferPage" finished-at="2020-11-23T05:44:41 CST" duration-ms="2045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterInternalTransferPage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:41 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:44:42 CST" duration-ms="1573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterInternalTransferPage status=SUCCESS method=FooterPageTest.testFooterInternalTransferPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:42 CST" name="cleanUp" finished-at="2020-11-23T05:44:42 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:42 CST" name="setUp" finished-at="2020-11-23T05:44:49 CST" duration-ms="6958" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.bankofamerica.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:49 CST" name="getInit" finished-at="2020-11-23T05:44:49 CST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:49 CST" name="startExtent" finished-at="2020-11-23T05:44:49 CST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestFooter.FooterPageTest.testFooterBillSPaymentervicePage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testFooterBillSPaymentervicePage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:49 CST" name="testFooterBillSPaymentervicePage" finished-at="2020-11-23T05:44:51 CST" duration-ms="1439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterBillSPaymentervicePage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:51 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:44:52 CST" duration-ms="1312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterBillSPaymentervicePage status=SUCCESS method=FooterPageTest.testFooterBillSPaymentervicePage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:52 CST" name="cleanUp" finished-at="2020-11-23T05:44:52 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:52 CST" name="setUp" finished-at="2020-11-23T05:44:59 CST" duration-ms="6832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.bankofamerica.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:59 CST" name="startExtent" finished-at="2020-11-23T05:44:59 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestFooter.FooterPageTest.testFooterZelleNetworkPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:59 CST" name="getInit" finished-at="2020-11-23T05:44:59 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method signature="testFooterZelleNetworkPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:44:59 CST" name="testFooterZelleNetworkPage" finished-at="2020-11-23T05:45:01 CST" duration-ms="1855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterZelleNetworkPage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:01 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:45:02 CST" duration-ms="937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterZelleNetworkPage status=SUCCESS method=FooterPageTest.testFooterZelleNetworkPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:02 CST" name="cleanUp" finished-at="2020-11-23T05:45:02 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:02 CST" name="setUp" finished-at="2020-11-23T05:45:09 CST" duration-ms="7420" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.bankofamerica.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:09 CST" name="startExtent" finished-at="2020-11-23T05:45:09 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestFooter.FooterPageTest.testFooterACHWirePage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:09 CST" name="getInit" finished-at="2020-11-23T05:45:09 CST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method signature="testFooterACHWirePage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:09 CST" name="testFooterACHWirePage" finished-at="2020-11-23T05:45:11 CST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterACHWirePage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:11 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:45:12 CST" duration-ms="1224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterACHWirePage status=SUCCESS method=FooterPageTest.testFooterACHWirePage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:12 CST" name="setUp" finished-at="2020-11-23T05:45:21 CST" duration-ms="8630" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.bankofamerica.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:12 CST" name="cleanUp" finished-at="2020-11-23T05:45:12 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:21 CST" name="startExtent" finished-at="2020-11-23T05:45:21 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestFooter.FooterPageTest.testFooterDisclaimernPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:21 CST" name="getInit" finished-at="2020-11-23T05:45:21 CST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method signature="testFooterDisclaimernPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:21 CST" name="testFooterDisclaimernPage" finished-at="2020-11-23T05:45:23 CST" duration-ms="2070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterDisclaimernPage -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:23 CST" name="afterEachTestMethod" finished-at="2020-11-23T05:45:24 CST" duration-ms="967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterDisclaimernPage status=SUCCESS method=FooterPageTest.testFooterDisclaimernPage()[pri:0, instance:TestFooter.FooterPageTest@272ed83b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:24 CST" name="cleanUp" finished-at="2020-11-23T05:45:24 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:TestFooter.FooterPageTest@272ed83b]" started-at="2020-11-23T05:45:24 CST" name="generateReport" finished-at="2020-11-23T05:45:24 CST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- TestFooter.FooterPageTest -->
+    </test> <!-- Bank of America Automation -->
+  </suite> <!-- TestSuit -->
+</testng-results>
