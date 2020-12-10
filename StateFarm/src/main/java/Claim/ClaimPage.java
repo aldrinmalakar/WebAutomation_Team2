@@ -535,5 +535,8 @@ public class ClaimPage extends WebAPI {
         Assert.assertEquals(actualText, expextedText, "Test Failed: keyword does not match");
     }
 
+    public void connecttoSQL(){
+
+    }
 
 }
