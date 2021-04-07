@@ -13,7 +13,7 @@
     <parameter name="os_version" value="10"/>
     <!--    <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
-    <parameter name="browserVersion" value="86"/>
+    <parameter name="browserVersion" value="87"/>
     <parameter name="url" value="https://b2b.statefarm.com/b2b/index.html"/>
 
     <test name="###########">
@@ -28,7 +28,7 @@
 <!--                    <include name="testSearchBoxCheck2"></include>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testHome.HomePageTest"></class>
+            <class name="testBusiness.testBusinessPage"></class>
 
         </classes>
     </test>

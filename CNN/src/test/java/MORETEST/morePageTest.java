@@ -22,53 +22,53 @@ public class morePageTest extends WebAPI {
 //
 //}
 
-     @Test(enabled = false)
+     @Test
     public void testCnnTitleValidation(){
         morepage.cnnTitleValidation();
         }
 
-    @Test(enabled = false)
+    @Test
     public void TestOpenMenuButton(){
         morepage.openMenuButton();
         morepage.validationOpenMenuButton();
         }
 
-    @Test(enabled = false)
+    @Test
     public void testAccountUser()  {
         morepage.accountUser();
         morepage.validateAccountUser();
         }
 
-     @Test(enabled = false )
+     @Test
     public void testLogInWithInvalidPassword(){
         morepage.logInWithInvalidPassword();
         morepage.validateLogInWithInvalidPassword();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testisSelectedCheckBox() throws InterruptedException {
         morepage.isSelectedCheckBox();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testSearchBox(){
         morepage.SearchBox();
         morepage.ValidateSearchBox();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testEditionButton() {
         morepage.EditionButton();
         morepage.validateEditionButton();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testCnnLogo(){
         morepage.CnnLogo();
         morepage.validateCnnLogo();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testLiveTV(){
         morepage.liveTV();
         morepage.validateLiveTV();
@@ -82,75 +82,75 @@ public class morePageTest extends WebAPI {
 
 
 
-    @Test(enabled = false)
+    @Test
     public void testCnnProfiles(){
         morepage.CnnProfiles();
         morepage.validateCnnProfiles();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testBackForward() throws InterruptedException {
         morepage.BackForward();
         morepage.validateBackForward();
     }
 
 
-    @Test(enabled = false)
+    @Test
     public void testPhotos(){
         morepage.Photos();
         morepage.validatePhotos();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testInvestigations(){
         morepage.Investigations();
         morepage.validateInvestigations();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testFindAllLinkText(){
         morepage.findAllLinkText();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testFindAllInput(){
         morepage.FindAllInput ();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testEspanol() throws InterruptedException {
         morepage.Espanol();
         morepage.validateEspanol();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testForgetPassword(){
         morepage.ForgetPassword ();
         morepage.validateForgetPassword();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testWorkForCNN() throws InterruptedException {
         morepage.WorkForCNN();
         morepage.validateWorkForCNN();
     }
 
-    @Test(enabled = false)//DD
+    @Test//DD
     public void testDropdown() throws InterruptedException {
         morepage.dropdown();
     }
 
-    @Test(enabled = false)//DD
+    @Test//DD
     public void testSelectPositionType() throws InterruptedException {
         morepage.SelectPositionType();
     }
 
-    @Test(enabled = false) //DD
+    @Test //DD
     public void testStudentsDropdown() throws InterruptedException {
         morepage.CategoryDropdown();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testAreaOfInterestDropDown() throws InterruptedException {
         morepage.AreaOfInterestDropDown();
     }

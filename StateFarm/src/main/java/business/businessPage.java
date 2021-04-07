@@ -1,32 +1,22 @@
 package business;
-
-
 import common.WebAPI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
 import static business.BusinessLocators.*;
 import static org.openqa.selenium.WebDriver.*;
-
 public class businessPage extends WebAPI {
-
-
-
     @FindBy(how = How.XPATH,using = loginWebElement)
     public WebElement login;
     @FindBy(how = How.ID,using = emailFieldWebElement)
     public WebElement emailField;
     @FindBy(how = How.XPATH,using = passwordFieldWebElement)
     public WebElement passwordField;
-
-
     @FindBy(how = How.XPATH,using = checkBoxWebElement)
     public WebElement checkBox;
     @FindBy(how = How.XPATH,using = needHelpWebElement)
@@ -105,16 +95,14 @@ public class businessPage extends WebAPI {
     public WebElement medicalEBilling;
     @FindBy(how = How.XPATH,using = verifyWeb)
     public WebElement verify;
-
-
-
+    @FindBy(how = How.ID,using = myAccountWebElement)
+    public WebElement myAccount;
     public void validateBusinessTitle() throws InterruptedException {
         Thread.sleep(2000);
         String expectedTitle="State Farm® B2B | Welcome";
         String actualTitle= driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle,titleFailed);
     }
-
     public void LoginWithInvalidPassword(){
         emailField.sendKeys(emailData);
         passwordField.sendKeys(passwordData);
@@ -125,7 +113,6 @@ public class businessPage extends WebAPI {
         boolean b=  errorMessage.isDisplayed();//true
         System.out.println("is displayed ? "+b);
     }
-
    public void validateCheckBox() throws InterruptedException {
        emailField.sendKeys(emailData);
        passwordField.sendKeys(passwordData);
@@ -135,8 +122,6 @@ public class businessPage extends WebAPI {
            System.out.println(checkBox.isSelected());
        }
     }
-
-
     public void needHelp(){
         needHelp.click();
     }
@@ -144,13 +129,11 @@ public class businessPage extends WebAPI {
         boolean b=helpDisplay.isDisplayed();
         System.out.println("is it displayed? "+b);
     }
-
     public void Dropdown() throws InterruptedException {
         Select slct =new Select(selectDropdown);
         slct.selectByVisibleText("Motorcycle Insurance");
         Thread.sleep(2000);
     }
-
     public void register(){
         register.click();
     }
@@ -159,8 +142,6 @@ public class businessPage extends WebAPI {
         String ActualAttribute=text.getAttribute("class");
         Assert.assertEquals(ActualAttribute,expectedAttribute,"test failed" );
     }
-
-
     public void radioButton() throws InterruptedException {
         register.click();
         Thread.sleep(4000);
@@ -176,7 +157,6 @@ public class businessPage extends WebAPI {
         System.out.println("radio yes is selected  :"+radioYES2);//false
         System.out.println("radio no is selected  :"+radioNO2);//true
     }
-
     public void openNewTab() throws InterruptedException {
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",openNewTab);
         openNewTab.click();
@@ -195,8 +175,6 @@ public class businessPage extends WebAPI {
       Assert.assertEquals(actualTabTitle,expectedTabTitle,"failed !");
 
     }
-
-
     public void BrokenLinks(){
         List<WebElement> links=driver.findElements(By.tagName("a"));
         System.out.println("Total links are "+links.size());
@@ -207,8 +185,6 @@ public class businessPage extends WebAPI {
             verifyLinkActive(url);
         }
     }
-
-
     public void ContactUs(){
         contactUs.click();
     }
@@ -216,8 +192,6 @@ public class businessPage extends WebAPI {
        boolean b =contactDisplay.isDisplayed();
         System.out.println(b);//true
     }
-
-
     public void B2BIDButton(){
         B2BID.click();
         Search.sendKeys(emailData);
@@ -227,8 +201,6 @@ public class businessPage extends WebAPI {
         boolean a=error.isDisplayed();
         System.out.println("the element is displayed :"+a);
     }
-
-
     public void BackForward() throws InterruptedException {
         register.click();
         Thread.sleep(3000);
@@ -237,12 +209,10 @@ public class businessPage extends WebAPI {
         navigateForward();
     }
     public void ValidateBackForward(){
-
         String ExpectedTitle="Contact Us";
         String ActualTitle=driver.getTitle();
         Assert.assertEquals(ActualTitle,ExpectedTitle,"test failed !");
     }
-
     public void Admin(){
         admin.click();
     }
@@ -250,7 +220,6 @@ public class businessPage extends WebAPI {
         boolean abc =adminValid.isDisplayed();
         System.out.println("is displayed :"+abc);
     }
-
     public void RequestSupplement(){
         RequestSupplement.click();
         numberField.sendKeys("123456789");
@@ -263,7 +232,6 @@ public class businessPage extends WebAPI {
         String expectedMSGAttribute="alert alert-danger";
         Assert.assertEquals(actualMSGAttribute,expectedMSGAttribute,"test failed !");
     }
-
     public void IRSNewTab() throws InterruptedException {
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",IRS);
         IRS.click();
@@ -284,7 +252,6 @@ public class businessPage extends WebAPI {
         String expectedChildTitle="Forms & Instructions | Internal Revenue Service";
         Assert.assertEquals(actualChildTitle,expectedChildTitle,"test failed !");
     }
-
     public void EFTLink(){
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",EFT);
         EFT.click();
@@ -293,7 +260,6 @@ public class businessPage extends WebAPI {
         boolean abc=displayMessage.isDisplayed();
         System.out.println("is displayed :"+abc);
     }
-
     public void LoginIsEnabled(){
         if ( ! login.isEnabled()){
             System.out.println("login button  is not enabled !");
@@ -302,7 +268,6 @@ public class businessPage extends WebAPI {
             System.out.println("login button is enabled");
         }
     }
-
     public void Contact(){
         contact.click();
     }
@@ -314,8 +279,6 @@ public class businessPage extends WebAPI {
             System.out.println("validation didn't passed !");
         }
     }
-
-
     public void TermsOfUse(){
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",termsOfUse);
         termsOfUse.click();
@@ -327,7 +290,6 @@ public class businessPage extends WebAPI {
             System.out.println("not displayed ");
         }
     }
-
     public void AutoRepair(){
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",thirdParty);
         thirdParty.click();
@@ -342,8 +304,6 @@ public class businessPage extends WebAPI {
             System.out.println("element not displayed. test failed");
         }
     }
-
-
     public void BusinessOwner() throws InterruptedException {
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",businessOwner);
         businessOwner.click();
@@ -363,18 +323,14 @@ public class businessPage extends WebAPI {
         }
 
     }
-
     public void MedicalElectronic(){
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",MedicalElectronic);
         MedicalElectronic.click();
     }
     public void ValidateMedicalElectronic(){
-
      boolean abc=  ElectronicText.isDisplayed();
         System.out.println("the element is displayed :"+abc);
     }
-
-
     public void MedicalEBillingLink(){
         ( (JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",medicalEBilling);
         medicalEBilling.click();
@@ -383,14 +339,17 @@ public class businessPage extends WebAPI {
         boolean b=verify.isDisplayed();
         System.out.println("is displayed :"+b);
     }
-
-
     public void GoBackToHome() throws InterruptedException {
         register.click();
         Thread.sleep(4000);
         goBackToHomeWindow();
       //  mouseHoverByXpath();
     }
+
+
+
+
+
 
 
 

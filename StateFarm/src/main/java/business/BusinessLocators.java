@@ -48,7 +48,7 @@ public class BusinessLocators {
     public static final String electronicWeb="//strong[contains(text(),'An Electronic Funds Transfer (EFT) is the automate')]";
     public static final String medicalEBillingWeb="//a[contains(text(),'Medical eBilling - Health Claims')]";
     public static final String verifyWeb="//h2[contains(text(),'Health Care Providers')]";
-//    public static final String
+    public static final String myAccountWebElement="user-links-dropdown";
 //    public static final String
 
 

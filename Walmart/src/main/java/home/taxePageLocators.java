@@ -41,7 +41,7 @@ public class taxePageLocators {
     public static final String StoreFinderWebElement="//span[contains(text(),'Store Finder')]";
     public static final String searchButtonWebElement="//header/div[1]/div[2]/div[1]/div[1]/nav[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/label[1]/div[1]/div[1]/input[1]";
     public static final String findWebElement="#header-GlobalEyebrowNav-button-3";
-    public static final String searchBoxWebElement="header-GlobalSearch-input";
+    public static final String searchBoxWebElement="//input[@id='global-search-input']";
     public static final String okSearchButtonWebElement="//*[@id=\"global-search-form\"]/div/div[3]/button/span[1]";
     public static final String element="//*[@id=\"SearchContainer\"]/div/div[2]/div/div[2]/div/div[1]/div[1]/p";
     public static final String attributeWebElement="EasyReorder-logo";

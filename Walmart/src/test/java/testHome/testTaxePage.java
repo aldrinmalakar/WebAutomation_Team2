@@ -7,7 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class testTaxePage extends WebAPI {
+
+
+    // hi there
 
     taxPage taxpage ;
     @BeforeMethod
@@ -29,7 +34,7 @@ public class testTaxePage extends WebAPI {
     }
 
     @Test(enabled = false)
-    public void testMyLocalStoreButton(){
+    public void testMyLocalStoreButton() throws IOException {
         taxpage.myLocalStoreButton();
         taxpage.validatMyLocalStoreButton();
     }
@@ -115,10 +120,10 @@ public class testTaxePage extends WebAPI {
 
     }
 
-    @Test(enabled = false)
-    public void testSearchBox(){
+    @Test(enabled = true)
+    public void testSearchBox() throws Exception {
         taxpage.SearchBox();
-        taxpage.validateSearchBox();
+       // taxpage.validateSearchBox();
     }
 
     @Test(enabled = false)

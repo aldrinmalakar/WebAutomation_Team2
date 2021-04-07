@@ -12,12 +12,11 @@
         <module>Generic</module>
         <module>Walmart</module>
         <module>CNN</module>
-        <module>T-Mobile</module>
+
         <module>StateFarm</module>
-        <module>BCBS</module>
+
         <module>BankOfAmerica</module>
-        <module>Marriot</module>
-        <module>Expedia</module>
+
     </modules>
 
 

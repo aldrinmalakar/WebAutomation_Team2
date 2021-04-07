@@ -7,161 +7,130 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static business.businessPage.*;
-
 public class testBusinessPage extends WebAPI {
-
-
     businessPage business ;
     @BeforeMethod
     public void getInit(){
         business= PageFactory.initElements(driver, businessPage.class);
     }
-
-
     @Test(enabled = false)
     public void testValidateBusinessTitle() throws InterruptedException {
         business.validateBusinessTitle();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testLoginWithInvalidPassword(){
         business.LoginWithInvalidPassword();
         business.validateLoginWithInvalidPassword();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testValidateCheckBox() throws InterruptedException {
         business.validateCheckBox();
     }
-    @Test(enabled = false)
+    @Test
     public void testNeedHelp(){
         business.needHelp();
         business.validateNeedHelp();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testDropdown() throws InterruptedException {
         business.Dropdown();
                     }
-
-    @Test(enabled = false)
+    @Test
     public void testRegister(){
         business.register();
         business.validateRegister();
 
     }
-
-
-    @Test(enabled = false)
+    @Test
     public void testRadioButton() throws InterruptedException {
         business.radioButton();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testOpenNewTab() throws InterruptedException {
         business.openNewTab();
         business.ValidateOpenNewTab();
     }
-
-    @Test(enabled = false)
+    @Test
     public void TestBrokenLinks(){
         business.BrokenLinks();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testContactUs(){
         business.ContactUs();
         business.validateContactUs();
     }
-
-
-    @Test(enabled = false)
+    @Test
     public void validateB2BIDButton(){
         business.B2BIDButton();
         business.validateB2BIDButton();
     }
-
-    @Test(enabled = false)
+    @Test
     public void TestBackForward() throws InterruptedException {
         business.BackForward();
         business.ValidateBackForward();
     }
-
-    @Test(enabled = false)
+    @Test
     public void TestAdmin(){
         business.Admin();
         business.ValidateAdmin();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testRequestSupplement(){
         business.RequestSupplement();
         business.ValidateRequestSupplement();
     }
-
-    @Test(enabled = false)//switch to ch
+    @Test//switch to ch
     public void TestIRSNewTab() throws InterruptedException {
         business.IRSNewTab();
         business.validateIRSNewTab();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testEFTLink(){
         business.EFTLink();
         business.ValidateEFT();
     }
-
-    @Test(enabled = false)
+    @Test
     public void TestLoginIsEnabled(){
         business.LoginIsEnabled();
     }
-
-
-    @Test(enabled = false)
+    @Test
     public void testContact(){
         business.Contact();
         business.ValidateContact();
     }
-
-
-    @Test(enabled = false)
+    @Test
     public void testTermsOfUse(){
         business.TermsOfUse();
        business.validateTermsOfUse();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testAutoRepair(){
         business.AutoRepair();
         business.ValidateAutoRepair();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testBusinessOwner() throws InterruptedException {
 
         business.BusinessOwner();
         business.ValidateChildWindow();
 
     }
-
-    @Test(enabled = false )
+    @Test
     public void testMedicalElectronic(){
         business.MedicalElectronic();
         business.ValidateMedicalElectronic();
     }
-
-    @Test(enabled = false)
+    @Test
     public void testMedicalEBillingLink(){
         business.MedicalEBillingLink();
         business.validateMedicalEBillingLink();
 
     }
-
-    @Test(enabled = false)
+    @Test
     public void TestGoBackToHome() throws InterruptedException {
         business.GoBackToHome();
+    }
     }
 
 
@@ -195,4 +164,5 @@ public class testBusinessPage extends WebAPI {
 
 
 
-}
+
+

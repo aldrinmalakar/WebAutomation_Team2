@@ -128,7 +128,7 @@ public class WebAPI {
     @Parameters({"useCloudEnv", "cloudEnvName", "OS", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("chrome") String browserName,
-                      @Optional("86") String browserVersion, @Optional("https://b2b.statefarm.com/b2b/index.html") String url) throws IOException {
+                      @Optional("87") String browserVersion, @Optional("https://b2b.statefarm.com/b2b/index.html") String url) throws IOException {
         // Platform: Local Machine/ cloud machine
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserStack")) {
@@ -734,9 +734,11 @@ public class WebAPI {
         }
     }
 
+    //=================================      MY HELPER METHODS    =============================================
 
 
-    public static void verifyLinkActive(String linkUrl) {
+
+     public static void verifyLinkActive(String linkUrl) {
         try {
             URL url = new URL(linkUrl);
 
@@ -755,7 +757,41 @@ public class WebAPI {
         } catch (Exception e) {
 
         }
+    }
 
+
+
+
+
+
+    public void mouseOverXPATH(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.xpath(element))).build().perform();
+    }
+
+    public void mouseOverID(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.id(element))).build().perform();
+    }
+
+    public void mouseOverCSS(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.cssSelector(element))).build().perform();
+    }
+
+    public void mouseOverNAME(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.name(element))).build().perform();
+    }
+
+    public void mouseOverLINKTEXT(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.linkText(element))).build().perform();
+    }
+
+    public void mouseOverCLASS(String element) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.className(element))).build().perform();
     }
 
 

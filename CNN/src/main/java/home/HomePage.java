@@ -1,7 +1,12 @@
 package home;
 
-import common.WebAPI;
 
-public class HomePage extends WebAPI {
+import common.WebAPI;
+import static home.HomePageLocators.*;
+
+public class HomePage  extends WebAPI {
+
+
+
 
 }
